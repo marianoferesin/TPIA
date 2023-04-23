@@ -1,7 +1,7 @@
 package Utils;
 
-import enviroment.PokeUbicacion;
-import enviroment.Ubicacion;
+import environment.PokeUbicacion;
+import environment.Ubicacion;
 
 import java.util.ArrayList;
 import java.util.Collection;

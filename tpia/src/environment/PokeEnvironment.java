@@ -1,4 +1,4 @@
-package enviroment;
+package environment;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;

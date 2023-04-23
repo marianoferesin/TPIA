@@ -1,9 +1,8 @@
-package enviroment;
+package environment;
 
 import Utils.GenPokeUbicaciones;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-import java.text.CollationElementIterator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
