@@ -1,11 +1,13 @@
 package environment;
 
+import enemigos.PokeEnemigo;
+
+import java.security.cert.PolicyNode;
 import java.util.Objects;
 
 public class PokeUbicacion {
     private Ubicacion ubicacion;
-    private Integer energia;
-    private Integer antiguedad;
+    private PokeEnemigo enemigo;
     private Integer energiaPokeparada;
 
     public PokeUbicacion(){};
@@ -18,10 +20,10 @@ public class PokeUbicacion {
         this.energiaPokeparada = energiaPokeparada;
     };
 
-    public PokeUbicacion(Ubicacion ubicacion, Integer energia, Integer antiguedad, Integer energiaPokeparada) {
+    public PokeUbicacion(Ubicacion ubicacion, PokeEnemigo enemigo, Integer antiguedad, Integer energiaPokeparada) {
         this.ubicacion = ubicacion;
-        this.energia = energia;
-        this.antiguedad = antiguedad;
+        this.enemigo = enemigo;
+
         this.energiaPokeparada = energiaPokeparada;
     }
 
@@ -33,20 +35,8 @@ public class PokeUbicacion {
         this.ubicacion = ubicacion;
     }
 
-    public Integer getEnergia() {
-        return energia;
-    }
-
-    public void setEnergia(Integer energia) {
-        this.energia = energia;
-    }
-
-    public Integer getAntiguedad() {
-        return antiguedad;
-    }
-
-    public void setAntiguedad(Integer antiguedad) {
-        this.antiguedad = antiguedad;
+    public PokeEnemigo getEnemigo() {
+        return enemigo;
     }
 
     public Integer getEnergiaPokeparada() {
@@ -65,6 +55,16 @@ public class PokeUbicacion {
 
     @Override
     public String toString() {
-        return ubicacion.toString() + " ; " +energiaPokeparada.toString();
+        if(this.enemigo != null)
+            return ubicacion.toString() + " Enemigo: "+ enemigo.toString() + " ; PokeParada: " +energiaPokeparada.toString()  ;
+        return ubicacion.toString() + " Enemigo: 0;  PokeParada: " +energiaPokeparada.toString()  ;
+    }
+
+    public boolean esPokeParada() {
+        return this.energiaPokeparada > 0;
+    }
+
+    public void setEnemigo(PokeEnemigo enemigo) {
+        this.enemigo = enemigo;
     }
 }

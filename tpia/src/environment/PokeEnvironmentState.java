@@ -1,15 +1,19 @@
 package environment;
 
 import Utils.GenPokeUbicaciones;
+import enemigos.PokeEnemigo;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Random;
 
 public class PokeEnvironmentState extends EnvironmentState {
     private Collection<PokeUbicacion> pokeUbicaciones;
     private HashMap<String, Collection<String>> map;
+
+    private Integer cantidadEnemigos;
 
     public static final String[][] ADYACENCIA = new String[][]{
             {Ubicacion.TierraDelFuego.toString(),Ubicacion.BuenosAires.toString(),Ubicacion.Peru.toString()},
@@ -58,11 +62,20 @@ public class PokeEnvironmentState extends EnvironmentState {
         }
         //Genera pokeubicaciones
         pokeUbicaciones = GenPokeUbicaciones.genPokeUbicaciones();
-        //TODO
-        //FALTA GENERADOR DE ENEMIGOS
 
-
-
+        Integer cantidadGenerada = 0;
+        Random rand = new Random();
+        for(PokeUbicacion ubi: pokeUbicaciones){
+            if(!ubi.esPokeParada()) {
+                if(rand.nextInt()%2==0) {
+                    System.out.println("ENTROOOOOO");
+                    cantidadGenerada++;
+                    PokeEnemigo enemigo = new PokeEnemigo(ubi.toString());
+                    ubi.setEnemigo(enemigo);
+                }
+            }
+        }
+        this.cantidadEnemigos = cantidadGenerada;
     }
 
     @Override
@@ -97,5 +110,9 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     public HashMap<String, Collection<String>> getMap() {
         return map;
+    }
+
+    public Object getCantidadEnemigos() {
+        return this.cantidadEnemigos;
     }
 }
