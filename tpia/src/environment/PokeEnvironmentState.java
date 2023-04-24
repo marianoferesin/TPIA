@@ -65,16 +65,14 @@ public class PokeEnvironmentState extends EnvironmentState {
 
         Integer cantidadGenerada = 0;
         Random rand = new Random();
-        for(PokeUbicacion ubi: pokeUbicaciones){
-            if(!ubi.esPokeParada()) {
-                if(rand.nextInt()%2==0) {
-                    System.out.println("ENTROOOOOO");
+        for(PokeUbicacion ubi: pokeUbicaciones)
+            if (!ubi.esPokeParada()) {
+                if (rand.nextInt() % 2 == 0) {
                     cantidadGenerada++;
                     PokeEnemigo enemigo = new PokeEnemigo(ubi.toString());
                     ubi.setEnemigo(enemigo);
                 }
             }
-        }
         this.cantidadEnemigos = cantidadGenerada;
     }
 
