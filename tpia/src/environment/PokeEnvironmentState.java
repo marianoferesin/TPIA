@@ -15,6 +15,7 @@ public class PokeEnvironmentState extends EnvironmentState {
     private final Integer cantidadEnemigos;
     private final Integer minimoEnergiaEnemigos;
     private final Integer maximoEnergiaEnemigos;
+    private Integer cdSatelite;
     public PokeEnvironmentState(Integer cantidadEnemigos,Integer minimoEnergiaEnemigos,Integer maximoEnergiaEnemigos){
         this.map = new HashMap<>();
         this.pokeUbicaciones = new ArrayList<>();
@@ -22,6 +23,7 @@ public class PokeEnvironmentState extends EnvironmentState {
         this.cantidadEnemigos = cantidadEnemigos;
         this.minimoEnergiaEnemigos = minimoEnergiaEnemigos;
         this.maximoEnergiaEnemigos = maximoEnergiaEnemigos;
+        this.cdSatelite = 0;
     }
     @Override
     public void initState() {
@@ -58,5 +60,16 @@ public class PokeEnvironmentState extends EnvironmentState {
     }
     public Integer getCantidadEnemigos() {
         return this.cantidadEnemigos;
+    }
+
+    public Integer getCdSatelite() {
+        return cdSatelite;
+    }
+
+    public void setCdSatelite(Integer cdSatelite) {
+        this.cdSatelite = cdSatelite;
+    }
+    public void actualizarCdSatelite(){
+        this.cdSatelite++;
     }
 }
