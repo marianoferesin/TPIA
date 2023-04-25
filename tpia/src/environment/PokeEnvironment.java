@@ -5,7 +5,8 @@ import frsf.cidisi.faia.environment.Environment;
 
 public class PokeEnvironment extends Environment {
     public PokeEnvironment(){
-        //this.environmentState = new PokeEnvironmentState();
+        //Create enviorement state
+        this.environmentState = new PokeEnvironmentState();
     }
     @Override
     public Perception getPercept() {
