@@ -10,7 +10,7 @@ Canarias	0	5	8
 Sahara	0	5	9
 Inglaterra	0	5	10
 Noruega	0	5	11
-Suecia	0	5	12
+Suecia	0	80	12
 Egipto	0	5	13
 Sudafrica	0	5	14
 Moscu	0	5	15
