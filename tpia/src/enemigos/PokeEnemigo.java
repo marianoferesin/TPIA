@@ -1,19 +1,16 @@
 package enemigos;
 
 public class PokeEnemigo {
-    private final Integer energia;
+
+    private Integer id;
+    private Integer energia;
     private Integer cooldownMoverse;
-    public PokeEnemigo(Integer energia) {
-        this.energia=energia;
+
+
+    public PokeEnemigo(Integer id, Integer energia) {
+        this.id = id;
+        this.energia = energia;
         this.cooldownMoverse = (int) ((Math.random() * ((3 - 1) + 1)) + 3);
-    }
-
-    public Integer getEnergia() {
-        return energia;
-    }
-
-    public String toString(){
-        return this.energia.toString();
     }
 
     public boolean moverse(){
