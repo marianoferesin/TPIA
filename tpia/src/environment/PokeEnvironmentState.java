@@ -29,10 +29,9 @@ public class PokeEnvironmentState extends EnvironmentState {
         ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
         for(ArrayList<String> info: infoUbicaciones){
             PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
-            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Boolean.valueOf(info.get(1)));
+            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
             pokeUbicaciones.put(ubi.getNombre(),ubi);
         }
-
        //An edge is represented by an ArrayList
        //This means that a pokemon can go from position 0 to position 1 and viceversa
        ArrayList <ArrayList<String>> aristas = FileReaders.leerAristas();
@@ -51,12 +50,14 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     @Override
     public String toString() {
-        //For now copied from Robot example
+        //Display info about all world
         String str = "";
 
-        str = str + "[ \n";
         for (String point : map.keySet()) {
             str = str + "[ " + point + " --> ";
+            if(pokeUbicaciones.get(point).esPokeparada()) str += " Pokeparada  --> ";
+            else str += "Enemigo: " + pokeUbicaciones.get(point).getPokeEnemigo().getEnergia().toString() + " --> ";
+
             Collection<String> successors = map.get(point);
             if (successors != null) {
                 for (String successor : successors) {
@@ -65,7 +66,6 @@ public class PokeEnvironmentState extends EnvironmentState {
             }
             str = str + " ]\n";
         }
-        str = str + " ]";
 
         return str;
     }

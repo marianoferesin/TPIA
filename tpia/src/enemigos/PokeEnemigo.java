@@ -8,4 +8,8 @@ public class PokeEnemigo {
         this.id = id;
         this.energia = energia;
     }
+
+    public Integer getEnergia(){
+        return this.energia;
+    }
 }

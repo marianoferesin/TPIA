@@ -25,3 +25,5 @@ Groenlandia	1	0	0
 Arabia	1	0	0
 NuevaZelanda	1	0	0
 Siberia	1	0	0
+Cuba	0	0	0
+Boss	0	12344312	23

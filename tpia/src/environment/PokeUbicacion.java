@@ -21,4 +21,12 @@ public class PokeUbicacion {
         this.pokeEnemigo = pokeEnemigo;
         this.esPokeparada = esPokeparada;
     }
+
+    public Boolean esPokeparada(){
+        return this.esPokeparada;
+    }
+
+    public PokeEnemigo getPokeEnemigo(){
+        return this.pokeEnemigo;
+    }
 }
