@@ -90,7 +90,8 @@ public class PokeEnvironmentState extends EnvironmentState {
     }
 
     private void moverEnemigo(PokeUbicacion unaUbicacion){
-        if (unaUbicacion.getPokeEnemigo().moverse()){
+
+        if (unaUbicacion.getPokeEnemigo() != null &&  unaUbicacion.getPokeEnemigo().moverse()){
             String ubi= unaUbicacion.getNombre();
             ArrayList<String> adyacentes = map.get(ubi);
             for (int i = 0; i < adyacentes.size(); i++) {
