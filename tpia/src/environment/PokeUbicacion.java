@@ -29,4 +29,10 @@ public class PokeUbicacion {
     public PokeEnemigo getPokeEnemigo(){
         return this.pokeEnemigo;
     }
+
+    public void removerPokeEnemigo(){ this.pokeEnemigo = null;}
+
+    public void setPokeEnemigo(PokeEnemigo pokeEnemigo) {
+        this.pokeEnemigo = pokeEnemigo;
+    }
 }
