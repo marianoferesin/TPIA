@@ -8,7 +8,8 @@ public class PokeEnvironment extends Environment {
     private final Integer MIN_ENERGIA_ENEMIGOS = 5;
     private final Integer MAX_ENERGIA_ENEMIGOS = 10;
     public PokeEnvironment(){
-        this.environmentState = new PokeEnvironmentState(CANTIDAD_ENEMIGOS,MIN_ENERGIA_ENEMIGOS,MAX_ENERGIA_ENEMIGOS);
+        //Create enviorement state
+        this.environmentState = new PokeEnvironmentState();
     }
     @Override
     public Perception getPercept() {

@@ -4,56 +4,29 @@ import enemigos.PokeEnemigo;
 import java.util.Objects;
 
 public class PokeUbicacion {
-    private Ubicacion ubicacion;
+    private String nombre;
     private PokeEnemigo pokeEnemigo;
-    private Integer energiaPokeparada;
+    private Boolean esPokeparada;
 
-    public PokeUbicacion(){};
-    public PokeUbicacion(Ubicacion ubicacion){
-        this.ubicacion = ubicacion;
-        this.pokeEnemigo = null;
-        this.energiaPokeparada = 0;
-    }
-    public PokeUbicacion(Ubicacion ubicacion,Integer energiaPokeparada){
-        this.ubicacion = ubicacion;
-        this.pokeEnemigo = null;
-        this.energiaPokeparada = energiaPokeparada;
-    }
-    public Ubicacion getUbicacion() {
-        return ubicacion;
-    }
-    public void setUbicacion(Ubicacion ubicacion) {
-        this.ubicacion = ubicacion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public PokeEnemigo getEnemigo() {
-        return pokeEnemigo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public Integer getEnergiaPokeparada() {
-        return energiaPokeparada;
+    public PokeUbicacion(String nombre, PokeEnemigo pokeEnemigo, Boolean esPokeparada) {
+        this.nombre = nombre;
+        this.pokeEnemigo = pokeEnemigo;
+        this.esPokeparada = esPokeparada;
     }
 
-    public void setEnergiaPokeparada(Integer energiaPokeparada) {
-        this.energiaPokeparada = energiaPokeparada;
+    public Boolean esPokeparada(){
+        return this.esPokeparada;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        PokeUbicacion that = (PokeUbicacion) o;
-        return Objects.equals(ubicacion.toString(), that.getUbicacion().toString());
-    }
-
-    @Override
-    public String toString() {
-        return "{" + ubicacion.toString() + "; Enemigo: "+ (pokeEnemigo==null?"null":pokeEnemigo.toString()) + " ; PokeParada: " +energiaPokeparada.toString() + "}";
-    }
-
-    public boolean esPokeParada() {
-        return this.energiaPokeparada > 0;
-    }
-
-    public void setEnemigo(PokeEnemigo enemigo) {
-        this.pokeEnemigo = enemigo;
+    public PokeEnemigo getPokeEnemigo(){
+        return this.pokeEnemigo;
     }
 }
