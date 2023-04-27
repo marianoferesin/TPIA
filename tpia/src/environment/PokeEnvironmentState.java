@@ -117,4 +117,11 @@ public class PokeEnvironmentState extends EnvironmentState {
         }
     }
 
+    public HashMap<String, ArrayList<String>> getMap() {
+        return map;
+    }
+
+    public HashMap<String, PokeUbicacion> getPokeUbicaciones() {
+        return pokeUbicaciones;
+    }
 }
