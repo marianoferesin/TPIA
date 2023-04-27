@@ -13,7 +13,8 @@ public class PokeEnvironmentState extends EnvironmentState {
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     private String ubicacionBoss;
     private Integer cdSatelite;
-    public PokeEnvironmentState(){
+    private String ubicacionPokeLuchador;
+ public PokeEnvironmentState(){
         this.map = new HashMap<String, ArrayList<String>>();
         this.pokeUbicaciones = new HashMap<String,PokeUbicacion>();
         this.cdSatelite = 0;
@@ -40,6 +41,10 @@ public class PokeEnvironmentState extends EnvironmentState {
            map.get(a.get(0)).add(a.get(1));
            map.get(a.get(1)).add(a.get(0));
        }
+
+
+       this.ubicacionBoss =  "Boss";
+       this.ubicacionPokeLuchador = "TierraDelFuego";
 
 
     }
@@ -78,7 +83,50 @@ public class PokeEnvironmentState extends EnvironmentState {
     public void setCdSatelite(Integer cdSatelite) {
         this.cdSatelite = cdSatelite;
     }
-    public void actualizarCdSatelite(){
+    public void actualizarCdSatelite() {
         this.cdSatelite++;
+    }
+    public void setUbicacionPokeLuchador(String ubicacionPokeLuchador) {
+        this.ubicacionPokeLuchador = ubicacionPokeLuchador;
+    }
+
+    public String getUbicacionPokeLuchador() {
+        return ubicacionPokeLuchador;
+    }
+
+    private void moverEnemigo(PokeUbicacion unaUbicacion){
+
+        if (unaUbicacion.getPokeEnemigo() != null &&  unaUbicacion.getPokeEnemigo().moverse()){
+            String ubi= unaUbicacion.getNombre();
+            ArrayList<String> adyacentes = map.get(ubi);
+            for (int i = 0; i < adyacentes.size(); i++) {
+                PokeUbicacion ady = pokeUbicaciones.get(adyacentes.get(i));
+                if (ady.getPokeEnemigo() != null || ady.esPokeparada()){
+                    adyacentes.remove(i);
+                }
+            }
+            PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
+            unaUbicacion.removerPokeEnemigo();
+            pokeUbicaciones.put(ubi,unaUbicacion);
+            int destino = (int) (Math.random() * (adyacentes.size() + 1));
+            String dest = adyacentes.get(destino);
+            PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
+            nuevaUbi.setPokeEnemigo(enemigo);
+            pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+        }
+    }
+
+    public void MoverEnemigos(){
+        for (String point : pokeUbicaciones.keySet()) {
+            this.moverEnemigo(pokeUbicaciones.get(point));
+        }
+    }
+
+    public HashMap<String, ArrayList<String>> getMap() {
+        return map;
+    }
+
+    public HashMap<String, PokeUbicacion> getPokeUbicaciones() {
+        return pokeUbicaciones;
     }
 }
