@@ -9,6 +9,8 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class PokeEnvironmentState extends EnvironmentState {
+    private String BOSS_LOCATION = "Boss";
+    private String AGENT_LOCATION = "TierraDelFuego";
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     private String ubicacionBoss;
@@ -43,8 +45,8 @@ public class PokeEnvironmentState extends EnvironmentState {
        }
 
 
-       this.ubicacionBoss =  "Boss";
-       this.ubicacionPokeLuchador = "TierraDelFuego";
+       this.ubicacionBoss =  BOSS_LOCATION;
+       this.ubicacionPokeLuchador = AGENT_LOCATION;
 
 
     }
