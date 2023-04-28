@@ -21,4 +21,7 @@ public abstract class EnvironmentState extends State {
 
     public EnvironmentState() {
     }
+
+    @Override
+    public abstract boolean equals(Object obj);
 }
