@@ -7,12 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PokeEnvironment extends Environment {
-    private final Integer CANTIDAD_ENEMIGOS = 10;
-    private final Integer MIN_ENERGIA_ENEMIGOS = 5;
-    private final Integer MAX_ENERGIA_ENEMIGOS = 10;
     public PokeEnvironment(){
-        //Create enviorement state
         this.environmentState = new PokeEnvironmentState();
+        this.environmentState.initState();
     }
 
     public PokeEnvironmentState getEnvironmentState() {
@@ -47,6 +44,6 @@ public class PokeEnvironment extends Environment {
     }
 
     public String toString(){
-        return this.toString();
+        return super.environmentState.toString();
     }
 }

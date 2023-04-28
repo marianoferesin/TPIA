@@ -1,12 +1,12 @@
-import agent.PokeAgentState;
-import environment.PokeEnvironmentState;
+import agent.PokeAgent;
+import environment.PokeEnvironment;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
 public class Main {
     public static void main(String[] args) {
-        PokeEnvironmentState estado = new PokeEnvironmentState();
-        estado.initState();
-        PokeAgentState estadoAgente = new PokeAgentState();
-        estadoAgente.initState();
-        System.out.println(estadoAgente.printPokeAtaques());
+        PokeEnvironment pokeEnvironment = new PokeEnvironment();
+        PokeAgent pokeAgent = new PokeAgent();
+        SearchBasedAgentSimulator searchBasedAgentSimulator = new SearchBasedAgentSimulator(pokeEnvironment,pokeAgent);
+        searchBasedAgentSimulator.start();
     }
 }

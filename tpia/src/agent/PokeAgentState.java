@@ -11,7 +11,8 @@ import java.util.HashMap;
 
 public class PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
-    private String AGENT_LOCATION = "TierraDelFuego";
+    private String AGENT_INIT_LOCATION = "TierraDelFuego";
+    private String pokeUbicacion;
     private Integer pokeEnergia;
     private Integer pokeEnergiaInicial;
     private Integer energiaContrincante;
@@ -22,6 +23,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacionAgent> pokeUbicaciones;
     public PokeAgentState(){
+        pokeUbicacion = AGENT_INIT_LOCATION;
         map = new HashMap<>();
         pokeUbicaciones = new HashMap<>();
     }
@@ -73,10 +75,6 @@ public class PokeAgentState extends SearchBasedAgentState {
             map.get(a.get(1)).add(a.get(0));
         }
     }
-    @Override
-    public String toString() {
-        return null;
-    }
     public Integer[][] getPokeAtaques(){
         return pokeAtaques;
     }
@@ -85,5 +83,9 @@ public class PokeAgentState extends SearchBasedAgentState {
         str = "[ " + pokeAtaques[0][0] + " , " + pokeAtaques[0][1] + " , " + pokeAtaques[0][2] + " ] \n";
         str = str + "[ " + pokeAtaques[1][0] + " , " + pokeAtaques[1][1] + " , " + pokeAtaques[1][2] + " ]";
         return str;
+    }
+    @Override
+    public String toString() {
+        return "{ " + "Energia: "+ pokeEnergia + "," + pokeUbicacion + " }";
     }
 }

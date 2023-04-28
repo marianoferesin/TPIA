@@ -4,22 +4,25 @@ import actions.GoToBuenosAires;
 import actions.GoToTierraDelFuego;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
+import frsf.cidisi.faia.agent.search.Problem;
+import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class PokeAgent extends SearchBasedAgent {
-    private PokeGoal pokeGoal;
-    private PokeAgentState pokeAgentState;
-    private ArrayList<Action> actions;
+    private Vector<SearchAction> actions;
     public PokeAgent(){
-        this.pokeGoal = new PokeGoal();
-        this.pokeAgentState = new PokeAgentState();
-        this.pokeAgentState.initState();
-        this.actions = initActions();
+        PokeGoal pokeGoal = new PokeGoal();
+        PokeAgentState pokeAgentState = new PokeAgentState();
+        pokeAgentState.initState();
+        this.setAgentState(pokeAgentState);
+        actions = initActions();
+        Problem problem = new Problem(pokeGoal,pokeAgentState,actions);
+        this.setProblem(problem);
     }
-    private ArrayList<Action> initActions(){
-        ArrayList<Action> actionsList = new ArrayList<>();
+    private Vector<SearchAction> initActions(){
+        Vector<SearchAction> actionsList = new Vector<>();
         actionsList.add(new GoToBuenosAires());
         actionsList.add(new GoToTierraDelFuego());
         return actionsList;

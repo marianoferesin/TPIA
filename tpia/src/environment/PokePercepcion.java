@@ -27,7 +27,6 @@ public class PokePercepcion extends Perception {
     }
 
     @Override
-
     // iniciacización basica de la percepción, solo obtiene la ubicación actual y los adyacentes
     public void initPerception(Agent agent, Environment environment) {
         PokeEnvironment ambiente = (PokeEnvironment) environment;
@@ -44,4 +43,8 @@ public class PokePercepcion extends Perception {
             }
     }
 
+    @Override
+    public String toString() {
+        return "PokePercepcion: " + "miMap= {...}, misUbicacionesVisibles= {...} , miUbicacion=" + miUbicacion;
+    }
 }
