@@ -78,16 +78,25 @@ public class PokeEnvironmentState extends EnvironmentState {
         return str;
     }
     
-    public Integer getCdSatelite() {
-        return cdSatelite;
+
+    private void actualizarCdSatelite() {
+        if (this.cdSatelite < 10) {
+            this.cdSatelite++;
+        } else {
+            this.cdSatelite =0;
+        }
     }
 
-    public void setCdSatelite(Integer cdSatelite) {
-        this.cdSatelite = cdSatelite;
+    public boolean getSatelite(){
+        if (this.cdSatelite == 0 ){
+            this.actualizarCdSatelite();
+            return true;
+        }else{
+            this.actualizarCdSatelite();
+            return false;
+        }
     }
-    public void actualizarCdSatelite() {
-        this.cdSatelite++;
-    }
+
     public void setUbicacionPokeLuchador(String ubicacionPokeLuchador) {
         this.ubicacionPokeLuchador = ubicacionPokeLuchador;
     }
