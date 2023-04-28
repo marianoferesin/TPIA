@@ -81,8 +81,8 @@ public class PokeAgentState extends SearchBasedAgentState {
         //Get info of places
         ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
         for(ArrayList<String> info: infoUbicaciones){
-            PokeEnemigo ene = null;
-            PokeUbicacionAgent ubi = new PokeUbicacionAgent(info.get(0),ene,0,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
+            PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
+            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Boolean.valueOf(info.get(1)));
             pokeUbicaciones.put(ubi.getNombre(),ubi);
         }
         //An edge is represented by an ArrayList
