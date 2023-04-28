@@ -72,6 +72,19 @@ public class PokeAgentState extends SearchBasedAgentState {
         pokeAtaques = new Integer[][]{{0,0,0},{0,0,0}};
         pokeCantidad = 0;
     }
+
+    public void setPokeUbicacion(String pokeUbicacion) {
+        this.pokeUbicacion = pokeUbicacion;
+    }
+
+    public HashMap<String, ArrayList<String>> getMap() {
+        return map;
+    }
+
+    public HashMap<String, PokeUbicacion> getPokeUbicaciones() {
+        return pokeUbicaciones;
+    }
+
     private void initMap(){
         ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
         for(String ubi: ubicaciones){

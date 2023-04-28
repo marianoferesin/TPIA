@@ -1,29 +1,58 @@
 package actions;
 
+import agent.PokeAgentState;
+import environment.PokeEnvironmentState;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
+import java.util.ArrayList;
+
 public class GoToTierraDelFuego extends SearchAction {
 
+    private String destino= "TierraDelFuego";
+    //Actualiza el estado del agente
+    @Override
+    public SearchBasedAgentState execute(SearchBasedAgentState s) {
+        System.out.println("\u001B[43m" + "SearchBasedAgentState: "+ s);
+        PokeAgentState agState = (PokeAgentState) s;
+        String ubi = agState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
+        for (int i = 0; i < adyacentes.size(); i++) {
+            if (adyacentes.get(i).equals(destino)) {
+                agState.setPokeUbicacion(destino);
+                return agState;
+            }
+        }
+        return null;
+    }
+
+
+    // Actualiza el estado del agente y del ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
+        PokeAgentState agState = (PokeAgentState) ast;
+        PokeEnvironmentState pkState = (PokeEnvironmentState) est;
+        String ubi = agState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
+        for (int i = 0; i < adyacentes.size(); i++) {
+            if (adyacentes.get(i).equals(destino)) {
+                agState.setPokeUbicacion(destino);
+                pkState.setUbicacionPokeLuchador(destino);
+                return pkState;
+            }
+        }
         return null;
+
     }
 
     @Override
     public String toString() {
-        return null;
+        return "GoTo"+destino;
     }
 
-    @Override
-    public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        return null;
-    }
 
     @Override
-    public Double getCost() {
-        return null;
-    }
+    public Double getCost() { return 1.0; }
 }
