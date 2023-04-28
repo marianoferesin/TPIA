@@ -28,7 +28,6 @@ public class PokeEnvironment extends Environment {
         if ( this.getEnvironmentState().getSatelite()){
             perception.setMiMap(this.getEnvironmentState().getMap());
             perception.setMisUbicacionesVisibles(this.getEnvironmentState().getPokeUbicaciones());
-            return perception;
         // si no se puede utilizar el satelite solo se envia la ubicación y los adyacentes
         }else{
             mapPerception.put(miUbicacionPerception, this.getEnvironmentState().getMap().get(miUbicacionPerception)) ;

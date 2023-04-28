@@ -7,7 +7,6 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-import java.util.ArrayList;
 import java.util.Vector;
 
 public class PokeAgent extends SearchBasedAgent {

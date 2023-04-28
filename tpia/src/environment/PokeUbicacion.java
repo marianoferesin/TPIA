@@ -7,8 +7,7 @@ public class PokeUbicacion {
     private String nombre;
     private PokeEnemigo pokeEnemigo;
     private Boolean esPokeparada;
-
-    private int antiguedad;
+    private Integer antiguedad;
 
     public String getNombre() {
         return nombre;
@@ -33,7 +32,7 @@ public class PokeUbicacion {
         return this.pokeEnemigo;
     }
 
-    public void removerPokeEnemigo(){ this.pokeEnemigo = null;}
+    public void removerPokeEnemigo(){ this.pokeEnemigo.setEnergia(0);}
 
     public void setPokeEnemigo(PokeEnemigo pokeEnemigo) {
         this.pokeEnemigo = pokeEnemigo;

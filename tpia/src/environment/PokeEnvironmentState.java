@@ -7,6 +7,7 @@ import frsf.cidisi.faia.state.EnvironmentState;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Random;
 
 public class PokeEnvironmentState extends EnvironmentState {
     private String BOSS_LOCATION = "Boss";
@@ -119,14 +120,19 @@ public class PokeEnvironmentState extends EnvironmentState {
                     adyacentes.remove(i);
                 }
             }
-            PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
-            unaUbicacion.removerPokeEnemigo();
-            pokeUbicaciones.put(ubi,unaUbicacion);
-            int destino = (int) (Math.random() * (adyacentes.size() + 1));
-            String dest = adyacentes.get(destino);
-            PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
-            nuevaUbi.setPokeEnemigo(enemigo);
-            pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+            if(adyacentes.size() != 0){
+                PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
+                unaUbicacion.removerPokeEnemigo();
+                pokeUbicaciones.put(ubi,unaUbicacion);
+                System.out.println(adyacentes.size());
+                int destino = ((new Random()).nextInt() % adyacentes.size());
+                System.out.println(destino);
+                if(destino<0) destino = destino*(-1);
+                String dest = adyacentes.get(destino);
+                PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
+                nuevaUbi.setPokeEnemigo(enemigo);
+                pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+            }
         }
     }
 
