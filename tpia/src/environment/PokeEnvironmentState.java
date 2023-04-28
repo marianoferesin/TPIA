@@ -12,11 +12,19 @@ public class PokeEnvironmentState extends EnvironmentState {
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     private String ubicacionBoss;
-
-    public PokeEnvironmentState(){
+    private Integer cdSatelite;
+    private String ubicacionPokeLuchador;
+ public PokeEnvironmentState(){
         this.map = new HashMap<String, ArrayList<String>>();
         this.pokeUbicaciones = new HashMap<String,PokeUbicacion>();
+        this.cdSatelite = 0;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+
     @Override
     public void initState() {
         //Get all places
@@ -39,6 +47,10 @@ public class PokeEnvironmentState extends EnvironmentState {
            this.map.get(a.get(0)).add(a.get(1));
            this.map.get(a.get(1)).add(a.get(0));
        }
+
+       this.ubicacionBoss =  "Boss";
+       this.ubicacionPokeLuchador = "TierraDelFuego";
+
     }
     @Override
     public Object clone() {
@@ -67,11 +79,67 @@ public class PokeEnvironmentState extends EnvironmentState {
 
         return str;
     }
+    
 
-    @Override
-    public boolean equals(Object obj) {
-        // Returns always true. This method is not used.
-        return true;
+    private void actualizarCdSatelite() {
+        if (this.cdSatelite < 10) {
+            this.cdSatelite++;
+        } else {
+            this.cdSatelite =0;
+        }
     }
 
+    public boolean getSatelite(){
+        if (this.cdSatelite == 0 ){
+            this.actualizarCdSatelite();
+            return true;
+        }else{
+            this.actualizarCdSatelite();
+            return false;
+        }
+    }
+
+    public void setUbicacionPokeLuchador(String ubicacionPokeLuchador) {
+        this.ubicacionPokeLuchador = ubicacionPokeLuchador;
+    }
+
+    public String getUbicacionPokeLuchador() {
+        return ubicacionPokeLuchador;
+    }
+
+    private void moverEnemigo(PokeUbicacion unaUbicacion){
+
+        if (unaUbicacion.getPokeEnemigo() != null &&  unaUbicacion.getPokeEnemigo().moverse()){
+            String ubi= unaUbicacion.getNombre();
+            ArrayList<String> adyacentes = map.get(ubi);
+            for (int i = 0; i < adyacentes.size(); i++) {
+                PokeUbicacion ady = pokeUbicaciones.get(adyacentes.get(i));
+                if (ady.getPokeEnemigo() != null || ady.esPokeparada()){
+                    adyacentes.remove(i);
+                }
+            }
+            PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
+            unaUbicacion.removerPokeEnemigo();
+            pokeUbicaciones.put(ubi,unaUbicacion);
+            int destino = (int) (Math.random() * (adyacentes.size() + 1));
+            String dest = adyacentes.get(destino);
+            PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
+            nuevaUbi.setPokeEnemigo(enemigo);
+            pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+        }
+    }
+
+    public void MoverEnemigos(){
+        for (String point : pokeUbicaciones.keySet()) {
+            this.moverEnemigo(pokeUbicaciones.get(point));
+        }
+    }
+
+    public HashMap<String, ArrayList<String>> getMap() {
+        return map;
+    }
+
+    public HashMap<String, PokeUbicacion> getPokeUbicaciones() {
+        return pokeUbicaciones;
+    }
 }

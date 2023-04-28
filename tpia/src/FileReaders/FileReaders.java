@@ -6,11 +6,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReaders {
-
+    private static String MACOS_NAME = "Mac OS X";
     public static ArrayList<String> leerUbicaciones(){
         ArrayList<String> ret = new ArrayList<String>();
+        String path = ".\\tpia\\src\\Files\\Ubicaciones.txt";
         try {
-            File myObj = new File(".\\tpia\\src\\Files\\Ubicaciones.txt");
+            if(System.getProperty("os.name").equals(MACOS_NAME)){
+                path = "tpia/src/Files/Ubicaciones.txt";
+            }
+            File myObj = new File(path);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -25,8 +29,12 @@ public class FileReaders {
     }
     public static ArrayList<ArrayList<String>> leerAristas(){
         ArrayList<ArrayList<String>> ret = new ArrayList<ArrayList<String>>();
+        String path = ".\\tpia\\src\\Files\\Aristas.txt";
         try {
-            File myObj = new File(".\\tpia\\src\\Files\\Aristas.txt");
+            if(System.getProperty("os.name").equals(MACOS_NAME)){
+                path = "tpia/src/Files/Aristas.txt";
+            }
+            File myObj = new File(path);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -46,8 +54,12 @@ public class FileReaders {
 
     public static ArrayList<ArrayList<String>> leerInfoUbicaciones(){
         ArrayList<ArrayList<String>> ret = new ArrayList<ArrayList<String>>();
+        String path = ".\\tpia\\src\\Files\\InfoUbicaciones.txt";
         try {
-            File myObj = new File(".\\tpia\\src\\Files\\InfoUbicaciones.txt");
+            if(System.getProperty("os.name").equals(MACOS_NAME)){
+                path = "tpia/src/Files/InfoUbicaciones.txt";
+            }
+            File myObj = new File(path);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
