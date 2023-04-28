@@ -13,6 +13,17 @@ public class PokePercepcion extends Perception {
     private HashMap<String, PokeUbicacion> misUbicacionesVisibles;
     private String miUbicacion;
 
+    public HashMap<String, ArrayList<String>> getMiMap() {
+        return miMap;
+    }
+
+    public HashMap<String, PokeUbicacion> getMisUbicacionesVisibles() {
+        return misUbicacionesVisibles;
+    }
+
+    public String getMiUbicacion() {
+        return miUbicacion;
+    }
 
     public void setMiMap(HashMap<String, ArrayList<String>> miMap) {
         this.miMap = miMap;
