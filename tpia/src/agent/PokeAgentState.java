@@ -2,6 +2,7 @@ package agent;
 
 import FileReaders.FileReaders;
 import enemigos.PokeEnemigo;
+import environment.PokePercepcion;
 import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
@@ -21,7 +22,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     //Debe existir una percepcion desee el ambiente que informe a la gente de la cantidad de pokemones.
     private Integer pokeCantidad;
     private HashMap<String, ArrayList<String>> map;
-    private HashMap<String, PokeUbicacionAgent> pokeUbicaciones;
+    private HashMap<String, PokeUbicacion> pokeUbicaciones;
     public PokeAgentState(){
         pokeUbicacion = AGENT_INIT_LOCATION;
         map = new HashMap<>();
@@ -44,7 +45,19 @@ public class PokeAgentState extends SearchBasedAgentState {
 
     @Override
     public void updateState(Perception p) {
-
+        PokePercepcion percep = (PokePercepcion) p;
+        this.pokeUbicacion = percep.getMiUbicacion();
+        this.map.putAll(percep.getMiMap());
+        for (String ubi : this.pokeUbicaciones.keySet()) {
+            PokeUbicacion unaUbi =  this.pokeUbicaciones.get(ubi);
+            unaUbi.incrementAnt();
+            this.pokeUbicaciones.put(ubi,unaUbi);
+        }
+        for (String ubi : percep.getMisUbicacionesVisibles().keySet()) {
+            PokeUbicacion unaUbi =  percep.getMisUbicacionesVisibles().get(ubi);
+            unaUbi.resetAnt();
+            this.pokeUbicaciones.put(ubi,unaUbi);
+        }
     }
 
     @Override
