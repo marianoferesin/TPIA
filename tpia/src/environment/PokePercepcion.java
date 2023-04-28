@@ -8,11 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PokePercepcion extends Perception {
-    // vecinos;
-    // miUbicacion;
-    // satelite
+
     private HashMap<String, ArrayList<String>> miMap;
-    private int sateliteCount=10;
     private HashMap<String, PokeUbicacion> misUbicacionesVisibles;
     private String miUbicacion;
 
@@ -30,34 +27,21 @@ public class PokePercepcion extends Perception {
     }
 
     @Override
+
+    // iniciacización basica de la percepción, solo obtiene la ubicación actual y los adyacentes
     public void initPerception(Agent agent, Environment environment) {
         PokeEnvironment ambiente = (PokeEnvironment) environment;
-        PokeEnvironmentState estadoAmbiente = (PokeEnvironmentState) environment.getEnvironmentState();
+        PokeEnvironmentState estadoAmbiente = ambiente.getEnvironmentState();
         this.miUbicacion = estadoAmbiente.getUbicacionPokeLuchador();
-        this.miMap = estadoAmbiente.getMap();
-        this.misUbicacionesVisibles = estadoAmbiente.getPokeUbicaciones();
-        if (this.sateliteCount == 10){
-            this.sateliteCount = 0;
-            for (String ubi : misUbicacionesVisibles.keySet()) {
-                misUbicacionesVisibles.get(ubi).resetAnt();
-            }
-        }else{
-            this.sateliteCount+=1;
-            for (String ubi : misUbicacionesVisibles.keySet()) {
-                misUbicacionesVisibles.put(ubi,misUbicacionesVisibles.get(ubi).incrementAnt());
-            }
-            misUbicacionesVisibles.put(miUbicacion,(misUbicacionesVisibles.get(miUbicacion).resetAnt()));
+        this.miMap.put(this.miUbicacion, estadoAmbiente.getMap().get(this.miUbicacion)) ;
+        PokeUbicacion miPokeUbicacion = estadoAmbiente.getPokeUbicaciones().get(this.miUbicacion);
 
-            ArrayList<String> adyacentes = miMap.get(miUbicacion);
-            for (int i = 0; i < adyacentes.size(); i++) {
-                PokeUbicacion ady = misUbicacionesVisibles.get(adyacentes.get(i));
-                misUbicacionesVisibles.put(adyacentes.get(i),ady.resetAnt());
+        this.misUbicacionesVisibles.put(this.miUbicacion,miPokeUbicacion);
+        ArrayList<String> adyacentes = miMap.get(this.miUbicacion);
+        for (int i = 0; i < adyacentes.size(); i++) {
+            PokeUbicacion adyUbicacion = estadoAmbiente.getPokeUbicaciones().get(adyacentes.get(i));
+            this.misUbicacionesVisibles.put(adyacentes.get(i),adyUbicacion);
             }
-        }
     }
-
-
-
-
 
 }
