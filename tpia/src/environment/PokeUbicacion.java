@@ -23,6 +23,12 @@ public class PokeUbicacion {
         this.esPokeparada = esPokeparada;
         this.antiguedad = 0;
     }
+    public PokeUbicacion(PokeUbicacion e) {
+        this.nombre = e.nombre;
+        this.pokeEnemigo = e.pokeEnemigo;
+        this.esPokeparada = e.esPokeparada;
+        this.antiguedad = e.antiguedad;
+    }
 
     public Boolean esPokeparada(){
         return this.esPokeparada;

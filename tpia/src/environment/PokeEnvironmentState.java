@@ -4,10 +4,7 @@ import FileReaders.FileReaders;
 import enemigos.PokeEnemigo;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
 public class PokeEnvironmentState extends EnvironmentState {
     private String BOSS_LOCATION = "Boss";
@@ -17,6 +14,25 @@ public class PokeEnvironmentState extends EnvironmentState {
     private String ubicacionBoss;
     private Integer cdSatelite;
     private String ubicacionPokeLuchador;
+
+    @Override
+    public Object clone() {
+        PokeEnvironmentState newPokeEnviromentState = new PokeEnvironmentState();
+        HashMap<String, ArrayList<String>> copyMap = new HashMap<String, ArrayList<String>>();
+        for (Map.Entry<String, ArrayList<String>> entry : this.map.entrySet()) {
+            copyMap.put(entry.getKey(), new ArrayList<String>(entry.getValue()));
+        }
+        newPokeEnviromentState.map = copyMap;
+        HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<String, PokeUbicacion>();
+        for (Map.Entry<String, PokeUbicacion> entry : this.pokeUbicaciones.entrySet()) {
+            copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
+        }
+        newPokeEnviromentState.pokeUbicaciones = copyPokeUbicaciones;
+        newPokeEnviromentState.ubicacionBoss = String.valueOf(this.ubicacionBoss);
+        newPokeEnviromentState.cdSatelite = this.cdSatelite;
+        newPokeEnviromentState.ubicacionPokeLuchador = String.valueOf(this.ubicacionPokeLuchador);
+        return  newPokeEnviromentState;
+    }
  public PokeEnvironmentState(){
         this.map = new HashMap<String, ArrayList<String>>();
         this.pokeUbicaciones = new HashMap<String,PokeUbicacion>();
@@ -54,10 +70,7 @@ public class PokeEnvironmentState extends EnvironmentState {
        this.ubicacionPokeLuchador = AGENT_LOCATION;
 
     }
-    @Override
-    public Object clone() {
-        return map.clone();
-    }
+
 
 
     @Override
@@ -121,13 +134,12 @@ public class PokeEnvironmentState extends EnvironmentState {
                 }
             }
             if(adyacentes.size() != 0){
-                PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
+                PokeEnemigo enemigo = new PokeEnemigo(unaUbicacion.getPokeEnemigo());
                 unaUbicacion.removerPokeEnemigo();
                 pokeUbicaciones.put(ubi,unaUbicacion);
-                System.out.println(adyacentes.size());
                 int destino = ((new Random()).nextInt() % adyacentes.size());
-                System.out.println(destino);
-                if(destino<0) destino = destino*(-1);
+                if(destino<0) destino += adyacentes.size();
+
                 String dest = adyacentes.get(destino);
                 PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
                 nuevaUbi.setPokeEnemigo(enemigo);
@@ -148,5 +160,45 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     public HashMap<String, PokeUbicacion> getPokeUbicaciones() {
         return pokeUbicaciones;
+    }
+
+    public String getBOSS_LOCATION() {
+        return BOSS_LOCATION;
+    }
+
+    public void setBOSS_LOCATION(String BOSS_LOCATION) {
+        this.BOSS_LOCATION = BOSS_LOCATION;
+    }
+
+    public String getAGENT_LOCATION() {
+        return AGENT_LOCATION;
+    }
+
+    public void setAGENT_LOCATION(String AGENT_LOCATION) {
+        this.AGENT_LOCATION = AGENT_LOCATION;
+    }
+
+    public void setMap(HashMap<String, ArrayList<String>> map) {
+        this.map = map;
+    }
+
+    public void setPokeUbicaciones(HashMap<String, PokeUbicacion> pokeUbicaciones) {
+        this.pokeUbicaciones = pokeUbicaciones;
+    }
+
+    public String getUbicacionBoss() {
+        return ubicacionBoss;
+    }
+
+    public void setUbicacionBoss(String ubicacionBoss) {
+        this.ubicacionBoss = ubicacionBoss;
+    }
+
+    public Integer getCdSatelite() {
+        return cdSatelite;
+    }
+
+    public void setCdSatelite(Integer cdSatelite) {
+        this.cdSatelite = cdSatelite;
     }
 }

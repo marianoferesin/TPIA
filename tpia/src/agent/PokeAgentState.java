@@ -27,6 +27,11 @@ public class PokeAgentState extends SearchBasedAgentState {
         map = new HashMap<>();
         pokeUbicaciones = new HashMap<>();
     }
+
+    public String getPokeUbicacion() {
+        return pokeUbicacion;
+    }
+
     @Override
     public boolean equals(Object obj) {
         return false;

@@ -13,6 +13,16 @@ public class PokeEnemigo {
         this.cooldownMoverse = (int) ((Math.random() * ((3 - 1) + 1)) + 1);
     }
 
+    public PokeEnemigo(PokeEnemigo e){
+        this.id = e.id;
+        this.energia = e.energia;
+        this.cooldownMoverse = e.getCooldownMoverse();
+    }
+
+    private Integer getCooldownMoverse() {
+        return this.cooldownMoverse;
+    }
+
     public boolean moverse(){
         this.cooldownMoverse-=1;
         if (cooldownMoverse == 0){

@@ -13,7 +13,7 @@ public class PokeEnvironment extends Environment {
     }
 
     public PokeEnvironmentState getEnvironmentState() {
-        return (PokeEnvironmentState) super.getEnvironmentState();
+        return (PokeEnvironmentState) this.environmentState;
     }
 
     @Override
