@@ -9,6 +9,7 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
@@ -40,7 +41,25 @@ public class PokeAgentState extends SearchBasedAgentState {
 
     @Override
     public SearchBasedAgentState clone() {
-        return null;
+        PokeAgentState pokeAgentState = new PokeAgentState();
+        pokeAgentState.setPokeUbicacion(this.pokeUbicacion);
+        pokeAgentState.setPokeEnergia(this.pokeEnergia);
+        pokeAgentState.setPokeEnergiaInicial(this.pokeEnergiaInicial);
+        pokeAgentState.setEnergiaContrincante(this.energiaContrincante);
+        pokeAgentState.setPokeAtaques(this.pokeAtaques);
+        pokeAgentState.setPokeCantidad(this.pokeCantidad);
+        HashMap<String, ArrayList<String>> copyMap = new HashMap<>();
+        for (Map.Entry<String, ArrayList<String>> entry : this.map.entrySet()) {
+            copyMap.put(entry.getKey(), new ArrayList<String>(entry.getValue()));
+        }
+        pokeAgentState.setMap(copyMap);
+        HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<>();
+        for (Map.Entry<String, PokeUbicacion> entry : this.pokeUbicaciones.entrySet()) {
+            copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
+        }
+        pokeAgentState.setPokeUbicaciones(copyPokeUbicaciones);
+
+        return pokeAgentState;
     }
 
     @Override
@@ -118,5 +137,49 @@ public class PokeAgentState extends SearchBasedAgentState {
     @Override
     public String toString() {
         return "{ " + "Energia: "+ pokeEnergia + "," + pokeUbicacion + " }";
+    }
+
+    public Integer getPokeEnergia() {
+        return pokeEnergia;
+    }
+
+    public void setPokeEnergia(Integer pokeEnergia) {
+        this.pokeEnergia = pokeEnergia;
+    }
+
+    public Integer getPokeEnergiaInicial() {
+        return pokeEnergiaInicial;
+    }
+
+    public void setPokeEnergiaInicial(Integer pokeEnergiaInicial) {
+        this.pokeEnergiaInicial = pokeEnergiaInicial;
+    }
+
+    public Integer getEnergiaContrincante() {
+        return energiaContrincante;
+    }
+
+    public void setEnergiaContrincante(Integer energiaContrincante) {
+        this.energiaContrincante = energiaContrincante;
+    }
+
+    public void setPokeAtaques(Integer[][] pokeAtaques) {
+        this.pokeAtaques = pokeAtaques;
+    }
+
+    public Integer getPokeCantidad() {
+        return pokeCantidad;
+    }
+
+    public void setPokeCantidad(Integer pokeCantidad) {
+        this.pokeCantidad = pokeCantidad;
+    }
+
+    public void setMap(HashMap<String, ArrayList<String>> map) {
+        this.map = map;
+    }
+
+    public void setPokeUbicaciones(HashMap<String, PokeUbicacion> pokeUbicaciones) {
+        this.pokeUbicaciones = pokeUbicaciones;
     }
 }

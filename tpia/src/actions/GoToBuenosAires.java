@@ -2,8 +2,6 @@ package actions;
 
 import agent.PokeAgentState;
 import environment.PokeEnvironmentState;
-import environment.PokeUbicacion;
-import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
@@ -21,7 +19,7 @@ public class GoToBuenosAires extends SearchAction {
         PokeAgentState agState = (PokeAgentState) s;
         String ubi = agState.getPokeUbicacion();
         ArrayList<String> adyacentes = agState.getMap().get(ubi);;
-        for (int i = 0; i < adyacentes.size(); i++) {
+        for(int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);
                 return agState;
@@ -29,15 +27,13 @@ public class GoToBuenosAires extends SearchAction {
         }
         return null;
     }
-
-
     // Actualiza el estado del agente y del ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         PokeAgentState agState = (PokeAgentState) ast;
         PokeEnvironmentState pkState = (PokeEnvironmentState) est;
         String ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
+        ArrayList<String> adyacentes = agState.getMap().get(ubi);
         for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);
