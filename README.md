@@ -3,8 +3,9 @@ Trabajo práctico de la materia Inteligencia Artificial UTN FRSF
 
 # Etapa 2
 
-#Agente
+# Agente
 Definimos las siguientes clases para el agente del programa. Que reflejan estados
+
 ![image](https://user-images.githubusercontent.com/44452084/235811346-7b2f5dba-d0a6-4af5-9a3f-8180d6a8d648.png)
 
 # Acciones
