@@ -4,15 +4,14 @@ Trabajo práctico de la materia Inteligencia Artificial UTN FRSF
 # Etapa 2
 
 ## Agente
-Definimos las siguientes clases para el agente del programa. Que reflejan estados
+Definimos las siguientes clases para describir el agente. Que reflejan estados, objetivo y clases auxiliares.
 
-![image](https://user-images.githubusercontent.com/44452084/235811346-7b2f5dba-d0a6-4af5-9a3f-8180d6a8d648.png)
+![image](https://user-images.githubusercontent.com/44452084/235812592-47ab6cf8-dcce-4569-9ccb-2aedf7bca1fe.png)
 
 ## Acciones
 Incluimos 2 acciones basicas, para poder correr la simulacion simplemente, son las siguientes.
 
-![image](https://user-images.githubusercontent.com/44452084/235812083-7508c284-63f1-4843-a3d3-47783b276465.png)
-
+![image](https://user-images.githubusercontent.com/44452084/235812480-c6519153-8238-412a-97fd-ee58417e3228.png)
 
 
 ## File y FileReaders
