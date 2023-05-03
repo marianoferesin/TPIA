@@ -4,7 +4,7 @@ Trabajo práctico de la materia Inteligencia Artificial UTN FRSF 2023
 # Etapa 2
 
 ## Resumen
-  Todas las clases definidas extienden de sus respectivas clases del framework, como se observo en los ejemplos de la catedra. De esta forma PokeEnvironment extiende de Environment y asi sucesivamente con todas las clases. Los directorios agrupan las diferentes clases referentes a Actions, Agent, Environment y demas directorios auxiliares.
+  Todas las clases definidas extienden de sus respectivas clases del framework FAIA, como se observo en los ejemplos de la catedra. De esta forma PokeEnvironment extiende de Environment y asi sucesivamente con todas las clases. Los directorios agrupan las diferentes clases referentes a Actions, Agent, Environment y demas directorios auxiliares.
 ## Ambiente
 Definimos las siguientes clases para representar los estados del ambiente y las percepciones que seran enviadas al agente.
 
