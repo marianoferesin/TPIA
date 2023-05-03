@@ -15,6 +15,9 @@ Definimos las siguientes clases para describir el agente. Que reflejan estados, 
 
 ![image](https://user-images.githubusercontent.com/44452084/235812592-47ab6cf8-dcce-4569-9ccb-2aedf7bca1fe.png)
 
+### Nota
+El objetivo planteado en esta etapa es trivial, llegar a "BuenosAires" desde "TierraDelFuego" mediante una unica acción. Definimos esto solo para ver correr la simulación con todo funcionando. 
+
 ## Acciones
 Incluimos 2 acciones basicas, para poder correr la simulacion simplemente, son las siguientes.
 
