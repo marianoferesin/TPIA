@@ -1,5 +1,5 @@
 # TPIA
-Trabajo práctico de la materia Inteligencia Artificial UTN FRSF
+Trabajo práctico de la materia Inteligencia Artificial UTN FRSF 2023
 
 # Etapa 2
 
