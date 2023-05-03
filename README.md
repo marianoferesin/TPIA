@@ -3,6 +3,13 @@ Trabajo práctico de la materia Inteligencia Artificial UTN FRSF
 
 # Etapa 2
 
+## Resumen
+  Todas las clases definidas extienden de sus respectivas clases del framework, como se observo en los ejemplos de la catedra. De esta forma PokeEnvironment extiende de Environment y asi sucesivamente con todas las clases. Los directorios agrupan las diferentes clases referentes a Actions, Agent, Environment y demas directorios auxiliares.
+## Ambiente
+Definimos las siguientes clases para representar los estados del ambiente y las percepciones que seran enviadas al agente.
+
+![image](https://user-images.githubusercontent.com/44452084/235812986-c4ae2539-a96c-48a3-ae07-1711a6735b87.png)
+
 ## Agente
 Definimos las siguientes clases para describir el agente. Que reflejan estados, objetivo y clases auxiliares.
 
@@ -12,6 +19,16 @@ Definimos las siguientes clases para describir el agente. Que reflejan estados, 
 Incluimos 2 acciones basicas, para poder correr la simulacion simplemente, son las siguientes.
 
 ![image](https://user-images.githubusercontent.com/44452084/235812480-c6519153-8238-412a-97fd-ee58417e3228.png)
+
+## Enemigos
+Contamos con la clase siguiente, donde encapsulamos los atributos y comportamientos de los pokemones enemigos.
+
+![image](https://user-images.githubusercontent.com/44452084/235812655-b0e7d65b-f6d8-46c9-83fb-d8316eea982b.png)
+
+## MAIN
+En la clase Main.java realizamos la instanciación de el agente, ambiente y simulador, para finalmente iniciar la simulacion.
+
+![image](https://user-images.githubusercontent.com/44452084/235812899-b20de14e-de21-4d9d-a77a-9f1f3367b7cf.png)
 
 
 ## File y FileReaders
