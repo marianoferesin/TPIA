@@ -6,7 +6,6 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
-
 import java.util.ArrayList;
 
 public class GoToBuenosAires extends SearchAction {
@@ -19,8 +18,8 @@ public class GoToBuenosAires extends SearchAction {
         PokeAgentState agState = (PokeAgentState) s;
         String ubi = agState.getPokeUbicacion();
         ArrayList<String> adyacentes = agState.getMap().get(ubi);;
-        for(int i = 0; i < adyacentes.size(); i++) {
-            if (adyacentes.get(i).equals(destino)) {
+        for (String adyacente : adyacentes) {
+            if (adyacente.equals(destino)) {
                 agState.setPokeUbicacion(destino);
                 agState.huir();
                 return agState;

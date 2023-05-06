@@ -30,6 +30,7 @@ public class FileReaders {
     public static ArrayList<ArrayList<String>> leerAristas(){
         ArrayList<ArrayList<String>> ret = new ArrayList<ArrayList<String>>();
         String path = ".\\tpia\\src\\Files\\Aristas.txt";
+
         try {
             if(System.getProperty("os.name").equals(MACOS_NAME)){
                 path = "tpia/src/Files/Aristas.txt";

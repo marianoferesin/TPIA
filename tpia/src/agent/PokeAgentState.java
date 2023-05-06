@@ -64,6 +64,7 @@ public class PokeAgentState extends SearchBasedAgentState {
 
     @Override
     public void updateState(Perception p) {
+        //TODO
         PokePercepcion percep = (PokePercepcion) p;
         this.pokeUbicacion = percep.getMiUbicacion();
         this.map.putAll(percep.getMiMap());
@@ -105,6 +106,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     private void initMap(){
+        /*
         ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
         for(String ubi: ubicaciones){
             map.put(ubi,new ArrayList<>());
@@ -124,6 +126,8 @@ public class PokeAgentState extends SearchBasedAgentState {
             map.get(a.get(0)).add(a.get(1));
             map.get(a.get(1)).add(a.get(0));
         }
+
+         */
     }
     public Integer[][] getPokeAtaques(){
         return pokeAtaques;
@@ -184,7 +188,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     public void huir(){
-        if (!this.energiaContrincante.equals(0) && (this.pokeEnergia > this.energiaContrincante)) {
+        if (!this.energiaContrincante.equals(0) && (this.pokeEnergia < this.energiaContrincante)) {
             this.setPokeEnergia(this.pokeEnergiaInicial-(this.energiaContrincante/4));
         }
     }

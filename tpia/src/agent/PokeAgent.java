@@ -66,10 +66,8 @@ public class PokeAgent extends SearchBasedAgent {
 
         return selectedAction;
     }
-
-
     @Override
-    public void see(Perception p) {
-
+    public void see(Perception perception) {
+            this.getAgentState().updateState(perception);
     }
 }
