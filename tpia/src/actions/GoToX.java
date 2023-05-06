@@ -10,11 +10,11 @@ import frsf.cidisi.faia.state.EnvironmentState;
 
 import java.util.ArrayList;
 
-public class GotoX extends SearchAction {
+public class GoToX extends SearchAction {
 
     private String destino= "";
 
-    public GotoX(String destino) {
+    public GoToX(String destino) {
         this.destino = destino;
     }
 
@@ -24,6 +24,7 @@ public class GotoX extends SearchAction {
         PokeAgentState agState = (PokeAgentState) s;
         PokeUbicacion ubi = agState.getPokeUbicacion();
         ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
+        System.out.println(adyacentes);
         if (adyacentes.contains(destino)) {
                 agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
                 agState.huir();

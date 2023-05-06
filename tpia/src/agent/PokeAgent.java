@@ -1,7 +1,8 @@
 package agent;
 
 import FileReaders.FileReaders;
-import actions.GotoX;
+import actions.GoToX;
+import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
@@ -16,26 +17,38 @@ import java.util.logging.Logger;
 
 public class PokeAgent extends SearchBasedAgent {
     private Vector<SearchAction> actions;
+    private PokeAgentState pokeAgentState = new PokeAgentState();
+    private PokeGoal pokeGoal = new PokeGoal();
+    private Problem problem;
     public PokeAgent(){
-        PokeGoal pokeGoal = new PokeGoal();
-        PokeAgentState pokeAgentState = new PokeAgentState();
         pokeAgentState.initState();
         this.setAgentState(pokeAgentState);
         actions = initActions();
-        Problem problem = new Problem(pokeGoal,pokeAgentState,actions);
+        problem = new Problem(pokeGoal,pokeAgentState,actions);
         this.setProblem(problem);
     }
     private Vector<SearchAction> initActions(){
         Vector<SearchAction> actionsList = new Vector<>();
-        //get todas las ubicaciones
+        //Funcionamiento sin poda de arbol de busqueda.
         ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
         for(String ubi: ubicaciones){
-            actionsList.add(new GotoX(ubi));
+            actionsList.add(new GoToX(ubi));
         }
+
+        //Arbol podado.
+        /*PokeUbicacion ubicacion = pokeAgentState.getPokeUbicacion();
+        ArrayList<String> adyacentes = pokeAgentState.getMap().get(ubicacion.getNombre());
+        for (String adyacente : adyacentes) {
+            actionsList.add(new GoToX(adyacente));
+        }*/
+        //actionsList.add(new GoToX("Peru"));
+        //actionsList.add(new GoToX("BuenosAires"));
+
         return actionsList;
     }
     @Override
     public Action selectAction() {
+
         // Breath first strategy
         BreathFirstSearch searchStrategy = new BreathFirstSearch();
 //        DepthFirstSearch searchStrategy = new DepthFirstSearch();

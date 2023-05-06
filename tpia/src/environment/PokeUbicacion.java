@@ -55,4 +55,12 @@ public class PokeUbicacion {
     }
 
     public int getAnt() {return antiguedad;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PokeUbicacion that = (PokeUbicacion) o;
+        return Objects.equals(nombre, that.nombre);
+    }
 }

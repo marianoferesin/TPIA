@@ -68,6 +68,7 @@ public class PokeEnvironmentState extends EnvironmentState {
        //An edge is represented by an ArrayList
        //This means that a pokemon can go from position 0 to position 1 and viceversa
        ArrayList <ArrayList<String>> aristas = FileReaders.leerAristas();
+
        for(ArrayList<String> a: aristas) {
            this.map.get(a.get(0)).add(a.get(1));
            this.map.get(a.get(1)).add(a.get(0));

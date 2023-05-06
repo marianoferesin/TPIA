@@ -43,11 +43,11 @@ public class PokePercepcion extends Perception {
         PokeEnvironment ambiente = (PokeEnvironment) environment;
         PokeEnvironmentState estadoAmbiente = ambiente.getEnvironmentState();
         this.miUbicacion = estadoAmbiente.getUbicacionPokeLuchador();
-        this.miMap.put(this.miUbicacion.getNombre(), estadoAmbiente.getMap().get(this.miUbicacion)) ;
-        PokeUbicacion miPokeUbicacion = estadoAmbiente.getPokeUbicaciones().get(this.miUbicacion);
+        this.miMap.put(this.miUbicacion.getNombre(), estadoAmbiente.getMap().get(this.miUbicacion.getNombre())) ;
+        PokeUbicacion miPokeUbicacion = estadoAmbiente.getPokeUbicaciones().get(this.miUbicacion.getNombre());
 
         this.misUbicacionesVisibles.put(this.miUbicacion.getNombre(),miPokeUbicacion);
-        ArrayList<String> adyacentes = miMap.get(this.miUbicacion);
+        ArrayList<String> adyacentes = miMap.get(this.miUbicacion.getNombre());
         for (int i = 0; i < adyacentes.size(); i++) {
             PokeUbicacion adyUbicacion = estadoAmbiente.getPokeUbicaciones().get(adyacentes.get(i));
             this.misUbicacionesVisibles.put(adyacentes.get(i),adyUbicacion);
@@ -56,6 +56,6 @@ public class PokePercepcion extends Perception {
 
     @Override
     public String toString() {
-        return "PokePercepcion: " + "miMap= {...}, misUbicacionesVisibles= {...} , miUbicacion=" + miUbicacion;
+        return "PokePercepcion: " + "miMap= {...}, misUbicacionesVisibles= {...} , miUbicacion=" + miUbicacion.getNombre();
     }
 }

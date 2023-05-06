@@ -41,8 +41,8 @@ public class FileReaders {
                 String data = myReader.nextLine();
                 String[] splitted = data.split("\\s+");
                 ArrayList <String> next = new ArrayList<String>();
-                next.add(splitted[0]);
-                next.add(splitted[1]);
+                next.add(splitted[0].trim());
+                next.add(splitted[1].trim());
                 ret.add(next);
             }
             myReader.close();

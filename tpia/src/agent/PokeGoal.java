@@ -1,14 +1,15 @@
 package agent;
 
+import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.state.AgentState;
 
 public class PokeGoal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
+        PokeUbicacion pokeDestino = new PokeUbicacion("Sahara",null,false);
 
-        if( ((PokeAgentState)agentState).getPokeUbicacion().getNombre() == "BuenosAires") return true;
-        return false;
+        return ((PokeAgentState) agentState).getPokeUbicacion().equals(pokeDestino);
 
     }
 }
