@@ -182,4 +182,10 @@ public class PokeAgentState extends SearchBasedAgentState {
     public void setPokeUbicaciones(HashMap<String, PokeUbicacion> pokeUbicaciones) {
         this.pokeUbicaciones = pokeUbicaciones;
     }
+
+    public void huir(){
+        if (!this.energiaContrincante.equals(0) && (this.pokeEnergia > this.energiaContrincante)) {
+            this.setPokeEnergia(this.pokeEnergiaInicial-(this.energiaContrincante/4));
+        }
+    }
 }

@@ -9,9 +9,14 @@ import frsf.cidisi.faia.state.EnvironmentState;
 
 import java.util.ArrayList;
 
-public class GoToBuenosAires extends SearchAction {
+public class GotoX extends SearchAction {
 
-    private String destino= "BuenosAires";
+    private String destino= "";
+
+    public GotoX(String destino) {
+        this.destino = destino;
+    }
+
     //Actualiza el estado del agente
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
@@ -19,7 +24,7 @@ public class GoToBuenosAires extends SearchAction {
         PokeAgentState agState = (PokeAgentState) s;
         String ubi = agState.getPokeUbicacion();
         ArrayList<String> adyacentes = agState.getMap().get(ubi);;
-        for(int i = 0; i < adyacentes.size(); i++) {
+        for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);
                 agState.huir();
@@ -28,13 +33,15 @@ public class GoToBuenosAires extends SearchAction {
         }
         return null;
     }
+
+
     // Actualiza el estado del agente y del ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         PokeAgentState agState = (PokeAgentState) ast;
         PokeEnvironmentState pkState = (PokeEnvironmentState) est;
         String ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi);
+        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
         for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);

@@ -1,7 +1,11 @@
 package agent;
 
+import FileReaders.FileReaders;
 import actions.GoToBuenosAires;
 import actions.GoToTierraDelFuego;
+import actions.GotoX;
+import enemigos.PokeEnemigo;
+import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
@@ -11,6 +15,7 @@ import frsf.cidisi.faia.solver.Solve;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
 
+import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,8 +33,11 @@ public class PokeAgent extends SearchBasedAgent {
     }
     private Vector<SearchAction> initActions(){
         Vector<SearchAction> actionsList = new Vector<>();
-        actionsList.add(new GoToBuenosAires());
-        actionsList.add(new GoToTierraDelFuego());
+        //get todas las ubicaciones
+        ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
+        for(String ubi: ubicaciones){
+            actionsList.add(new GotoX(ubi));
+        }
         return actionsList;
     }
     @Override

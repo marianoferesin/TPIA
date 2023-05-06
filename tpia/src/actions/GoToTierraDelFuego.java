@@ -22,6 +22,7 @@ public class GoToTierraDelFuego extends SearchAction {
         for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);
+                agState.huir();
                 return agState;
             }
         }
@@ -39,6 +40,7 @@ public class GoToTierraDelFuego extends SearchAction {
         for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
                 agState.setPokeUbicacion(destino);
+                agState.huir();
                 pkState.setUbicacionPokeLuchador(destino);
                 return pkState;
             }
