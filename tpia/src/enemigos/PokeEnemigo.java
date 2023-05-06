@@ -2,8 +2,8 @@ package enemigos;
 
 public class PokeEnemigo {
 
-    private Integer id;
-    private Integer energia;
+    protected Integer id;
+    protected Integer energia;
     private Integer cooldownMoverse;
 
 
@@ -19,7 +19,7 @@ public class PokeEnemigo {
         this.cooldownMoverse = e.getCooldownMoverse();
     }
 
-    private Integer getCooldownMoverse() {
+    public Integer getCooldownMoverse() {
         return this.cooldownMoverse;
     }
 

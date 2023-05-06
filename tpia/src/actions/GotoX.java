@@ -2,6 +2,7 @@ package actions;
 
 import agent.PokeAgentState;
 import environment.PokeEnvironmentState;
+import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
@@ -20,16 +21,13 @@ public class GotoX extends SearchAction {
     //Actualiza el estado del agente
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        System.out.println("\u001B[43m" + "SearchBasedAgentState: "+ s);
         PokeAgentState agState = (PokeAgentState) s;
-        String ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
-        for (int i = 0; i < adyacentes.size(); i++) {
-            if (adyacentes.get(i).equals(destino)) {
-                agState.setPokeUbicacion(destino);
+        PokeUbicacion ubi = agState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
+        if (adyacentes.contains(destino)) {
+                agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
                 agState.huir();
                 return agState;
-            }
         }
         return null;
     }
@@ -40,13 +38,13 @@ public class GotoX extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         PokeAgentState agState = (PokeAgentState) ast;
         PokeEnvironmentState pkState = (PokeEnvironmentState) est;
-        String ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi);;
+        PokeUbicacion ubi = agState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
         for (int i = 0; i < adyacentes.size(); i++) {
             if (adyacentes.get(i).equals(destino)) {
-                agState.setPokeUbicacion(destino);
+                agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
                 agState.huir();
-                pkState.setUbicacionPokeLuchador(destino);
+                pkState.setUbicacionPokeLuchador(agState.getPokeUbicaciones().get(destino));
                 return pkState;
             }
         }

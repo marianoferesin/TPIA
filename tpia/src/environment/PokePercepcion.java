@@ -11,7 +11,7 @@ public class PokePercepcion extends Perception {
 
     private HashMap<String, ArrayList<String>> miMap;
     private HashMap<String, PokeUbicacion> misUbicacionesVisibles;
-    private String miUbicacion;
+    private PokeUbicacion miUbicacion;
 
     public HashMap<String, ArrayList<String>> getMiMap() {
         return miMap;
@@ -21,7 +21,7 @@ public class PokePercepcion extends Perception {
         return misUbicacionesVisibles;
     }
 
-    public String getMiUbicacion() {
+    public PokeUbicacion getMiUbicacion() {
         return miUbicacion;
     }
 
@@ -33,7 +33,7 @@ public class PokePercepcion extends Perception {
         this.misUbicacionesVisibles = misUbicacionesVisibles;
     }
 
-    public void setMiUbicacion(String miUbicacion) {
+    public void setMiUbicacion(PokeUbicacion miUbicacion) {
         this.miUbicacion = miUbicacion;
     }
 
@@ -43,10 +43,10 @@ public class PokePercepcion extends Perception {
         PokeEnvironment ambiente = (PokeEnvironment) environment;
         PokeEnvironmentState estadoAmbiente = ambiente.getEnvironmentState();
         this.miUbicacion = estadoAmbiente.getUbicacionPokeLuchador();
-        this.miMap.put(this.miUbicacion, estadoAmbiente.getMap().get(this.miUbicacion)) ;
+        this.miMap.put(this.miUbicacion.getNombre(), estadoAmbiente.getMap().get(this.miUbicacion)) ;
         PokeUbicacion miPokeUbicacion = estadoAmbiente.getPokeUbicaciones().get(this.miUbicacion);
 
-        this.misUbicacionesVisibles.put(this.miUbicacion,miPokeUbicacion);
+        this.misUbicacionesVisibles.put(this.miUbicacion.getNombre(),miPokeUbicacion);
         ArrayList<String> adyacentes = miMap.get(this.miUbicacion);
         for (int i = 0; i < adyacentes.size(); i++) {
             PokeUbicacion adyUbicacion = estadoAmbiente.getPokeUbicaciones().get(adyacentes.get(i));

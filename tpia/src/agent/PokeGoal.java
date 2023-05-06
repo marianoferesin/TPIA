@@ -7,7 +7,7 @@ public class PokeGoal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
 
-        if( ((PokeAgentState)agentState).getPokeUbicacion() == "BuenosAires") return true;
+        if( ((PokeAgentState)agentState).getPokeUbicacion().getNombre() == "BuenosAires") return true;
         return false;
 
     }

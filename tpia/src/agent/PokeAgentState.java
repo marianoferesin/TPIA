@@ -14,26 +14,20 @@ import java.util.Map;
 public class PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
     private String AGENT_INIT_LOCATION = "TierraDelFuego";
-    private String pokeUbicacion;
+    private PokeUbicacion pokeUbicacion;
     private Integer pokeEnergia;
     private Integer pokeEnergiaInicial;
-    private Integer energiaContrincante;
     private Integer[][] pokeAtaques;
     //TODO
-    //Debe existir una percepcion desee el ambiente que informe a la gente de la cantidad de pokemones.
+    //Debe existir una percepcion desede el ambiente que informe a la gente de la cantidad de pokemones.
     private Integer pokeCantidad;
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     public PokeAgentState(){
-        pokeUbicacion = AGENT_INIT_LOCATION;
+        pokeUbicacion = new PokeUbicacion(AGENT_INIT_LOCATION,null,false);
         map = new HashMap<>();
         pokeUbicaciones = new HashMap<>();
     }
-
-    public String getPokeUbicacion() {
-        return pokeUbicacion;
-    }
-
     @Override
     public boolean equals(Object obj) {
         return false;
@@ -45,7 +39,6 @@ public class PokeAgentState extends SearchBasedAgentState {
         pokeAgentState.setPokeUbicacion(this.pokeUbicacion);
         pokeAgentState.setPokeEnergia(this.pokeEnergia);
         pokeAgentState.setPokeEnergiaInicial(this.pokeEnergiaInicial);
-        pokeAgentState.setEnergiaContrincante(this.energiaContrincante);
         pokeAgentState.setPokeAtaques(this.pokeAtaques);
         pokeAgentState.setPokeCantidad(this.pokeCantidad);
         HashMap<String, ArrayList<String>> copyMap = new HashMap<>();
@@ -64,10 +57,13 @@ public class PokeAgentState extends SearchBasedAgentState {
 
     @Override
     public void updateState(Perception p) {
-        //TODO
+        //TODO actualizar bien el estado.
         PokePercepcion percep = (PokePercepcion) p;
+        //Actualizo mi ubicacion
         this.pokeUbicacion = percep.getMiUbicacion();
+        //Actualizo mi mapa
         this.map.putAll(percep.getMiMap());
+        //Actualizo mis ubicaciones
         for (String ubi : this.pokeUbicaciones.keySet()) {
             PokeUbicacion unaUbi =  this.pokeUbicaciones.get(ubi);
             unaUbi.incrementAnt();
@@ -88,12 +84,14 @@ public class PokeAgentState extends SearchBasedAgentState {
     private void initPlayer(){
         pokeEnergiaInicial = (int) (Math.random()*(20-10+1)+10);
         pokeEnergia = pokeEnergiaInicial;
-        energiaContrincante = 0;
         pokeAtaques = new Integer[][]{{0,0,0},{0,0,0}};
         pokeCantidad = 0;
     }
+    public PokeUbicacion getPokeUbicacion() {
+        return pokeUbicacion;
+    }
 
-    public void setPokeUbicacion(String pokeUbicacion) {
+    public void setPokeUbicacion(PokeUbicacion pokeUbicacion) {
         this.pokeUbicacion = pokeUbicacion;
     }
 
@@ -106,28 +104,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     private void initMap(){
-        /*
-        ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
-        for(String ubi: ubicaciones){
-            map.put(ubi,new ArrayList<>());
-        }
 
-        //Get info of places
-        ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
-        for(ArrayList<String> info: infoUbicaciones){
-            PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
-            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Boolean.valueOf(info.get(1)));
-            pokeUbicaciones.put(ubi.getNombre(),ubi);
-        }
-        //An edge is represented by an ArrayList
-        //This means that a pokemon can go from position 0 to position 1 and viceversa
-        ArrayList <ArrayList<String>> aristas = FileReaders.leerAristas();
-        for(ArrayList<String> a: aristas) {
-            map.get(a.get(0)).add(a.get(1));
-            map.get(a.get(1)).add(a.get(0));
-        }
-
-         */
     }
     public Integer[][] getPokeAtaques(){
         return pokeAtaques;
@@ -158,15 +135,6 @@ public class PokeAgentState extends SearchBasedAgentState {
     public void setPokeEnergiaInicial(Integer pokeEnergiaInicial) {
         this.pokeEnergiaInicial = pokeEnergiaInicial;
     }
-
-    public Integer getEnergiaContrincante() {
-        return energiaContrincante;
-    }
-
-    public void setEnergiaContrincante(Integer energiaContrincante) {
-        this.energiaContrincante = energiaContrincante;
-    }
-
     public void setPokeAtaques(Integer[][] pokeAtaques) {
         this.pokeAtaques = pokeAtaques;
     }
@@ -188,8 +156,18 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     public void huir(){
-        if (!this.energiaContrincante.equals(0) && (this.pokeEnergia < this.energiaContrincante)) {
-            this.setPokeEnergia(this.pokeEnergiaInicial-(this.energiaContrincante/4));
+        if (this.pokeUbicacion.getPokeEnemigo() != null){
+            if (this.pokeEnergia < this.pokeUbicacion.getPokeEnemigo().getEnergia()){
+                this.setPokeEnergia(this.pokeEnergiaInicial-(this.pokeUbicacion.getPokeEnemigo().getEnergia()/4));
+            }
         }
+
     }
+
+    public void verificarPoderesEspeciales(){
+        if( (1.2*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][0] =1;}
+        if( (1.3*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][1] =1;}
+        if( (1.5*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][3] =1;}
+    }
+
 }

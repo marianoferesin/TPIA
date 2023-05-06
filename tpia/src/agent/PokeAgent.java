@@ -1,20 +1,14 @@
 package agent;
 
 import FileReaders.FileReaders;
-import actions.GoToBuenosAires;
-import actions.GoToTierraDelFuego;
 import actions.GotoX;
-import enemigos.PokeEnemigo;
-import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-import frsf.cidisi.faia.solver.Solve;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
-
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -62,7 +56,6 @@ public class PokeAgent extends SearchBasedAgent {
             Logger.getLogger(PokeAgent.class.getName()).log(Level.SEVERE, null, ex);
         }
         // Return the selected action
-        selectedAction = new GoToBuenosAires();
 
         return selectedAction;
     }

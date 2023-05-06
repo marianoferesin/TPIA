@@ -1,6 +1,7 @@
 package environment;
 
 import FileReaders.FileReaders;
+import enemigos.Boss;
 import enemigos.PokeEnemigo;
 import frsf.cidisi.faia.state.EnvironmentState;
 
@@ -8,12 +9,12 @@ import java.util.*;
 
 public class PokeEnvironmentState extends EnvironmentState {
     private String BOSS_LOCATION = "Boss";
-    private String AGENT_LOCATION = "TierraDelFuego";
+    private String AGENT_INIT_LOCATION = "TierraDelFuego";
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
-    private String ubicacionBoss;
+    private PokeUbicacion ubicacionBoss;
     private Integer cdSatelite;
-    private String ubicacionPokeLuchador;
+    private PokeUbicacion ubicacionPokeLuchador;
 
     @Override
     public Object clone() {
@@ -28,9 +29,9 @@ public class PokeEnvironmentState extends EnvironmentState {
             copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
         }
         newPokeEnviromentState.pokeUbicaciones = copyPokeUbicaciones;
-        newPokeEnviromentState.ubicacionBoss = String.valueOf(this.ubicacionBoss);
+        newPokeEnviromentState.ubicacionBoss = this.ubicacionBoss;
         newPokeEnviromentState.cdSatelite = this.cdSatelite;
-        newPokeEnviromentState.ubicacionPokeLuchador = String.valueOf(this.ubicacionPokeLuchador);
+        newPokeEnviromentState.ubicacionPokeLuchador = this.ubicacionPokeLuchador;
         return  newPokeEnviromentState;
     }
  public PokeEnvironmentState(){
@@ -56,6 +57,11 @@ public class PokeEnvironmentState extends EnvironmentState {
         ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
         for(ArrayList<String> info: infoUbicaciones){
             PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
+
+            if (info.get(0).equals(BOSS_LOCATION)){
+                ene = new Boss(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
+                this.ubicacionBoss = new PokeUbicacion(info.get(0),ene,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
+            }
             PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
             this.pokeUbicaciones.put(ubi.getNombre(),ubi);
         }
@@ -66,8 +72,8 @@ public class PokeEnvironmentState extends EnvironmentState {
            this.map.get(a.get(0)).add(a.get(1));
            this.map.get(a.get(1)).add(a.get(0));
        }
-       this.ubicacionBoss =  BOSS_LOCATION;
-       this.ubicacionPokeLuchador = AGENT_LOCATION;
+
+       this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,null,false);
 
     }
 
@@ -114,11 +120,11 @@ public class PokeEnvironmentState extends EnvironmentState {
         }
     }
 
-    public void setUbicacionPokeLuchador(String ubicacionPokeLuchador) {
+    public void setUbicacionPokeLuchador(PokeUbicacion ubicacionPokeLuchador) {
         this.ubicacionPokeLuchador = ubicacionPokeLuchador;
     }
 
-    public String getUbicacionPokeLuchador() {
+    public PokeUbicacion getUbicacionPokeLuchador() {
         return ubicacionPokeLuchador;
     }
 
@@ -170,14 +176,6 @@ public class PokeEnvironmentState extends EnvironmentState {
         this.BOSS_LOCATION = BOSS_LOCATION;
     }
 
-    public String getAGENT_LOCATION() {
-        return AGENT_LOCATION;
-    }
-
-    public void setAGENT_LOCATION(String AGENT_LOCATION) {
-        this.AGENT_LOCATION = AGENT_LOCATION;
-    }
-
     public void setMap(HashMap<String, ArrayList<String>> map) {
         this.map = map;
     }
@@ -186,11 +184,11 @@ public class PokeEnvironmentState extends EnvironmentState {
         this.pokeUbicaciones = pokeUbicaciones;
     }
 
-    public String getUbicacionBoss() {
+    public PokeUbicacion getUbicacionBoss() {
         return ubicacionBoss;
     }
 
-    public void setUbicacionBoss(String ubicacionBoss) {
+    public void setUbicacionBoss(PokeUbicacion ubicacionBoss) {
         this.ubicacionBoss = ubicacionBoss;
     }
 

@@ -22,16 +22,16 @@ public class PokeEnvironment extends Environment {
         HashMap<String, ArrayList<String>> mapPerception = new HashMap<String, ArrayList<String>>();
         HashMap<String, PokeUbicacion> ubiPerception = new HashMap<String,PokeUbicacion>();
         PokePercepcion perception = new PokePercepcion();
-        String miUbicacionPerception = this.getEnvironmentState().getUbicacionPokeLuchador();
+        PokeUbicacion miUbicacionPerception = this.getEnvironmentState().getUbicacionPokeLuchador();
         perception.setMiUbicacion(miUbicacionPerception);
-        // si se puede usar el satelite se envia todo completo
+        // si se puede usar el satelite se envia el mapa completo
         if ( this.getEnvironmentState().getSatelite()){
             perception.setMiMap(this.getEnvironmentState().getMap());
             perception.setMisUbicacionesVisibles(this.getEnvironmentState().getPokeUbicaciones());
         // si no se puede utilizar el satelite solo se envia la ubicación y los adyacentes
         }else{
-            mapPerception.put(miUbicacionPerception, this.getEnvironmentState().getMap().get(miUbicacionPerception)) ;
-            ubiPerception.put(miUbicacionPerception,this.getEnvironmentState().getPokeUbicaciones().get(miUbicacionPerception));
+            mapPerception.put(miUbicacionPerception.getNombre(), this.getEnvironmentState().getMap().get(miUbicacionPerception)) ;
+            ubiPerception.put(miUbicacionPerception.getNombre(),this.getEnvironmentState().getPokeUbicaciones().get(miUbicacionPerception));
             ArrayList<String> adyacentes = mapPerception.get(miUbicacionPerception);
             for (int i = 0; i < adyacentes.size(); i++) {
                 ubiPerception.put(adyacentes.get(i),this.getEnvironmentState().getPokeUbicaciones().get(adyacentes.get(i)));
