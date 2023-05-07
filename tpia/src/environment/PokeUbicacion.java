@@ -67,4 +67,9 @@ public class PokeUbicacion {
     public boolean tieneEnemigo(){
         return (this.pokeEnemigo.getEnergia() != 0);
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }

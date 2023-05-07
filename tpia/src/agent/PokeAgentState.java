@@ -1,12 +1,9 @@
 package agent;
 
-import FileReaders.FileReaders;
-import enemigos.PokeEnemigo;
 import environment.PokePercepcion;
 import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -62,7 +59,11 @@ public class PokeAgentState extends SearchBasedAgentState {
         //Actualizo mi ubicacion
         this.pokeUbicacion = percep.getMiUbicacion();
         //Actualizo mi mapa
-        this.map.putAll(percep.getMiMap());
+        for (String key : percep.getMiMap().keySet()){
+            this.map.put(key,percep.getMiMap().get(key));
+        }
+       // this.map.putAll(percep.getMiMap());
+
         //Actualizo mis ubicaciones
         for (String ubi : this.pokeUbicaciones.keySet()) {
             PokeUbicacion unaUbi =  this.pokeUbicaciones.get(ubi);

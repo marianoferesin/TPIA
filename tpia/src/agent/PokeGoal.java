@@ -7,7 +7,7 @@ import frsf.cidisi.faia.state.AgentState;
 public class PokeGoal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
-        PokeUbicacion pokeDestino = new PokeUbicacion("BuenosAires",null,false);
+        PokeUbicacion pokeDestino = new PokeUbicacion("Kamchatka",null,false);
 
         return ((PokeAgentState) agentState).getPokeUbicacion().equals(pokeDestino);
 

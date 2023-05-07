@@ -4,12 +4,11 @@ import FileReaders.FileReaders;
 import enemigos.Boss;
 import enemigos.PokeEnemigo;
 import frsf.cidisi.faia.state.EnvironmentState;
-
 import java.util.*;
 
 public class PokeEnvironmentState extends EnvironmentState {
-    private String BOSS_LOCATION = "Boss";
-    private String AGENT_INIT_LOCATION = "TierraDelFuego";
+    private final String BOSS_LOCATION = "Boss";
+    private final String AGENT_INIT_LOCATION = "TierraDelFuego";
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     private PokeUbicacion ubicacionBoss;
@@ -134,23 +133,18 @@ public class PokeEnvironmentState extends EnvironmentState {
                 ArrayList<String> posibleDestinos = new ArrayList<>();
                 for(String a: map.get(unaUbicacion.getNombre())){
                     PokeUbicacion ady = pokeUbicaciones.get(a);
-                    if (!ady.tieneEnemigo()) {
-                       if (!ady.esPokeparada()) {
-                            posibleDestinos.add(a);
-                        }
+                    if (!ady.tieneEnemigo() && !ady.esPokeparada()) {
+                        posibleDestinos.add(a);
                     }
                 }
-                if(posibleDestinos.size() != 0){
-                    System.out.println("Enemigo de "+unaUbicacion.getNombre()+" se puede mover a "+ posibleDestinos);
+                if(!posibleDestinos.isEmpty()){
                     PokeEnemigo pokeEnemigo = new PokeEnemigo(enemigo);
                     unaUbicacion.removerPokeEnemigo();
                     int destino = ((new Random()).nextInt() % posibleDestinos.size());
                     if(destino<0) {destino += posibleDestinos.size();}
                     String dest = posibleDestinos.get(destino);
                     PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
-                    System.out.println("Enemigo de "+unaUbicacion.getNombre()+ " se mueve a "+dest);
                     nuevaUbi.setPokeEnemigo(pokeEnemigo);
-
                 }
             }
         }
@@ -172,10 +166,6 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     public String getBOSS_LOCATION() {
         return BOSS_LOCATION;
-    }
-
-    public void setBOSS_LOCATION(String BOSS_LOCATION) {
-        this.BOSS_LOCATION = BOSS_LOCATION;
     }
 
     public void setMap(HashMap<String, ArrayList<String>> map) {

@@ -21,14 +21,13 @@ public class GoToX extends SearchAction {
     //Actualiza el estado del agente
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        PokeAgentState agState = (PokeAgentState) s;
-        PokeUbicacion ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
+        PokeAgentState agentState = (PokeAgentState) s;
+        PokeUbicacion ubi = agentState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
         if (adyacentes.contains(destino)) {
-                agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
-                agState.huir();
-            System.out.println(ubi.getNombre()+"-->"+destino);
-                return agState;
+                agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
+                agentState.huir();
+                return agentState;
         }
         return null;
     }

@@ -46,6 +46,7 @@ public class PokeEnvironment extends Environment {
     }
 
     public String toString(){
-        return environmentState.toString();
+        return "";
+        //return environmentState.toString();
     }
 }

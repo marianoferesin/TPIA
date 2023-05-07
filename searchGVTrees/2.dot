@@ -1,18 +1,4608 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: GoToPeru}"]
-nodo3[label="{EO: 3|cost: 2.0|A: GoToCanarias|{\nEnergia:\n17environment.PokeUbicacion@254989ff\n}}"]
+nodo1[label="{EO: 1|cost: 1.0|A: GoToCanada}"]
+nodo5[label="{EO: 5|cost: 2.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo17[label="{EO: 17|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo55[label="{EO: 55|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo170[label="{EO: 170|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo525[label="{EO: 525|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
 
-nodo1 -> nodo3;
-nodo4[label="{EO: 4|cost: 2.0|A: GoToTierraDelFuego|{\nEnergia:\n17environment.PokeUbicacion@254989ff\n}}"]
+nodo170 -> nodo525;
+nodo526[label="{EO: 526|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
 
-nodo1 -> nodo4;
+nodo170 -> nodo526;
+nodo527[label="{EO: 527|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo170 -> nodo527;
+nodo528[label="{EO: 528|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo170 -> nodo528;
+
+nodo55 -> nodo170;
+nodo171[label="{EO: 171|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo529[label="{EO: 529|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo171 -> nodo529;
+nodo530[label="{EO: 530|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo171 -> nodo530;
+
+nodo55 -> nodo171;
+nodo172[label="{EO: 172|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo531[label="{EO: 531|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo172 -> nodo531;
+nodo532[label="{EO: 532|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo172 -> nodo532;
+nodo533[label="{EO: 533|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo172 -> nodo533;
+nodo534[label="{EO: 534|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo172 -> nodo534;
+
+nodo55 -> nodo172;
+nodo173[label="{EO: 173|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo535[label="{EO: 535|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo173 -> nodo535;
+nodo536[label="{EO: 536|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo173 -> nodo536;
+
+nodo55 -> nodo173;
+
+nodo17 -> nodo55;
+nodo56[label="{EO: 56|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo174[label="{EO: 174|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo537[label="{EO: 537|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo174 -> nodo537;
+
+nodo56 -> nodo174;
+nodo175[label="{EO: 175|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo538[label="{EO: 538|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo175 -> nodo538;
+nodo539[label="{EO: 539|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo175 -> nodo539;
+nodo540[label="{EO: 540|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo175 -> nodo540;
+nodo541[label="{EO: 541|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo175 -> nodo541;
+
+nodo56 -> nodo175;
+nodo176[label="{EO: 176|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo542[label="{EO: 542|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo176 -> nodo542;
+nodo543[label="{EO: 543|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo176 -> nodo543;
+nodo544[label="{EO: 544|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo176 -> nodo544;
+
+nodo56 -> nodo176;
+
+nodo17 -> nodo56;
+nodo57[label="{EO: 57|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo177[label="{EO: 177|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo545[label="{EO: 545|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo177 -> nodo545;
+nodo546[label="{EO: 546|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo177 -> nodo546;
+nodo547[label="{EO: 547|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo177 -> nodo547;
+nodo548[label="{EO: 548|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo177 -> nodo548;
+
+nodo57 -> nodo177;
+nodo178[label="{EO: 178|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo549[label="{EO: 549|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo178 -> nodo549;
+nodo550[label="{EO: 550|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo178 -> nodo550;
+nodo551[label="{EO: 551|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo178 -> nodo551;
+
+nodo57 -> nodo178;
+nodo179[label="{EO: 179|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo552[label="{EO: 552|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo179 -> nodo552;
+nodo553[label="{EO: 553|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo179 -> nodo553;
+
+nodo57 -> nodo179;
+
+nodo17 -> nodo57;
+nodo58[label="{EO: 58|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo180[label="{EO: 180|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo554[label="{EO: 554|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo180 -> nodo554;
+nodo555[label="{EO: 555|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo180 -> nodo555;
+nodo556[label="{EO: 556|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo180 -> nodo556;
+nodo557[label="{EO: 557|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo180 -> nodo557;
+
+nodo58 -> nodo180;
+nodo181[label="{EO: 181|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo558[label="{EO: 558|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo181 -> nodo558;
+nodo559[label="{EO: 559|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo181 -> nodo559;
+nodo560[label="{EO: 560|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo181 -> nodo560;
+
+nodo58 -> nodo181;
+nodo182[label="{EO: 182|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo561[label="{EO: 561|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo182 -> nodo561;
+nodo562[label="{EO: 562|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo182 -> nodo562;
+nodo563[label="{EO: 563|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo182 -> nodo563;
+
+nodo58 -> nodo182;
+
+nodo17 -> nodo58;
+
+nodo5 -> nodo17;
+nodo18[label="{EO: 18|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo59[label="{EO: 59|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo183[label="{EO: 183|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo564[label="{EO: 564|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo183 -> nodo564;
+nodo565[label="{EO: 565|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo183 -> nodo565;
+nodo566[label="{EO: 566|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo183 -> nodo566;
+nodo567[label="{EO: 567|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo183 -> nodo567;
+
+nodo59 -> nodo183;
+nodo184[label="{EO: 184|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo568[label="{EO: 568|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo184 -> nodo568;
+nodo569[label="{EO: 569|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo184 -> nodo569;
+
+nodo59 -> nodo184;
+nodo185[label="{EO: 185|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo570[label="{EO: 570|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo185 -> nodo570;
+nodo571[label="{EO: 571|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo185 -> nodo571;
+nodo572[label="{EO: 572|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo185 -> nodo572;
+nodo573[label="{EO: 573|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo185 -> nodo573;
+
+nodo59 -> nodo185;
+nodo186[label="{EO: 186|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo574[label="{EO: 574|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo186 -> nodo574;
+nodo575[label="{EO: 575|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo186 -> nodo575;
+
+nodo59 -> nodo186;
+
+nodo18 -> nodo59;
+nodo60[label="{EO: 60|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo187[label="{EO: 187|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo576[label="{EO: 576|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo187 -> nodo576;
+nodo577[label="{EO: 577|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo187 -> nodo577;
+
+nodo60 -> nodo187;
+nodo188[label="{EO: 188|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo578[label="{EO: 578|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo188 -> nodo578;
+nodo579[label="{EO: 579|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo188 -> nodo579;
+nodo580[label="{EO: 580|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo188 -> nodo580;
+
+nodo60 -> nodo188;
+nodo189[label="{EO: 189|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo581[label="{EO: 581|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo189 -> nodo581;
+nodo582[label="{EO: 582|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo189 -> nodo582;
+nodo583[label="{EO: 583|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo189 -> nodo583;
+nodo584[label="{EO: 584|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo189 -> nodo584;
+
+nodo60 -> nodo189;
+
+nodo18 -> nodo60;
+
+nodo5 -> nodo18;
+nodo19[label="{EO: 19|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo61[label="{EO: 61|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo190[label="{EO: 190|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo585[label="{EO: 585|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo190 -> nodo585;
+nodo586[label="{EO: 586|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo190 -> nodo586;
+
+nodo61 -> nodo190;
+nodo191[label="{EO: 191|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo587[label="{EO: 587|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo191 -> nodo587;
+nodo588[label="{EO: 588|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo191 -> nodo588;
+nodo589[label="{EO: 589|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo191 -> nodo589;
+nodo590[label="{EO: 590|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo191 -> nodo590;
+
+nodo61 -> nodo191;
+
+nodo19 -> nodo61;
+nodo62[label="{EO: 62|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo192[label="{EO: 192|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo591[label="{EO: 591|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo192 -> nodo591;
+nodo592[label="{EO: 592|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo192 -> nodo592;
+nodo593[label="{EO: 593|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo192 -> nodo593;
+nodo594[label="{EO: 594|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo192 -> nodo594;
+
+nodo62 -> nodo192;
+nodo193[label="{EO: 193|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo595[label="{EO: 595|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo193 -> nodo595;
+nodo596[label="{EO: 596|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo193 -> nodo596;
+
+nodo62 -> nodo193;
+nodo194[label="{EO: 194|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo597[label="{EO: 597|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo194 -> nodo597;
+nodo598[label="{EO: 598|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo194 -> nodo598;
+nodo599[label="{EO: 599|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo194 -> nodo599;
+nodo600[label="{EO: 600|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo194 -> nodo600;
+
+nodo62 -> nodo194;
+nodo195[label="{EO: 195|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo601[label="{EO: 601|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo195 -> nodo601;
+nodo602[label="{EO: 602|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo195 -> nodo602;
+
+nodo62 -> nodo195;
+
+nodo19 -> nodo62;
+nodo63[label="{EO: 63|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo196[label="{EO: 196|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo603[label="{EO: 603|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo196 -> nodo603;
+nodo604[label="{EO: 604|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo196 -> nodo604;
+
+nodo63 -> nodo196;
+nodo197[label="{EO: 197|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo605[label="{EO: 605|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo197 -> nodo605;
+nodo606[label="{EO: 606|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo197 -> nodo606;
+nodo607[label="{EO: 607|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo197 -> nodo607;
+
+nodo63 -> nodo197;
+nodo198[label="{EO: 198|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo608[label="{EO: 608|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo198 -> nodo608;
+nodo609[label="{EO: 609|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo198 -> nodo609;
+nodo610[label="{EO: 610|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo198 -> nodo610;
+nodo611[label="{EO: 611|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo198 -> nodo611;
+
+nodo63 -> nodo198;
+
+nodo19 -> nodo63;
+nodo64[label="{EO: 64|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo199[label="{EO: 199|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo612[label="{EO: 612|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo199 -> nodo612;
+nodo613[label="{EO: 613|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo199 -> nodo613;
+
+nodo64 -> nodo199;
+nodo200[label="{EO: 200|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo614[label="{EO: 614|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo200 -> nodo614;
+nodo615[label="{EO: 615|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo200 -> nodo615;
+nodo616[label="{EO: 616|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo200 -> nodo616;
+nodo617[label="{EO: 617|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo200 -> nodo617;
+
+nodo64 -> nodo200;
+
+nodo19 -> nodo64;
+
+nodo5 -> nodo19;
+nodo20[label="{EO: 20|cost: 3.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo65[label="{EO: 65|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo201[label="{EO: 201|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo618[label="{EO: 618|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo201 -> nodo618;
+nodo619[label="{EO: 619|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo201 -> nodo619;
+nodo620[label="{EO: 620|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo201 -> nodo620;
+nodo621[label="{EO: 621|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo201 -> nodo621;
+
+nodo65 -> nodo201;
+nodo202[label="{EO: 202|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo622[label="{EO: 622|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo202 -> nodo622;
+nodo623[label="{EO: 623|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo202 -> nodo623;
+
+nodo65 -> nodo202;
+nodo203[label="{EO: 203|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo624[label="{EO: 624|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo203 -> nodo624;
+nodo625[label="{EO: 625|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo203 -> nodo625;
+nodo626[label="{EO: 626|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo203 -> nodo626;
+nodo627[label="{EO: 627|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo203 -> nodo627;
+
+nodo65 -> nodo203;
+nodo204[label="{EO: 204|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo628[label="{EO: 628|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo204 -> nodo628;
+nodo629[label="{EO: 629|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo204 -> nodo629;
+
+nodo65 -> nodo204;
+
+nodo20 -> nodo65;
+nodo66[label="{EO: 66|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo205[label="{EO: 205|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo630[label="{EO: 630|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo205 -> nodo630;
+nodo631[label="{EO: 631|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo205 -> nodo631;
+nodo632[label="{EO: 632|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo205 -> nodo632;
+nodo633[label="{EO: 633|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo205 -> nodo633;
+nodo634[label="{EO: 634|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo205 -> nodo634;
+
+nodo66 -> nodo205;
+nodo206[label="{EO: 206|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo635[label="{EO: 635|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo206 -> nodo635;
+nodo636[label="{EO: 636|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo206 -> nodo636;
+
+nodo66 -> nodo206;
+nodo207[label="{EO: 207|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo637[label="{EO: 637|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo207 -> nodo637;
+nodo638[label="{EO: 638|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo207 -> nodo638;
+nodo639[label="{EO: 639|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo207 -> nodo639;
+
+nodo66 -> nodo207;
+
+nodo20 -> nodo66;
+
+nodo5 -> nodo20;
+
+nodo1 -> nodo5;
+nodo6[label="{EO: 6|cost: 2.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo21[label="{EO: 21|cost: 3.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo67[label="{EO: 67|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+nodo208[label="{EO: 208|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo640[label="{EO: 640|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo208 -> nodo640;
+
+nodo67 -> nodo208;
+nodo209[label="{EO: 209|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo641[label="{EO: 641|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo209 -> nodo641;
+nodo642[label="{EO: 642|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo209 -> nodo642;
+nodo643[label="{EO: 643|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo209 -> nodo643;
+nodo644[label="{EO: 644|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo209 -> nodo644;
+
+nodo67 -> nodo209;
+nodo210[label="{EO: 210|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo645[label="{EO: 645|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo210 -> nodo645;
+nodo646[label="{EO: 646|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo210 -> nodo646;
+nodo647[label="{EO: 647|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo210 -> nodo647;
+
+nodo67 -> nodo210;
+
+nodo21 -> nodo67;
+
+nodo6 -> nodo21;
+nodo22[label="{EO: 22|cost: 3.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo68[label="{EO: 68|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo211[label="{EO: 211|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo648[label="{EO: 648|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo211 -> nodo648;
+nodo649[label="{EO: 649|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo211 -> nodo649;
+nodo650[label="{EO: 650|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo211 -> nodo650;
+nodo651[label="{EO: 651|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo211 -> nodo651;
+
+nodo68 -> nodo211;
+nodo212[label="{EO: 212|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo652[label="{EO: 652|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo212 -> nodo652;
+nodo653[label="{EO: 653|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo212 -> nodo653;
+
+nodo68 -> nodo212;
+nodo213[label="{EO: 213|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo654[label="{EO: 654|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo213 -> nodo654;
+nodo655[label="{EO: 655|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo213 -> nodo655;
+nodo656[label="{EO: 656|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo213 -> nodo656;
+nodo657[label="{EO: 657|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo213 -> nodo657;
+
+nodo68 -> nodo213;
+nodo214[label="{EO: 214|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo658[label="{EO: 658|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo214 -> nodo658;
+nodo659[label="{EO: 659|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo214 -> nodo659;
+
+nodo68 -> nodo214;
+
+nodo22 -> nodo68;
+nodo69[label="{EO: 69|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo215[label="{EO: 215|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo660[label="{EO: 660|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo215 -> nodo660;
+
+nodo69 -> nodo215;
+nodo216[label="{EO: 216|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo661[label="{EO: 661|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo216 -> nodo661;
+nodo662[label="{EO: 662|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo216 -> nodo662;
+nodo663[label="{EO: 663|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo216 -> nodo663;
+nodo664[label="{EO: 664|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo216 -> nodo664;
+
+nodo69 -> nodo216;
+nodo217[label="{EO: 217|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo665[label="{EO: 665|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo217 -> nodo665;
+nodo666[label="{EO: 666|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo217 -> nodo666;
+nodo667[label="{EO: 667|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo217 -> nodo667;
+
+nodo69 -> nodo217;
+
+nodo22 -> nodo69;
+nodo70[label="{EO: 70|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo218[label="{EO: 218|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo668[label="{EO: 668|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo218 -> nodo668;
+nodo669[label="{EO: 669|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo218 -> nodo669;
+nodo670[label="{EO: 670|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo218 -> nodo670;
+nodo671[label="{EO: 671|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo218 -> nodo671;
+
+nodo70 -> nodo218;
+nodo219[label="{EO: 219|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo672[label="{EO: 672|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo219 -> nodo672;
+nodo673[label="{EO: 673|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo219 -> nodo673;
+nodo674[label="{EO: 674|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo219 -> nodo674;
+
+nodo70 -> nodo219;
+nodo220[label="{EO: 220|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo675[label="{EO: 675|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo220 -> nodo675;
+nodo676[label="{EO: 676|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo220 -> nodo676;
+
+nodo70 -> nodo220;
+
+nodo22 -> nodo70;
+nodo71[label="{EO: 71|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo221[label="{EO: 221|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo677[label="{EO: 677|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo221 -> nodo677;
+nodo678[label="{EO: 678|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo221 -> nodo678;
+nodo679[label="{EO: 679|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo221 -> nodo679;
+nodo680[label="{EO: 680|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo221 -> nodo680;
+
+nodo71 -> nodo221;
+nodo222[label="{EO: 222|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo681[label="{EO: 681|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo222 -> nodo681;
+nodo682[label="{EO: 682|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo222 -> nodo682;
+nodo683[label="{EO: 683|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo222 -> nodo683;
+
+nodo71 -> nodo222;
+nodo223[label="{EO: 223|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo684[label="{EO: 684|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo223 -> nodo684;
+nodo685[label="{EO: 685|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo223 -> nodo685;
+nodo686[label="{EO: 686|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo223 -> nodo686;
+
+nodo71 -> nodo223;
+
+nodo22 -> nodo71;
+
+nodo6 -> nodo22;
+nodo23[label="{EO: 23|cost: 3.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo72[label="{EO: 72|cost: 4.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo224[label="{EO: 224|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo687[label="{EO: 687|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo224 -> nodo687;
+nodo688[label="{EO: 688|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo224 -> nodo688;
+nodo689[label="{EO: 689|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo224 -> nodo689;
+nodo690[label="{EO: 690|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo224 -> nodo690;
+
+nodo72 -> nodo224;
+nodo225[label="{EO: 225|cost: 5.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo691[label="{EO: 691|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo225 -> nodo691;
+nodo692[label="{EO: 692|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo225 -> nodo692;
+nodo693[label="{EO: 693|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo225 -> nodo693;
+
+nodo72 -> nodo225;
+
+nodo23 -> nodo72;
+nodo73[label="{EO: 73|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo226[label="{EO: 226|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo694[label="{EO: 694|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo226 -> nodo694;
+
+nodo73 -> nodo226;
+nodo227[label="{EO: 227|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo695[label="{EO: 695|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo227 -> nodo695;
+nodo696[label="{EO: 696|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo227 -> nodo696;
+nodo697[label="{EO: 697|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo227 -> nodo697;
+nodo698[label="{EO: 698|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo227 -> nodo698;
+
+nodo73 -> nodo227;
+nodo228[label="{EO: 228|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo699[label="{EO: 699|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo228 -> nodo699;
+nodo700[label="{EO: 700|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo228 -> nodo700;
+nodo701[label="{EO: 701|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo228 -> nodo701;
+
+nodo73 -> nodo228;
+
+nodo23 -> nodo73;
+nodo74[label="{EO: 74|cost: 4.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo229[label="{EO: 229|cost: 5.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo702[label="{EO: 702|cost: 6.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+
+nodo229 -> nodo702;
+nodo703[label="{EO: 703|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+
+nodo229 -> nodo703;
+
+nodo74 -> nodo229;
+nodo230[label="{EO: 230|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo704[label="{EO: 704|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo230 -> nodo704;
+nodo705[label="{EO: 705|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo230 -> nodo705;
+nodo706[label="{EO: 706|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo230 -> nodo706;
+nodo707[label="{EO: 707|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo230 -> nodo707;
+
+nodo74 -> nodo230;
+nodo231[label="{EO: 231|cost: 5.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo708[label="{EO: 708|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo231 -> nodo708;
+nodo709[label="{EO: 709|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo231 -> nodo709;
+nodo710[label="{EO: 710|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo231 -> nodo710;
+
+nodo74 -> nodo231;
+nodo232[label="{EO: 232|cost: 5.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo711[label="{EO: 711|cost: 6.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+
+nodo232 -> nodo711;
+nodo712[label="{EO: 712|cost: 6.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+
+nodo232 -> nodo712;
+
+nodo74 -> nodo232;
+
+nodo23 -> nodo74;
+
+nodo6 -> nodo23;
+
+nodo1 -> nodo6;
+nodo7[label="{EO: 7|cost: 2.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo24[label="{EO: 24|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo75[label="{EO: 75|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo233[label="{EO: 233|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo713[label="{EO: 713|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo233 -> nodo713;
+nodo714[label="{EO: 714|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo233 -> nodo714;
+nodo715[label="{EO: 715|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo233 -> nodo715;
+nodo716[label="{EO: 716|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo233 -> nodo716;
+
+nodo75 -> nodo233;
+nodo234[label="{EO: 234|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo717[label="{EO: 717|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo234 -> nodo717;
+nodo718[label="{EO: 718|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo234 -> nodo718;
+
+nodo75 -> nodo234;
+nodo235[label="{EO: 235|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo719[label="{EO: 719|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo235 -> nodo719;
+nodo720[label="{EO: 720|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo235 -> nodo720;
+nodo721[label="{EO: 721|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo235 -> nodo721;
+nodo722[label="{EO: 722|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo235 -> nodo722;
+
+nodo75 -> nodo235;
+nodo236[label="{EO: 236|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo723[label="{EO: 723|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo236 -> nodo723;
+nodo724[label="{EO: 724|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo236 -> nodo724;
+
+nodo75 -> nodo236;
+
+nodo24 -> nodo75;
+nodo76[label="{EO: 76|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo237[label="{EO: 237|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo725[label="{EO: 725|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo237 -> nodo725;
+
+nodo76 -> nodo237;
+nodo238[label="{EO: 238|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo726[label="{EO: 726|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo238 -> nodo726;
+nodo727[label="{EO: 727|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo238 -> nodo727;
+nodo728[label="{EO: 728|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo238 -> nodo728;
+nodo729[label="{EO: 729|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo238 -> nodo729;
+
+nodo76 -> nodo238;
+nodo239[label="{EO: 239|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo730[label="{EO: 730|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo239 -> nodo730;
+nodo731[label="{EO: 731|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo239 -> nodo731;
+nodo732[label="{EO: 732|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo239 -> nodo732;
+
+nodo76 -> nodo239;
+
+nodo24 -> nodo76;
+nodo77[label="{EO: 77|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo240[label="{EO: 240|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo733[label="{EO: 733|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo240 -> nodo733;
+nodo734[label="{EO: 734|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo240 -> nodo734;
+nodo735[label="{EO: 735|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo240 -> nodo735;
+nodo736[label="{EO: 736|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo240 -> nodo736;
+
+nodo77 -> nodo240;
+nodo241[label="{EO: 241|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo737[label="{EO: 737|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo241 -> nodo737;
+nodo738[label="{EO: 738|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo241 -> nodo738;
+nodo739[label="{EO: 739|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo241 -> nodo739;
+
+nodo77 -> nodo241;
+nodo242[label="{EO: 242|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo740[label="{EO: 740|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo242 -> nodo740;
+nodo741[label="{EO: 741|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo242 -> nodo741;
+
+nodo77 -> nodo242;
+
+nodo24 -> nodo77;
+nodo78[label="{EO: 78|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo243[label="{EO: 243|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo742[label="{EO: 742|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo243 -> nodo742;
+nodo743[label="{EO: 743|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo243 -> nodo743;
+nodo744[label="{EO: 744|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo243 -> nodo744;
+nodo745[label="{EO: 745|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo243 -> nodo745;
+
+nodo78 -> nodo243;
+nodo244[label="{EO: 244|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo746[label="{EO: 746|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo244 -> nodo746;
+nodo747[label="{EO: 747|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo244 -> nodo747;
+nodo748[label="{EO: 748|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo244 -> nodo748;
+
+nodo78 -> nodo244;
+nodo245[label="{EO: 245|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo749[label="{EO: 749|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo245 -> nodo749;
+nodo750[label="{EO: 750|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo245 -> nodo750;
+nodo751[label="{EO: 751|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo245 -> nodo751;
+
+nodo78 -> nodo245;
+
+nodo24 -> nodo78;
+
+nodo7 -> nodo24;
+nodo25[label="{EO: 25|cost: 3.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo79[label="{EO: 79|cost: 4.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo246[label="{EO: 246|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo752[label="{EO: 752|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo246 -> nodo752;
+nodo753[label="{EO: 753|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo246 -> nodo753;
+nodo754[label="{EO: 754|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo246 -> nodo754;
+nodo755[label="{EO: 755|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo246 -> nodo755;
+
+nodo79 -> nodo246;
+nodo247[label="{EO: 247|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo756[label="{EO: 756|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo247 -> nodo756;
+nodo757[label="{EO: 757|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo247 -> nodo757;
+nodo758[label="{EO: 758|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo247 -> nodo758;
+
+nodo79 -> nodo247;
+nodo248[label="{EO: 248|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo759[label="{EO: 759|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo248 -> nodo759;
+nodo760[label="{EO: 760|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo248 -> nodo760;
+nodo761[label="{EO: 761|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo248 -> nodo761;
+
+nodo79 -> nodo248;
+nodo249[label="{EO: 249|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo762[label="{EO: 762|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo249 -> nodo762;
+nodo763[label="{EO: 763|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo249 -> nodo763;
+nodo764[label="{EO: 764|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo249 -> nodo764;
+
+nodo79 -> nodo249;
+
+nodo25 -> nodo79;
+nodo80[label="{EO: 80|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo250[label="{EO: 250|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo765[label="{EO: 765|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo250 -> nodo765;
+nodo766[label="{EO: 766|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo250 -> nodo766;
+nodo767[label="{EO: 767|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo250 -> nodo767;
+nodo768[label="{EO: 768|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo250 -> nodo768;
+
+nodo80 -> nodo250;
+nodo251[label="{EO: 251|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo769[label="{EO: 769|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo251 -> nodo769;
+nodo770[label="{EO: 770|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo251 -> nodo770;
+nodo771[label="{EO: 771|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo251 -> nodo771;
+
+nodo80 -> nodo251;
+nodo252[label="{EO: 252|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo772[label="{EO: 772|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo252 -> nodo772;
+nodo773[label="{EO: 773|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo252 -> nodo773;
+
+nodo80 -> nodo252;
+
+nodo25 -> nodo80;
+nodo81[label="{EO: 81|cost: 4.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo253[label="{EO: 253|cost: 5.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+nodo774[label="{EO: 774|cost: 6.0|A: GoToMoscu|{\nEnergia:\n19Egipto\n}}"]
+
+nodo253 -> nodo774;
+nodo775[label="{EO: 775|cost: 6.0|A: GoToSahara|{\nEnergia:\n19Egipto\n}}"]
+
+nodo253 -> nodo775;
+nodo776[label="{EO: 776|cost: 6.0|A: GoToSuecia|{\nEnergia:\n19Egipto\n}}"]
+
+nodo253 -> nodo776;
+
+nodo81 -> nodo253;
+nodo254[label="{EO: 254|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+nodo777[label="{EO: 777|cost: 6.0|A: GoToCanada|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo254 -> nodo777;
+nodo778[label="{EO: 778|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo254 -> nodo778;
+nodo779[label="{EO: 779|cost: 6.0|A: GoToSuecia|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo254 -> nodo779;
+
+nodo81 -> nodo254;
+nodo255[label="{EO: 255|cost: 5.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+nodo780[label="{EO: 780|cost: 6.0|A: GoToEgipto|{\nEnergia:\n19Moscu\n}}"]
+
+nodo255 -> nodo780;
+nodo781[label="{EO: 781|cost: 6.0|A: GoToIndia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo255 -> nodo781;
+nodo782[label="{EO: 782|cost: 6.0|A: GoToNoruega|{\nEnergia:\n19Moscu\n}}"]
+
+nodo255 -> nodo782;
+nodo783[label="{EO: 783|cost: 6.0|A: GoToSiberia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo255 -> nodo783;
+nodo784[label="{EO: 784|cost: 6.0|A: GoToSuecia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo255 -> nodo784;
+
+nodo81 -> nodo255;
+
+nodo25 -> nodo81;
+
+nodo7 -> nodo25;
+nodo26[label="{EO: 26|cost: 3.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo82[label="{EO: 82|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+nodo256[label="{EO: 256|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo785[label="{EO: 785|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo256 -> nodo785;
+nodo786[label="{EO: 786|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo256 -> nodo786;
+nodo787[label="{EO: 787|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo256 -> nodo787;
+nodo788[label="{EO: 788|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo256 -> nodo788;
+
+nodo82 -> nodo256;
+nodo257[label="{EO: 257|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo789[label="{EO: 789|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo257 -> nodo789;
+nodo790[label="{EO: 790|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo257 -> nodo790;
+nodo791[label="{EO: 791|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo257 -> nodo791;
+
+nodo82 -> nodo257;
+nodo258[label="{EO: 258|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo792[label="{EO: 792|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo258 -> nodo792;
+nodo793[label="{EO: 793|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo258 -> nodo793;
+
+nodo82 -> nodo258;
+
+nodo26 -> nodo82;
+nodo83[label="{EO: 83|cost: 4.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+nodo259[label="{EO: 259|cost: 5.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+nodo794[label="{EO: 794|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+
+nodo259 -> nodo794;
+nodo795[label="{EO: 795|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+
+nodo259 -> nodo795;
+nodo796[label="{EO: 796|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+
+nodo259 -> nodo796;
+
+nodo83 -> nodo259;
+nodo260[label="{EO: 260|cost: 5.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+nodo797[label="{EO: 797|cost: 6.0|A: GoToArabia|{\nEnergia:\n20India\n}}"]
+
+nodo260 -> nodo797;
+nodo798[label="{EO: 798|cost: 6.0|A: GoToIndonesia|{\nEnergia:\n20India\n}}"]
+
+nodo260 -> nodo798;
+nodo799[label="{EO: 799|cost: 6.0|A: GoToJapon|{\nEnergia:\n20India\n}}"]
+
+nodo260 -> nodo799;
+
+nodo83 -> nodo260;
+nodo261[label="{EO: 261|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+nodo800[label="{EO: 800|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo261 -> nodo800;
+nodo801[label="{EO: 801|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo261 -> nodo801;
+
+nodo83 -> nodo261;
+nodo262[label="{EO: 262|cost: 5.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+nodo802[label="{EO: 802|cost: 6.0|A: GoToBoss|{\nEnergia:\n20Siberia\n}}"]
+
+nodo262 -> nodo802;
+nodo803[label="{EO: 803|cost: 6.0|A: GoToChina|{\nEnergia:\n20Siberia\n}}"]
+
+nodo262 -> nodo803;
+nodo804[label="{EO: 804|cost: 6.0|A: GoToKamchatka|{\nEnergia:\n20Siberia\n}}"]
+
+nodo262 -> nodo804;
+
+nodo83 -> nodo262;
+nodo263[label="{EO: 263|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+nodo805[label="{EO: 805|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo263 -> nodo805;
+nodo806[label="{EO: 806|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo263 -> nodo806;
+nodo807[label="{EO: 807|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo263 -> nodo807;
+
+nodo83 -> nodo263;
+
+nodo26 -> nodo83;
+
+nodo7 -> nodo26;
+
+nodo1 -> nodo7;
+nodo8[label="{EO: 8|cost: 2.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo27[label="{EO: 27|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo84[label="{EO: 84|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo264[label="{EO: 264|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo808[label="{EO: 808|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo264 -> nodo808;
+nodo809[label="{EO: 809|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo264 -> nodo809;
+nodo810[label="{EO: 810|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo264 -> nodo810;
+nodo811[label="{EO: 811|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo264 -> nodo811;
+
+nodo84 -> nodo264;
+nodo265[label="{EO: 265|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo812[label="{EO: 812|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo265 -> nodo812;
+nodo813[label="{EO: 813|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo265 -> nodo813;
+
+nodo84 -> nodo265;
+nodo266[label="{EO: 266|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo814[label="{EO: 814|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo266 -> nodo814;
+nodo815[label="{EO: 815|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo266 -> nodo815;
+nodo816[label="{EO: 816|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo266 -> nodo816;
+nodo817[label="{EO: 817|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo266 -> nodo817;
+
+nodo84 -> nodo266;
+nodo267[label="{EO: 267|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo818[label="{EO: 818|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo267 -> nodo818;
+nodo819[label="{EO: 819|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo267 -> nodo819;
+
+nodo84 -> nodo267;
+
+nodo27 -> nodo84;
+nodo85[label="{EO: 85|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo268[label="{EO: 268|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo820[label="{EO: 820|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo268 -> nodo820;
+
+nodo85 -> nodo268;
+nodo269[label="{EO: 269|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo821[label="{EO: 821|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo269 -> nodo821;
+nodo822[label="{EO: 822|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo269 -> nodo822;
+nodo823[label="{EO: 823|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo269 -> nodo823;
+nodo824[label="{EO: 824|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo269 -> nodo824;
+
+nodo85 -> nodo269;
+nodo270[label="{EO: 270|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo825[label="{EO: 825|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo270 -> nodo825;
+nodo826[label="{EO: 826|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo270 -> nodo826;
+nodo827[label="{EO: 827|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo270 -> nodo827;
+
+nodo85 -> nodo270;
+
+nodo27 -> nodo85;
+nodo86[label="{EO: 86|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo271[label="{EO: 271|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo828[label="{EO: 828|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo271 -> nodo828;
+nodo829[label="{EO: 829|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo271 -> nodo829;
+nodo830[label="{EO: 830|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo271 -> nodo830;
+nodo831[label="{EO: 831|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo271 -> nodo831;
+
+nodo86 -> nodo271;
+nodo272[label="{EO: 272|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo832[label="{EO: 832|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo272 -> nodo832;
+nodo833[label="{EO: 833|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo272 -> nodo833;
+nodo834[label="{EO: 834|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo272 -> nodo834;
+
+nodo86 -> nodo272;
+nodo273[label="{EO: 273|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo835[label="{EO: 835|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo273 -> nodo835;
+nodo836[label="{EO: 836|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo273 -> nodo836;
+
+nodo86 -> nodo273;
+
+nodo27 -> nodo86;
+nodo87[label="{EO: 87|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo274[label="{EO: 274|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo837[label="{EO: 837|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo274 -> nodo837;
+nodo838[label="{EO: 838|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo274 -> nodo838;
+nodo839[label="{EO: 839|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo274 -> nodo839;
+nodo840[label="{EO: 840|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo274 -> nodo840;
+
+nodo87 -> nodo274;
+nodo275[label="{EO: 275|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo841[label="{EO: 841|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo275 -> nodo841;
+nodo842[label="{EO: 842|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo275 -> nodo842;
+nodo843[label="{EO: 843|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo275 -> nodo843;
+
+nodo87 -> nodo275;
+nodo276[label="{EO: 276|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo844[label="{EO: 844|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo276 -> nodo844;
+nodo845[label="{EO: 845|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo276 -> nodo845;
+nodo846[label="{EO: 846|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo276 -> nodo846;
+
+nodo87 -> nodo276;
+
+nodo27 -> nodo87;
+
+nodo8 -> nodo27;
+nodo28[label="{EO: 28|cost: 3.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo88[label="{EO: 88|cost: 4.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo277[label="{EO: 277|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo847[label="{EO: 847|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo277 -> nodo847;
+nodo848[label="{EO: 848|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo277 -> nodo848;
+nodo849[label="{EO: 849|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo277 -> nodo849;
+nodo850[label="{EO: 850|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo277 -> nodo850;
+
+nodo88 -> nodo277;
+nodo278[label="{EO: 278|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo851[label="{EO: 851|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo278 -> nodo851;
+nodo852[label="{EO: 852|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo278 -> nodo852;
+nodo853[label="{EO: 853|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo278 -> nodo853;
+
+nodo88 -> nodo278;
+nodo279[label="{EO: 279|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo854[label="{EO: 854|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo279 -> nodo854;
+nodo855[label="{EO: 855|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo279 -> nodo855;
+nodo856[label="{EO: 856|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo279 -> nodo856;
+
+nodo88 -> nodo279;
+nodo280[label="{EO: 280|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo857[label="{EO: 857|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo280 -> nodo857;
+nodo858[label="{EO: 858|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo280 -> nodo858;
+nodo859[label="{EO: 859|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo280 -> nodo859;
+
+nodo88 -> nodo280;
+
+nodo28 -> nodo88;
+nodo89[label="{EO: 89|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo281[label="{EO: 281|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo860[label="{EO: 860|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo281 -> nodo860;
+nodo861[label="{EO: 861|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo281 -> nodo861;
+nodo862[label="{EO: 862|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo281 -> nodo862;
+nodo863[label="{EO: 863|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo281 -> nodo863;
+
+nodo89 -> nodo281;
+nodo282[label="{EO: 282|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo864[label="{EO: 864|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo282 -> nodo864;
+nodo865[label="{EO: 865|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo282 -> nodo865;
+nodo866[label="{EO: 866|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo282 -> nodo866;
+
+nodo89 -> nodo282;
+nodo283[label="{EO: 283|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo867[label="{EO: 867|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo283 -> nodo867;
+nodo868[label="{EO: 868|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo283 -> nodo868;
+nodo869[label="{EO: 869|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo283 -> nodo869;
+
+nodo89 -> nodo283;
+
+nodo28 -> nodo89;
+nodo90[label="{EO: 90|cost: 4.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo284[label="{EO: 284|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+nodo870[label="{EO: 870|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo284 -> nodo870;
+nodo871[label="{EO: 871|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo284 -> nodo871;
+nodo872[label="{EO: 872|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo284 -> nodo872;
+
+nodo90 -> nodo284;
+nodo285[label="{EO: 285|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+nodo873[label="{EO: 873|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo285 -> nodo873;
+nodo874[label="{EO: 874|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo285 -> nodo874;
+nodo875[label="{EO: 875|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo285 -> nodo875;
+nodo876[label="{EO: 876|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo285 -> nodo876;
+nodo877[label="{EO: 877|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo285 -> nodo877;
+
+nodo90 -> nodo285;
+
+nodo28 -> nodo90;
+
+nodo8 -> nodo28;
+nodo29[label="{EO: 29|cost: 3.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo91[label="{EO: 91|cost: 4.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+nodo286[label="{EO: 286|cost: 5.0|A: GoToMoscu|{\nEnergia:\n19Egipto\n}}"]
+nodo878[label="{EO: 878|cost: 6.0|A: GoToEgipto|{\nEnergia:\n19Moscu\n}}"]
+
+nodo286 -> nodo878;
+nodo879[label="{EO: 879|cost: 6.0|A: GoToIndia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo286 -> nodo879;
+nodo880[label="{EO: 880|cost: 6.0|A: GoToNoruega|{\nEnergia:\n19Moscu\n}}"]
+
+nodo286 -> nodo880;
+nodo881[label="{EO: 881|cost: 6.0|A: GoToSiberia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo286 -> nodo881;
+nodo882[label="{EO: 882|cost: 6.0|A: GoToSuecia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo286 -> nodo882;
+
+nodo91 -> nodo286;
+nodo287[label="{EO: 287|cost: 5.0|A: GoToSahara|{\nEnergia:\n19Egipto\n}}"]
+nodo883[label="{EO: 883|cost: 6.0|A: GoToCanarias|{\nEnergia:\n19Sahara\n}}"]
+
+nodo287 -> nodo883;
+nodo884[label="{EO: 884|cost: 6.0|A: GoToEgipto|{\nEnergia:\n19Sahara\n}}"]
+
+nodo287 -> nodo884;
+
+nodo91 -> nodo287;
+nodo288[label="{EO: 288|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Egipto\n}}"]
+nodo885[label="{EO: 885|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo288 -> nodo885;
+nodo886[label="{EO: 886|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo288 -> nodo886;
+nodo887[label="{EO: 887|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo288 -> nodo887;
+
+nodo91 -> nodo288;
+
+nodo29 -> nodo91;
+nodo92[label="{EO: 92|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+nodo289[label="{EO: 289|cost: 5.0|A: GoToCanada|{\nEnergia:\n19Inglaterra\n}}"]
+nodo888[label="{EO: 888|cost: 6.0|A: GoToCanarias|{\nEnergia:\n19Canada\n}}"]
+
+nodo289 -> nodo888;
+nodo889[label="{EO: 889|cost: 6.0|A: GoToEEUU|{\nEnergia:\n19Canada\n}}"]
+
+nodo289 -> nodo889;
+nodo890[label="{EO: 890|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n19Canada\n}}"]
+
+nodo289 -> nodo890;
+nodo891[label="{EO: 891|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n19Canada\n}}"]
+
+nodo289 -> nodo891;
+
+nodo92 -> nodo289;
+nodo290[label="{EO: 290|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n19Inglaterra\n}}"]
+nodo892[label="{EO: 892|cost: 6.0|A: GoToCanada|{\nEnergia:\n19Groenlandia\n}}"]
+
+nodo290 -> nodo892;
+nodo893[label="{EO: 893|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n19Groenlandia\n}}"]
+
+nodo290 -> nodo893;
+nodo894[label="{EO: 894|cost: 6.0|A: GoToNoruega|{\nEnergia:\n19Groenlandia\n}}"]
+
+nodo290 -> nodo894;
+
+nodo92 -> nodo290;
+nodo291[label="{EO: 291|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Inglaterra\n}}"]
+nodo895[label="{EO: 895|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo291 -> nodo895;
+nodo896[label="{EO: 896|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo291 -> nodo896;
+nodo897[label="{EO: 897|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo291 -> nodo897;
+
+nodo92 -> nodo291;
+
+nodo29 -> nodo92;
+nodo93[label="{EO: 93|cost: 4.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+nodo292[label="{EO: 292|cost: 5.0|A: GoToEgipto|{\nEnergia:\n19Moscu\n}}"]
+nodo898[label="{EO: 898|cost: 6.0|A: GoToMoscu|{\nEnergia:\n19Egipto\n}}"]
+
+nodo292 -> nodo898;
+nodo899[label="{EO: 899|cost: 6.0|A: GoToSahara|{\nEnergia:\n19Egipto\n}}"]
+
+nodo292 -> nodo899;
+nodo900[label="{EO: 900|cost: 6.0|A: GoToSuecia|{\nEnergia:\n19Egipto\n}}"]
+
+nodo292 -> nodo900;
+
+nodo93 -> nodo292;
+nodo293[label="{EO: 293|cost: 5.0|A: GoToIndia|{\nEnergia:\n19Moscu\n}}"]
+nodo901[label="{EO: 901|cost: 6.0|A: GoToArabia|{\nEnergia:\n19India\n}}"]
+
+nodo293 -> nodo901;
+nodo902[label="{EO: 902|cost: 6.0|A: GoToIndonesia|{\nEnergia:\n19India\n}}"]
+
+nodo293 -> nodo902;
+nodo903[label="{EO: 903|cost: 6.0|A: GoToJapon|{\nEnergia:\n19India\n}}"]
+
+nodo293 -> nodo903;
+
+nodo93 -> nodo293;
+nodo294[label="{EO: 294|cost: 5.0|A: GoToNoruega|{\nEnergia:\n19Moscu\n}}"]
+nodo904[label="{EO: 904|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n19Noruega\n}}"]
+
+nodo294 -> nodo904;
+nodo905[label="{EO: 905|cost: 6.0|A: GoToMoscu|{\nEnergia:\n19Noruega\n}}"]
+
+nodo294 -> nodo905;
+
+nodo93 -> nodo294;
+nodo295[label="{EO: 295|cost: 5.0|A: GoToSiberia|{\nEnergia:\n19Moscu\n}}"]
+nodo906[label="{EO: 906|cost: 6.0|A: GoToBoss|{\nEnergia:\n19Siberia\n}}"]
+
+nodo295 -> nodo906;
+nodo907[label="{EO: 907|cost: 6.0|A: GoToChina|{\nEnergia:\n19Siberia\n}}"]
+
+nodo295 -> nodo907;
+nodo908[label="{EO: 908|cost: 6.0|A: GoToKamchatka|{\nEnergia:\n19Siberia\n}}"]
+
+nodo295 -> nodo908;
+
+nodo93 -> nodo295;
+nodo296[label="{EO: 296|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Moscu\n}}"]
+nodo909[label="{EO: 909|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo296 -> nodo909;
+nodo910[label="{EO: 910|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo296 -> nodo910;
+nodo911[label="{EO: 911|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo296 -> nodo911;
+
+nodo93 -> nodo296;
+
+nodo29 -> nodo93;
+
+nodo8 -> nodo29;
+
+nodo1 -> nodo8;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: GoToSahara}"]
+nodo2[label="{EO: 2|cost: 1.0|A: GoToCuba}"]
+nodo9[label="{EO: 9|cost: 2.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo30[label="{EO: 30|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo94[label="{EO: 94|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo297[label="{EO: 297|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo912[label="{EO: 912|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo297 -> nodo912;
+nodo913[label="{EO: 913|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo297 -> nodo913;
+nodo914[label="{EO: 914|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo297 -> nodo914;
+nodo915[label="{EO: 915|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo297 -> nodo915;
+
+nodo94 -> nodo297;
+nodo298[label="{EO: 298|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo916[label="{EO: 916|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo298 -> nodo916;
+nodo917[label="{EO: 917|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo298 -> nodo917;
+
+nodo94 -> nodo298;
+nodo299[label="{EO: 299|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo918[label="{EO: 918|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo299 -> nodo918;
+nodo919[label="{EO: 919|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo299 -> nodo919;
+nodo920[label="{EO: 920|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo299 -> nodo920;
+nodo921[label="{EO: 921|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo299 -> nodo921;
+
+nodo94 -> nodo299;
+nodo300[label="{EO: 300|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo922[label="{EO: 922|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo300 -> nodo922;
+nodo923[label="{EO: 923|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo300 -> nodo923;
+
+nodo94 -> nodo300;
+
+nodo30 -> nodo94;
+nodo95[label="{EO: 95|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo301[label="{EO: 301|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo924[label="{EO: 924|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo301 -> nodo924;
+
+nodo95 -> nodo301;
+nodo302[label="{EO: 302|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo925[label="{EO: 925|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo302 -> nodo925;
+nodo926[label="{EO: 926|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo302 -> nodo926;
+nodo927[label="{EO: 927|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo302 -> nodo927;
+nodo928[label="{EO: 928|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo302 -> nodo928;
+
+nodo95 -> nodo302;
+nodo303[label="{EO: 303|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo929[label="{EO: 929|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo303 -> nodo929;
+nodo930[label="{EO: 930|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo303 -> nodo930;
+nodo931[label="{EO: 931|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo303 -> nodo931;
+
+nodo95 -> nodo303;
+
+nodo30 -> nodo95;
+nodo96[label="{EO: 96|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo304[label="{EO: 304|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo932[label="{EO: 932|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo304 -> nodo932;
+nodo933[label="{EO: 933|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo304 -> nodo933;
+nodo934[label="{EO: 934|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo304 -> nodo934;
+nodo935[label="{EO: 935|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo304 -> nodo935;
+
+nodo96 -> nodo304;
+nodo305[label="{EO: 305|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo936[label="{EO: 936|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo305 -> nodo936;
+nodo937[label="{EO: 937|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo305 -> nodo937;
+nodo938[label="{EO: 938|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo305 -> nodo938;
+
+nodo96 -> nodo305;
+nodo306[label="{EO: 306|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo939[label="{EO: 939|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo306 -> nodo939;
+nodo940[label="{EO: 940|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo306 -> nodo940;
+
+nodo96 -> nodo306;
+
+nodo30 -> nodo96;
+nodo97[label="{EO: 97|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo307[label="{EO: 307|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo941[label="{EO: 941|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo307 -> nodo941;
+nodo942[label="{EO: 942|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo307 -> nodo942;
+nodo943[label="{EO: 943|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo307 -> nodo943;
+nodo944[label="{EO: 944|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo307 -> nodo944;
+
+nodo97 -> nodo307;
+nodo308[label="{EO: 308|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo945[label="{EO: 945|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo308 -> nodo945;
+nodo946[label="{EO: 946|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo308 -> nodo946;
+nodo947[label="{EO: 947|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo308 -> nodo947;
+
+nodo97 -> nodo308;
+nodo309[label="{EO: 309|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo948[label="{EO: 948|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo309 -> nodo948;
+nodo949[label="{EO: 949|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo309 -> nodo949;
+nodo950[label="{EO: 950|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo309 -> nodo950;
+
+nodo97 -> nodo309;
+
+nodo30 -> nodo97;
+
+nodo9 -> nodo30;
+nodo31[label="{EO: 31|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo98[label="{EO: 98|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo310[label="{EO: 310|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo951[label="{EO: 951|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo310 -> nodo951;
+nodo952[label="{EO: 952|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo310 -> nodo952;
+nodo953[label="{EO: 953|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo310 -> nodo953;
+nodo954[label="{EO: 954|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo310 -> nodo954;
+
+nodo98 -> nodo310;
+nodo311[label="{EO: 311|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo955[label="{EO: 955|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo311 -> nodo955;
+nodo956[label="{EO: 956|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo311 -> nodo956;
+
+nodo98 -> nodo311;
+nodo312[label="{EO: 312|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo957[label="{EO: 957|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo312 -> nodo957;
+nodo958[label="{EO: 958|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo312 -> nodo958;
+nodo959[label="{EO: 959|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo312 -> nodo959;
+nodo960[label="{EO: 960|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo312 -> nodo960;
+
+nodo98 -> nodo312;
+nodo313[label="{EO: 313|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo961[label="{EO: 961|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo313 -> nodo961;
+nodo962[label="{EO: 962|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo313 -> nodo962;
+
+nodo98 -> nodo313;
+
+nodo31 -> nodo98;
+nodo99[label="{EO: 99|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo314[label="{EO: 314|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo963[label="{EO: 963|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo314 -> nodo963;
+nodo964[label="{EO: 964|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo314 -> nodo964;
+
+nodo99 -> nodo314;
+nodo315[label="{EO: 315|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo965[label="{EO: 965|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo315 -> nodo965;
+nodo966[label="{EO: 966|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo315 -> nodo966;
+nodo967[label="{EO: 967|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo315 -> nodo967;
+
+nodo99 -> nodo315;
+nodo316[label="{EO: 316|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo968[label="{EO: 968|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo316 -> nodo968;
+nodo969[label="{EO: 969|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo316 -> nodo969;
+nodo970[label="{EO: 970|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo316 -> nodo970;
+nodo971[label="{EO: 971|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo316 -> nodo971;
+
+nodo99 -> nodo316;
+
+nodo31 -> nodo99;
+
+nodo9 -> nodo31;
+nodo32[label="{EO: 32|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo100[label="{EO: 100|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo317[label="{EO: 317|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo972[label="{EO: 972|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo317 -> nodo972;
+nodo973[label="{EO: 973|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo317 -> nodo973;
+
+nodo100 -> nodo317;
+nodo318[label="{EO: 318|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo974[label="{EO: 974|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo318 -> nodo974;
+nodo975[label="{EO: 975|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo318 -> nodo975;
+nodo976[label="{EO: 976|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo318 -> nodo976;
+nodo977[label="{EO: 977|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo318 -> nodo977;
+
+nodo100 -> nodo318;
+
+nodo32 -> nodo100;
+nodo101[label="{EO: 101|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo319[label="{EO: 319|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo978[label="{EO: 978|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo319 -> nodo978;
+nodo979[label="{EO: 979|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo319 -> nodo979;
+nodo980[label="{EO: 980|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo319 -> nodo980;
+nodo981[label="{EO: 981|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo319 -> nodo981;
+
+nodo101 -> nodo319;
+nodo320[label="{EO: 320|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo982[label="{EO: 982|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo320 -> nodo982;
+nodo983[label="{EO: 983|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo320 -> nodo983;
+
+nodo101 -> nodo320;
+nodo321[label="{EO: 321|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo984[label="{EO: 984|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo321 -> nodo984;
+nodo985[label="{EO: 985|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo321 -> nodo985;
+nodo986[label="{EO: 986|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo321 -> nodo986;
+nodo987[label="{EO: 987|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo321 -> nodo987;
+
+nodo101 -> nodo321;
+nodo322[label="{EO: 322|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo988[label="{EO: 988|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo322 -> nodo988;
+nodo989[label="{EO: 989|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo322 -> nodo989;
+
+nodo101 -> nodo322;
+
+nodo32 -> nodo101;
+nodo102[label="{EO: 102|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo323[label="{EO: 323|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo990[label="{EO: 990|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo323 -> nodo990;
+nodo991[label="{EO: 991|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo323 -> nodo991;
+
+nodo102 -> nodo323;
+nodo324[label="{EO: 324|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo992[label="{EO: 992|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo324 -> nodo992;
+nodo993[label="{EO: 993|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo324 -> nodo993;
+nodo994[label="{EO: 994|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo324 -> nodo994;
+
+nodo102 -> nodo324;
+nodo325[label="{EO: 325|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo995[label="{EO: 995|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo325 -> nodo995;
+nodo996[label="{EO: 996|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo325 -> nodo996;
+nodo997[label="{EO: 997|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo325 -> nodo997;
+nodo998[label="{EO: 998|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo325 -> nodo998;
+
+nodo102 -> nodo325;
+
+nodo32 -> nodo102;
+nodo103[label="{EO: 103|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo326[label="{EO: 326|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo999[label="{EO: 999|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo326 -> nodo999;
+nodo1000[label="{EO: 1000|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo326 -> nodo1000;
+
+nodo103 -> nodo326;
+nodo327[label="{EO: 327|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1001[label="{EO: 1001|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo327 -> nodo1001;
+nodo1002[label="{EO: 1002|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo327 -> nodo1002;
+nodo1003[label="{EO: 1003|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo327 -> nodo1003;
+nodo1004[label="{EO: 1004|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo327 -> nodo1004;
+
+nodo103 -> nodo327;
+
+nodo32 -> nodo103;
+
+nodo9 -> nodo32;
+nodo33[label="{EO: 33|cost: 3.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo104[label="{EO: 104|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo328[label="{EO: 328|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1005[label="{EO: 1005|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo328 -> nodo1005;
+nodo1006[label="{EO: 1006|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo328 -> nodo1006;
+nodo1007[label="{EO: 1007|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo328 -> nodo1007;
+nodo1008[label="{EO: 1008|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo328 -> nodo1008;
+
+nodo104 -> nodo328;
+nodo329[label="{EO: 329|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1009[label="{EO: 1009|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo329 -> nodo1009;
+nodo1010[label="{EO: 1010|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo329 -> nodo1010;
+
+nodo104 -> nodo329;
+nodo330[label="{EO: 330|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1011[label="{EO: 1011|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo330 -> nodo1011;
+nodo1012[label="{EO: 1012|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo330 -> nodo1012;
+nodo1013[label="{EO: 1013|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo330 -> nodo1013;
+nodo1014[label="{EO: 1014|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo330 -> nodo1014;
+
+nodo104 -> nodo330;
+nodo331[label="{EO: 331|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1015[label="{EO: 1015|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo331 -> nodo1015;
+nodo1016[label="{EO: 1016|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo331 -> nodo1016;
+
+nodo104 -> nodo331;
+
+nodo33 -> nodo104;
+nodo105[label="{EO: 105|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo332[label="{EO: 332|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo1017[label="{EO: 1017|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo332 -> nodo1017;
+nodo1018[label="{EO: 1018|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo332 -> nodo1018;
+nodo1019[label="{EO: 1019|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo332 -> nodo1019;
+nodo1020[label="{EO: 1020|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo332 -> nodo1020;
+nodo1021[label="{EO: 1021|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo332 -> nodo1021;
+
+nodo105 -> nodo332;
+nodo333[label="{EO: 333|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo1022[label="{EO: 1022|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo333 -> nodo1022;
+nodo1023[label="{EO: 1023|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo333 -> nodo1023;
+
+nodo105 -> nodo333;
+nodo334[label="{EO: 334|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo1024[label="{EO: 1024|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo334 -> nodo1024;
+nodo1025[label="{EO: 1025|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo334 -> nodo1025;
+nodo1026[label="{EO: 1026|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo334 -> nodo1026;
+
+nodo105 -> nodo334;
+
+nodo33 -> nodo105;
+
+nodo9 -> nodo33;
+
+nodo2 -> nodo9;
+nodo10[label="{EO: 10|cost: 2.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo34[label="{EO: 34|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo106[label="{EO: 106|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo335[label="{EO: 335|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1027[label="{EO: 1027|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo335 -> nodo1027;
+nodo1028[label="{EO: 1028|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo335 -> nodo1028;
+nodo1029[label="{EO: 1029|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo335 -> nodo1029;
+nodo1030[label="{EO: 1030|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo335 -> nodo1030;
+
+nodo106 -> nodo335;
+nodo336[label="{EO: 336|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1031[label="{EO: 1031|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo336 -> nodo1031;
+nodo1032[label="{EO: 1032|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo336 -> nodo1032;
+
+nodo106 -> nodo336;
+nodo337[label="{EO: 337|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1033[label="{EO: 1033|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo337 -> nodo1033;
+nodo1034[label="{EO: 1034|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo337 -> nodo1034;
+nodo1035[label="{EO: 1035|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo337 -> nodo1035;
+nodo1036[label="{EO: 1036|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo337 -> nodo1036;
+
+nodo106 -> nodo337;
+nodo338[label="{EO: 338|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1037[label="{EO: 1037|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo338 -> nodo1037;
+nodo1038[label="{EO: 1038|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo338 -> nodo1038;
+
+nodo106 -> nodo338;
+
+nodo34 -> nodo106;
+nodo107[label="{EO: 107|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo339[label="{EO: 339|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1039[label="{EO: 1039|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo339 -> nodo1039;
+nodo1040[label="{EO: 1040|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo339 -> nodo1040;
+
+nodo107 -> nodo339;
+nodo340[label="{EO: 340|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1041[label="{EO: 1041|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo340 -> nodo1041;
+nodo1042[label="{EO: 1042|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo340 -> nodo1042;
+nodo1043[label="{EO: 1043|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo340 -> nodo1043;
+
+nodo107 -> nodo340;
+nodo341[label="{EO: 341|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1044[label="{EO: 1044|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo341 -> nodo1044;
+nodo1045[label="{EO: 1045|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo341 -> nodo1045;
+nodo1046[label="{EO: 1046|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo341 -> nodo1046;
+nodo1047[label="{EO: 1047|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo341 -> nodo1047;
+
+nodo107 -> nodo341;
+
+nodo34 -> nodo107;
+
+nodo10 -> nodo34;
+nodo35[label="{EO: 35|cost: 3.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo108[label="{EO: 108|cost: 4.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo342[label="{EO: 342|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+nodo1048[label="{EO: 1048|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo342 -> nodo1048;
+nodo1049[label="{EO: 1049|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo342 -> nodo1049;
+nodo1050[label="{EO: 1050|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo342 -> nodo1050;
+
+nodo108 -> nodo342;
+
+nodo35 -> nodo108;
+nodo109[label="{EO: 109|cost: 4.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo343[label="{EO: 343|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo1051[label="{EO: 1051|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo343 -> nodo1051;
+nodo1052[label="{EO: 1052|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo343 -> nodo1052;
+nodo1053[label="{EO: 1053|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo343 -> nodo1053;
+nodo1054[label="{EO: 1054|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo343 -> nodo1054;
+
+nodo109 -> nodo343;
+nodo344[label="{EO: 344|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo1055[label="{EO: 1055|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo344 -> nodo1055;
+nodo1056[label="{EO: 1056|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo344 -> nodo1056;
+nodo1057[label="{EO: 1057|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo344 -> nodo1057;
+
+nodo109 -> nodo344;
+nodo345[label="{EO: 345|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo1058[label="{EO: 1058|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo345 -> nodo1058;
+nodo1059[label="{EO: 1059|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo345 -> nodo1059;
+nodo1060[label="{EO: 1060|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo345 -> nodo1060;
+
+nodo109 -> nodo345;
+nodo346[label="{EO: 346|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo1061[label="{EO: 1061|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo346 -> nodo1061;
+nodo1062[label="{EO: 1062|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo346 -> nodo1062;
+nodo1063[label="{EO: 1063|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo346 -> nodo1063;
+
+nodo109 -> nodo346;
+
+nodo35 -> nodo109;
+nodo110[label="{EO: 110|cost: 4.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo347[label="{EO: 347|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1064[label="{EO: 1064|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo347 -> nodo1064;
+nodo1065[label="{EO: 1065|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo347 -> nodo1065;
+
+nodo110 -> nodo347;
+nodo348[label="{EO: 348|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1066[label="{EO: 1066|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo348 -> nodo1066;
+nodo1067[label="{EO: 1067|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo348 -> nodo1067;
+nodo1068[label="{EO: 1068|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo348 -> nodo1068;
+
+nodo110 -> nodo348;
+nodo349[label="{EO: 349|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1069[label="{EO: 1069|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo349 -> nodo1069;
+nodo1070[label="{EO: 1070|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo349 -> nodo1070;
+nodo1071[label="{EO: 1071|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo349 -> nodo1071;
+nodo1072[label="{EO: 1072|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo349 -> nodo1072;
+
+nodo110 -> nodo349;
+
+nodo35 -> nodo110;
+
+nodo10 -> nodo35;
+nodo36[label="{EO: 36|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo111[label="{EO: 111|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo350[label="{EO: 350|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1073[label="{EO: 1073|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo350 -> nodo1073;
+nodo1074[label="{EO: 1074|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo350 -> nodo1074;
+
+nodo111 -> nodo350;
+nodo351[label="{EO: 351|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1075[label="{EO: 1075|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo351 -> nodo1075;
+nodo1076[label="{EO: 1076|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo351 -> nodo1076;
+nodo1077[label="{EO: 1077|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo351 -> nodo1077;
+nodo1078[label="{EO: 1078|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo351 -> nodo1078;
+
+nodo111 -> nodo351;
+
+nodo36 -> nodo111;
+nodo112[label="{EO: 112|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo352[label="{EO: 352|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1079[label="{EO: 1079|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo352 -> nodo1079;
+nodo1080[label="{EO: 1080|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo352 -> nodo1080;
+nodo1081[label="{EO: 1081|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo352 -> nodo1081;
+nodo1082[label="{EO: 1082|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo352 -> nodo1082;
+
+nodo112 -> nodo352;
+nodo353[label="{EO: 353|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1083[label="{EO: 1083|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo353 -> nodo1083;
+nodo1084[label="{EO: 1084|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo353 -> nodo1084;
+
+nodo112 -> nodo353;
+nodo354[label="{EO: 354|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1085[label="{EO: 1085|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo354 -> nodo1085;
+nodo1086[label="{EO: 1086|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo354 -> nodo1086;
+nodo1087[label="{EO: 1087|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo354 -> nodo1087;
+nodo1088[label="{EO: 1088|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo354 -> nodo1088;
+
+nodo112 -> nodo354;
+nodo355[label="{EO: 355|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1089[label="{EO: 1089|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo355 -> nodo1089;
+nodo1090[label="{EO: 1090|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo355 -> nodo1090;
+
+nodo112 -> nodo355;
+
+nodo36 -> nodo112;
+nodo113[label="{EO: 113|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo356[label="{EO: 356|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1091[label="{EO: 1091|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo356 -> nodo1091;
+nodo1092[label="{EO: 1092|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo356 -> nodo1092;
+
+nodo113 -> nodo356;
+nodo357[label="{EO: 357|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1093[label="{EO: 1093|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo357 -> nodo1093;
+nodo1094[label="{EO: 1094|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo357 -> nodo1094;
+nodo1095[label="{EO: 1095|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo357 -> nodo1095;
+
+nodo113 -> nodo357;
+nodo358[label="{EO: 358|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1096[label="{EO: 1096|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo358 -> nodo1096;
+nodo1097[label="{EO: 1097|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo358 -> nodo1097;
+nodo1098[label="{EO: 1098|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo358 -> nodo1098;
+nodo1099[label="{EO: 1099|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo358 -> nodo1099;
+
+nodo113 -> nodo358;
+
+nodo36 -> nodo113;
+nodo114[label="{EO: 114|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo359[label="{EO: 359|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1100[label="{EO: 1100|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo359 -> nodo1100;
+nodo1101[label="{EO: 1101|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo359 -> nodo1101;
+
+nodo114 -> nodo359;
+nodo360[label="{EO: 360|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1102[label="{EO: 1102|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo360 -> nodo1102;
+nodo1103[label="{EO: 1103|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo360 -> nodo1103;
+nodo1104[label="{EO: 1104|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo360 -> nodo1104;
+nodo1105[label="{EO: 1105|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo360 -> nodo1105;
+
+nodo114 -> nodo360;
+
+nodo36 -> nodo114;
+
+nodo10 -> nodo36;
+
+nodo2 -> nodo10;
 
 nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: 1.0|A: GoToPeru}"]
+nodo11[label="{EO: 11|cost: 2.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo37[label="{EO: 37|cost: 3.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo115[label="{EO: 115|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+nodo361[label="{EO: 361|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1106[label="{EO: 1106|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo361 -> nodo1106;
+nodo1107[label="{EO: 1107|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo361 -> nodo1107;
+
+nodo115 -> nodo361;
+nodo362[label="{EO: 362|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1108[label="{EO: 1108|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo362 -> nodo1108;
+nodo1109[label="{EO: 1109|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo362 -> nodo1109;
+nodo1110[label="{EO: 1110|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo362 -> nodo1110;
+nodo1111[label="{EO: 1111|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo362 -> nodo1111;
+
+nodo115 -> nodo362;
+
+nodo37 -> nodo115;
+nodo116[label="{EO: 116|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+nodo363[label="{EO: 363|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1112[label="{EO: 1112|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo363 -> nodo1112;
+nodo1113[label="{EO: 1113|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo363 -> nodo1113;
+
+nodo116 -> nodo363;
+nodo364[label="{EO: 364|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1114[label="{EO: 1114|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo364 -> nodo1114;
+nodo1115[label="{EO: 1115|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo364 -> nodo1115;
+nodo1116[label="{EO: 1116|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo364 -> nodo1116;
+nodo1117[label="{EO: 1117|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo364 -> nodo1117;
+
+nodo116 -> nodo364;
+
+nodo37 -> nodo116;
+
+nodo11 -> nodo37;
+nodo38[label="{EO: 38|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo117[label="{EO: 117|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo365[label="{EO: 365|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1118[label="{EO: 1118|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo365 -> nodo1118;
+nodo1119[label="{EO: 1119|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo365 -> nodo1119;
+
+nodo117 -> nodo365;
+nodo366[label="{EO: 366|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1120[label="{EO: 1120|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo366 -> nodo1120;
+nodo1121[label="{EO: 1121|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo366 -> nodo1121;
+nodo1122[label="{EO: 1122|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo366 -> nodo1122;
+nodo1123[label="{EO: 1123|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo366 -> nodo1123;
+
+nodo117 -> nodo366;
+
+nodo38 -> nodo117;
+nodo118[label="{EO: 118|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo367[label="{EO: 367|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1124[label="{EO: 1124|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo367 -> nodo1124;
+nodo1125[label="{EO: 1125|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo367 -> nodo1125;
+nodo1126[label="{EO: 1126|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo367 -> nodo1126;
+nodo1127[label="{EO: 1127|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo367 -> nodo1127;
+
+nodo118 -> nodo367;
+nodo368[label="{EO: 368|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1128[label="{EO: 1128|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo368 -> nodo1128;
+nodo1129[label="{EO: 1129|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo368 -> nodo1129;
+
+nodo118 -> nodo368;
+nodo369[label="{EO: 369|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1130[label="{EO: 1130|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo369 -> nodo1130;
+nodo1131[label="{EO: 1131|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo369 -> nodo1131;
+nodo1132[label="{EO: 1132|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo369 -> nodo1132;
+nodo1133[label="{EO: 1133|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo369 -> nodo1133;
+
+nodo118 -> nodo369;
+nodo370[label="{EO: 370|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1134[label="{EO: 1134|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo370 -> nodo1134;
+nodo1135[label="{EO: 1135|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo370 -> nodo1135;
+
+nodo118 -> nodo370;
+
+nodo38 -> nodo118;
+nodo119[label="{EO: 119|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo371[label="{EO: 371|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1136[label="{EO: 1136|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo371 -> nodo1136;
+nodo1137[label="{EO: 1137|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo371 -> nodo1137;
+
+nodo119 -> nodo371;
+nodo372[label="{EO: 372|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1138[label="{EO: 1138|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo372 -> nodo1138;
+nodo1139[label="{EO: 1139|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo372 -> nodo1139;
+nodo1140[label="{EO: 1140|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo372 -> nodo1140;
+
+nodo119 -> nodo372;
+nodo373[label="{EO: 373|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1141[label="{EO: 1141|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo373 -> nodo1141;
+nodo1142[label="{EO: 1142|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo373 -> nodo1142;
+nodo1143[label="{EO: 1143|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo373 -> nodo1143;
+nodo1144[label="{EO: 1144|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo373 -> nodo1144;
+
+nodo119 -> nodo373;
+
+nodo38 -> nodo119;
+nodo120[label="{EO: 120|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo374[label="{EO: 374|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1145[label="{EO: 1145|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo374 -> nodo1145;
+nodo1146[label="{EO: 1146|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo374 -> nodo1146;
+
+nodo120 -> nodo374;
+nodo375[label="{EO: 375|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1147[label="{EO: 1147|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo375 -> nodo1147;
+nodo1148[label="{EO: 1148|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo375 -> nodo1148;
+nodo1149[label="{EO: 1149|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo375 -> nodo1149;
+nodo1150[label="{EO: 1150|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo375 -> nodo1150;
+
+nodo120 -> nodo375;
+
+nodo38 -> nodo120;
+
+nodo11 -> nodo38;
+
+nodo3 -> nodo11;
+nodo12[label="{EO: 12|cost: 2.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo39[label="{EO: 39|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo121[label="{EO: 121|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo376[label="{EO: 376|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1151[label="{EO: 1151|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo376 -> nodo1151;
+nodo1152[label="{EO: 1152|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo376 -> nodo1152;
+nodo1153[label="{EO: 1153|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo376 -> nodo1153;
+nodo1154[label="{EO: 1154|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo376 -> nodo1154;
+
+nodo121 -> nodo376;
+nodo377[label="{EO: 377|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1155[label="{EO: 1155|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo377 -> nodo1155;
+nodo1156[label="{EO: 1156|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo377 -> nodo1156;
+
+nodo121 -> nodo377;
+nodo378[label="{EO: 378|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1157[label="{EO: 1157|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo378 -> nodo1157;
+nodo1158[label="{EO: 1158|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo378 -> nodo1158;
+nodo1159[label="{EO: 1159|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo378 -> nodo1159;
+nodo1160[label="{EO: 1160|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo378 -> nodo1160;
+
+nodo121 -> nodo378;
+nodo379[label="{EO: 379|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1161[label="{EO: 1161|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo379 -> nodo1161;
+nodo1162[label="{EO: 1162|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo379 -> nodo1162;
+
+nodo121 -> nodo379;
+
+nodo39 -> nodo121;
+nodo122[label="{EO: 122|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo380[label="{EO: 380|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo1163[label="{EO: 1163|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo380 -> nodo1163;
+
+nodo122 -> nodo380;
+nodo381[label="{EO: 381|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo1164[label="{EO: 1164|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo381 -> nodo1164;
+nodo1165[label="{EO: 1165|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo381 -> nodo1165;
+nodo1166[label="{EO: 1166|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo381 -> nodo1166;
+nodo1167[label="{EO: 1167|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo381 -> nodo1167;
+
+nodo122 -> nodo381;
+nodo382[label="{EO: 382|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo1168[label="{EO: 1168|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo382 -> nodo1168;
+nodo1169[label="{EO: 1169|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo382 -> nodo1169;
+nodo1170[label="{EO: 1170|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo382 -> nodo1170;
+
+nodo122 -> nodo382;
+
+nodo39 -> nodo122;
+nodo123[label="{EO: 123|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo383[label="{EO: 383|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1171[label="{EO: 1171|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo383 -> nodo1171;
+nodo1172[label="{EO: 1172|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo383 -> nodo1172;
+nodo1173[label="{EO: 1173|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo383 -> nodo1173;
+nodo1174[label="{EO: 1174|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo383 -> nodo1174;
+
+nodo123 -> nodo383;
+nodo384[label="{EO: 384|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1175[label="{EO: 1175|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo384 -> nodo1175;
+nodo1176[label="{EO: 1176|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo384 -> nodo1176;
+nodo1177[label="{EO: 1177|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo384 -> nodo1177;
+
+nodo123 -> nodo384;
+nodo385[label="{EO: 385|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1178[label="{EO: 1178|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo385 -> nodo1178;
+nodo1179[label="{EO: 1179|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo385 -> nodo1179;
+
+nodo123 -> nodo385;
+
+nodo39 -> nodo123;
+nodo124[label="{EO: 124|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo386[label="{EO: 386|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1180[label="{EO: 1180|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo386 -> nodo1180;
+nodo1181[label="{EO: 1181|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo386 -> nodo1181;
+nodo1182[label="{EO: 1182|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo386 -> nodo1182;
+nodo1183[label="{EO: 1183|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo386 -> nodo1183;
+
+nodo124 -> nodo386;
+nodo387[label="{EO: 387|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1184[label="{EO: 1184|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo387 -> nodo1184;
+nodo1185[label="{EO: 1185|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo387 -> nodo1185;
+nodo1186[label="{EO: 1186|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo387 -> nodo1186;
+
+nodo124 -> nodo387;
+nodo388[label="{EO: 388|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1187[label="{EO: 1187|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo388 -> nodo1187;
+nodo1188[label="{EO: 1188|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo388 -> nodo1188;
+nodo1189[label="{EO: 1189|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo388 -> nodo1189;
+
+nodo124 -> nodo388;
+
+nodo39 -> nodo124;
+
+nodo12 -> nodo39;
+nodo40[label="{EO: 40|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo125[label="{EO: 125|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo389[label="{EO: 389|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1190[label="{EO: 1190|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo389 -> nodo1190;
+nodo1191[label="{EO: 1191|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo389 -> nodo1191;
+nodo1192[label="{EO: 1192|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo389 -> nodo1192;
+nodo1193[label="{EO: 1193|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo389 -> nodo1193;
+
+nodo125 -> nodo389;
+nodo390[label="{EO: 390|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1194[label="{EO: 1194|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo390 -> nodo1194;
+nodo1195[label="{EO: 1195|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo390 -> nodo1195;
+
+nodo125 -> nodo390;
+nodo391[label="{EO: 391|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1196[label="{EO: 1196|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo391 -> nodo1196;
+nodo1197[label="{EO: 1197|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo391 -> nodo1197;
+nodo1198[label="{EO: 1198|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo391 -> nodo1198;
+nodo1199[label="{EO: 1199|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo391 -> nodo1199;
+
+nodo125 -> nodo391;
+nodo392[label="{EO: 392|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1200[label="{EO: 1200|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo392 -> nodo1200;
+nodo1201[label="{EO: 1201|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo392 -> nodo1201;
+
+nodo125 -> nodo392;
+
+nodo40 -> nodo125;
+nodo126[label="{EO: 126|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo393[label="{EO: 393|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1202[label="{EO: 1202|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo393 -> nodo1202;
+nodo1203[label="{EO: 1203|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo393 -> nodo1203;
+
+nodo126 -> nodo393;
+nodo394[label="{EO: 394|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1204[label="{EO: 1204|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo394 -> nodo1204;
+nodo1205[label="{EO: 1205|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo394 -> nodo1205;
+nodo1206[label="{EO: 1206|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo394 -> nodo1206;
+
+nodo126 -> nodo394;
+nodo395[label="{EO: 395|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1207[label="{EO: 1207|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo395 -> nodo1207;
+nodo1208[label="{EO: 1208|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo395 -> nodo1208;
+nodo1209[label="{EO: 1209|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo395 -> nodo1209;
+nodo1210[label="{EO: 1210|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo395 -> nodo1210;
+
+nodo126 -> nodo395;
+
+nodo40 -> nodo126;
+
+nodo12 -> nodo40;
+nodo41[label="{EO: 41|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo127[label="{EO: 127|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo396[label="{EO: 396|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1211[label="{EO: 1211|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo396 -> nodo1211;
+nodo1212[label="{EO: 1212|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo396 -> nodo1212;
+
+nodo127 -> nodo396;
+nodo397[label="{EO: 397|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1213[label="{EO: 1213|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo397 -> nodo1213;
+nodo1214[label="{EO: 1214|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo397 -> nodo1214;
+nodo1215[label="{EO: 1215|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo397 -> nodo1215;
+nodo1216[label="{EO: 1216|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo397 -> nodo1216;
+
+nodo127 -> nodo397;
+
+nodo41 -> nodo127;
+nodo128[label="{EO: 128|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo398[label="{EO: 398|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1217[label="{EO: 1217|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo398 -> nodo1217;
+nodo1218[label="{EO: 1218|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo398 -> nodo1218;
+nodo1219[label="{EO: 1219|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo398 -> nodo1219;
+nodo1220[label="{EO: 1220|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo398 -> nodo1220;
+
+nodo128 -> nodo398;
+nodo399[label="{EO: 399|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1221[label="{EO: 1221|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo399 -> nodo1221;
+nodo1222[label="{EO: 1222|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo399 -> nodo1222;
+
+nodo128 -> nodo399;
+nodo400[label="{EO: 400|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1223[label="{EO: 1223|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo400 -> nodo1223;
+nodo1224[label="{EO: 1224|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo400 -> nodo1224;
+nodo1225[label="{EO: 1225|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo400 -> nodo1225;
+nodo1226[label="{EO: 1226|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo400 -> nodo1226;
+
+nodo128 -> nodo400;
+nodo401[label="{EO: 401|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1227[label="{EO: 1227|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo401 -> nodo1227;
+nodo1228[label="{EO: 1228|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo401 -> nodo1228;
+
+nodo128 -> nodo401;
+
+nodo41 -> nodo128;
+nodo129[label="{EO: 129|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo402[label="{EO: 402|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1229[label="{EO: 1229|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo402 -> nodo1229;
+nodo1230[label="{EO: 1230|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo402 -> nodo1230;
+
+nodo129 -> nodo402;
+nodo403[label="{EO: 403|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1231[label="{EO: 1231|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo403 -> nodo1231;
+nodo1232[label="{EO: 1232|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo403 -> nodo1232;
+nodo1233[label="{EO: 1233|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo403 -> nodo1233;
+
+nodo129 -> nodo403;
+nodo404[label="{EO: 404|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1234[label="{EO: 1234|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo404 -> nodo1234;
+nodo1235[label="{EO: 1235|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo404 -> nodo1235;
+nodo1236[label="{EO: 1236|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo404 -> nodo1236;
+nodo1237[label="{EO: 1237|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo404 -> nodo1237;
+
+nodo129 -> nodo404;
+
+nodo41 -> nodo129;
+nodo130[label="{EO: 130|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo405[label="{EO: 405|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1238[label="{EO: 1238|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo405 -> nodo1238;
+nodo1239[label="{EO: 1239|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo405 -> nodo1239;
+
+nodo130 -> nodo405;
+nodo406[label="{EO: 406|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1240[label="{EO: 1240|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo406 -> nodo1240;
+nodo1241[label="{EO: 1241|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo406 -> nodo1241;
+nodo1242[label="{EO: 1242|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo406 -> nodo1242;
+nodo1243[label="{EO: 1243|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo406 -> nodo1243;
+
+nodo130 -> nodo406;
+
+nodo41 -> nodo130;
+
+nodo12 -> nodo41;
+nodo42[label="{EO: 42|cost: 3.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo131[label="{EO: 131|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo407[label="{EO: 407|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1244[label="{EO: 1244|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo407 -> nodo1244;
+nodo1245[label="{EO: 1245|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo407 -> nodo1245;
+nodo1246[label="{EO: 1246|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo407 -> nodo1246;
+nodo1247[label="{EO: 1247|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo407 -> nodo1247;
+
+nodo131 -> nodo407;
+nodo408[label="{EO: 408|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1248[label="{EO: 1248|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo408 -> nodo1248;
+nodo1249[label="{EO: 1249|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo408 -> nodo1249;
+
+nodo131 -> nodo408;
+nodo409[label="{EO: 409|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1250[label="{EO: 1250|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo409 -> nodo1250;
+nodo1251[label="{EO: 1251|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo409 -> nodo1251;
+nodo1252[label="{EO: 1252|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo409 -> nodo1252;
+nodo1253[label="{EO: 1253|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo409 -> nodo1253;
+
+nodo131 -> nodo409;
+nodo410[label="{EO: 410|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1254[label="{EO: 1254|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo410 -> nodo1254;
+nodo1255[label="{EO: 1255|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo410 -> nodo1255;
+
+nodo131 -> nodo410;
+
+nodo42 -> nodo131;
+nodo132[label="{EO: 132|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo411[label="{EO: 411|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo1256[label="{EO: 1256|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo411 -> nodo1256;
+nodo1257[label="{EO: 1257|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo411 -> nodo1257;
+nodo1258[label="{EO: 1258|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo411 -> nodo1258;
+nodo1259[label="{EO: 1259|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo411 -> nodo1259;
+nodo1260[label="{EO: 1260|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo411 -> nodo1260;
+
+nodo132 -> nodo411;
+nodo412[label="{EO: 412|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo1261[label="{EO: 1261|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo412 -> nodo1261;
+nodo1262[label="{EO: 1262|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo412 -> nodo1262;
+
+nodo132 -> nodo412;
+nodo413[label="{EO: 413|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo1263[label="{EO: 1263|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo413 -> nodo1263;
+nodo1264[label="{EO: 1264|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo413 -> nodo1264;
+nodo1265[label="{EO: 1265|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo413 -> nodo1265;
+
+nodo132 -> nodo413;
+
+nodo42 -> nodo132;
+
+nodo12 -> nodo42;
+
+nodo3 -> nodo12;
+nodo13[label="{EO: 13|cost: 2.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo43[label="{EO: 43|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo133[label="{EO: 133|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo414[label="{EO: 414|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1266[label="{EO: 1266|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo414 -> nodo1266;
+nodo1267[label="{EO: 1267|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo414 -> nodo1267;
+nodo1268[label="{EO: 1268|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo414 -> nodo1268;
+nodo1269[label="{EO: 1269|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo414 -> nodo1269;
+
+nodo133 -> nodo414;
+nodo415[label="{EO: 415|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1270[label="{EO: 1270|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo415 -> nodo1270;
+nodo1271[label="{EO: 1271|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo415 -> nodo1271;
+
+nodo133 -> nodo415;
+nodo416[label="{EO: 416|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1272[label="{EO: 1272|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo416 -> nodo1272;
+nodo1273[label="{EO: 1273|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo416 -> nodo1273;
+nodo1274[label="{EO: 1274|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo416 -> nodo1274;
+nodo1275[label="{EO: 1275|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo416 -> nodo1275;
+
+nodo133 -> nodo416;
+nodo417[label="{EO: 417|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1276[label="{EO: 1276|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo417 -> nodo1276;
+nodo1277[label="{EO: 1277|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo417 -> nodo1277;
+
+nodo133 -> nodo417;
+
+nodo43 -> nodo133;
+nodo134[label="{EO: 134|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo418[label="{EO: 418|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1278[label="{EO: 1278|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo418 -> nodo1278;
+nodo1279[label="{EO: 1279|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo418 -> nodo1279;
+
+nodo134 -> nodo418;
+nodo419[label="{EO: 419|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1280[label="{EO: 1280|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo419 -> nodo1280;
+nodo1281[label="{EO: 1281|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo419 -> nodo1281;
+nodo1282[label="{EO: 1282|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo419 -> nodo1282;
+
+nodo134 -> nodo419;
+nodo420[label="{EO: 420|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1283[label="{EO: 1283|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo420 -> nodo1283;
+nodo1284[label="{EO: 1284|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo420 -> nodo1284;
+nodo1285[label="{EO: 1285|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo420 -> nodo1285;
+nodo1286[label="{EO: 1286|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo420 -> nodo1286;
+
+nodo134 -> nodo420;
+
+nodo43 -> nodo134;
+
+nodo13 -> nodo43;
+nodo44[label="{EO: 44|cost: 3.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo135[label="{EO: 135|cost: 4.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo421[label="{EO: 421|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+nodo1287[label="{EO: 1287|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo421 -> nodo1287;
+nodo1288[label="{EO: 1288|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo421 -> nodo1288;
+nodo1289[label="{EO: 1289|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo421 -> nodo1289;
+
+nodo135 -> nodo421;
+
+nodo44 -> nodo135;
+nodo136[label="{EO: 136|cost: 4.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo422[label="{EO: 422|cost: 5.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo1290[label="{EO: 1290|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo422 -> nodo1290;
+nodo1291[label="{EO: 1291|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo422 -> nodo1291;
+nodo1292[label="{EO: 1292|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo422 -> nodo1292;
+nodo1293[label="{EO: 1293|cost: 6.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo422 -> nodo1293;
+
+nodo136 -> nodo422;
+nodo423[label="{EO: 423|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo1294[label="{EO: 1294|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo423 -> nodo1294;
+nodo1295[label="{EO: 1295|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo423 -> nodo1295;
+nodo1296[label="{EO: 1296|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo423 -> nodo1296;
+
+nodo136 -> nodo423;
+nodo424[label="{EO: 424|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo1297[label="{EO: 1297|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo424 -> nodo1297;
+nodo1298[label="{EO: 1298|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo424 -> nodo1298;
+nodo1299[label="{EO: 1299|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo424 -> nodo1299;
+
+nodo136 -> nodo424;
+nodo425[label="{EO: 425|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo1300[label="{EO: 1300|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo425 -> nodo1300;
+nodo1301[label="{EO: 1301|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo425 -> nodo1301;
+nodo1302[label="{EO: 1302|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo425 -> nodo1302;
+
+nodo136 -> nodo425;
+
+nodo44 -> nodo136;
+nodo137[label="{EO: 137|cost: 4.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo426[label="{EO: 426|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1303[label="{EO: 1303|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo426 -> nodo1303;
+nodo1304[label="{EO: 1304|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo426 -> nodo1304;
+
+nodo137 -> nodo426;
+nodo427[label="{EO: 427|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1305[label="{EO: 1305|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo427 -> nodo1305;
+nodo1306[label="{EO: 1306|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo427 -> nodo1306;
+nodo1307[label="{EO: 1307|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo427 -> nodo1307;
+
+nodo137 -> nodo427;
+nodo428[label="{EO: 428|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1308[label="{EO: 1308|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo428 -> nodo1308;
+nodo1309[label="{EO: 1309|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo428 -> nodo1309;
+nodo1310[label="{EO: 1310|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo428 -> nodo1310;
+nodo1311[label="{EO: 1311|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo428 -> nodo1311;
+
+nodo137 -> nodo428;
+
+nodo44 -> nodo137;
+
+nodo13 -> nodo44;
+nodo45[label="{EO: 45|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo138[label="{EO: 138|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo429[label="{EO: 429|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1312[label="{EO: 1312|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo429 -> nodo1312;
+nodo1313[label="{EO: 1313|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo429 -> nodo1313;
+
+nodo138 -> nodo429;
+nodo430[label="{EO: 430|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1314[label="{EO: 1314|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo430 -> nodo1314;
+nodo1315[label="{EO: 1315|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo430 -> nodo1315;
+nodo1316[label="{EO: 1316|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo430 -> nodo1316;
+nodo1317[label="{EO: 1317|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo430 -> nodo1317;
+
+nodo138 -> nodo430;
+
+nodo45 -> nodo138;
+nodo139[label="{EO: 139|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo431[label="{EO: 431|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1318[label="{EO: 1318|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo431 -> nodo1318;
+nodo1319[label="{EO: 1319|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo431 -> nodo1319;
+nodo1320[label="{EO: 1320|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo431 -> nodo1320;
+nodo1321[label="{EO: 1321|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo431 -> nodo1321;
+
+nodo139 -> nodo431;
+nodo432[label="{EO: 432|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1322[label="{EO: 1322|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo432 -> nodo1322;
+nodo1323[label="{EO: 1323|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo432 -> nodo1323;
+
+nodo139 -> nodo432;
+nodo433[label="{EO: 433|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1324[label="{EO: 1324|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo433 -> nodo1324;
+nodo1325[label="{EO: 1325|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo433 -> nodo1325;
+nodo1326[label="{EO: 1326|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo433 -> nodo1326;
+nodo1327[label="{EO: 1327|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo433 -> nodo1327;
+
+nodo139 -> nodo433;
+nodo434[label="{EO: 434|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1328[label="{EO: 1328|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo434 -> nodo1328;
+nodo1329[label="{EO: 1329|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo434 -> nodo1329;
+
+nodo139 -> nodo434;
+
+nodo45 -> nodo139;
+nodo140[label="{EO: 140|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo435[label="{EO: 435|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1330[label="{EO: 1330|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo435 -> nodo1330;
+nodo1331[label="{EO: 1331|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo435 -> nodo1331;
+
+nodo140 -> nodo435;
+nodo436[label="{EO: 436|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1332[label="{EO: 1332|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo436 -> nodo1332;
+nodo1333[label="{EO: 1333|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo436 -> nodo1333;
+nodo1334[label="{EO: 1334|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo436 -> nodo1334;
+
+nodo140 -> nodo436;
+nodo437[label="{EO: 437|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1335[label="{EO: 1335|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo437 -> nodo1335;
+nodo1336[label="{EO: 1336|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo437 -> nodo1336;
+nodo1337[label="{EO: 1337|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo437 -> nodo1337;
+nodo1338[label="{EO: 1338|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo437 -> nodo1338;
+
+nodo140 -> nodo437;
+
+nodo45 -> nodo140;
+nodo141[label="{EO: 141|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo438[label="{EO: 438|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1339[label="{EO: 1339|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo438 -> nodo1339;
+nodo1340[label="{EO: 1340|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo438 -> nodo1340;
+
+nodo141 -> nodo438;
+nodo439[label="{EO: 439|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1341[label="{EO: 1341|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo439 -> nodo1341;
+nodo1342[label="{EO: 1342|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo439 -> nodo1342;
+nodo1343[label="{EO: 1343|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo439 -> nodo1343;
+nodo1344[label="{EO: 1344|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo439 -> nodo1344;
+
+nodo141 -> nodo439;
+
+nodo45 -> nodo141;
+
+nodo13 -> nodo45;
+
+nodo3 -> nodo13;
+nodo14[label="{EO: 14|cost: 2.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo46[label="{EO: 46|cost: 3.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo142[label="{EO: 142|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+nodo440[label="{EO: 440|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1345[label="{EO: 1345|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo440 -> nodo1345;
+nodo1346[label="{EO: 1346|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo440 -> nodo1346;
+
+nodo142 -> nodo440;
+nodo441[label="{EO: 441|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1347[label="{EO: 1347|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo441 -> nodo1347;
+nodo1348[label="{EO: 1348|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo441 -> nodo1348;
+nodo1349[label="{EO: 1349|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo441 -> nodo1349;
+nodo1350[label="{EO: 1350|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo441 -> nodo1350;
+
+nodo142 -> nodo441;
+
+nodo46 -> nodo142;
+nodo143[label="{EO: 143|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+nodo442[label="{EO: 442|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1351[label="{EO: 1351|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo442 -> nodo1351;
+nodo1352[label="{EO: 1352|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo442 -> nodo1352;
+
+nodo143 -> nodo442;
+nodo443[label="{EO: 443|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1353[label="{EO: 1353|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo443 -> nodo1353;
+nodo1354[label="{EO: 1354|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo443 -> nodo1354;
+nodo1355[label="{EO: 1355|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo443 -> nodo1355;
+nodo1356[label="{EO: 1356|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo443 -> nodo1356;
+
+nodo143 -> nodo443;
+
+nodo46 -> nodo143;
+
+nodo14 -> nodo46;
+nodo47[label="{EO: 47|cost: 3.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo144[label="{EO: 144|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo444[label="{EO: 444|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1357[label="{EO: 1357|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo444 -> nodo1357;
+nodo1358[label="{EO: 1358|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo444 -> nodo1358;
+
+nodo144 -> nodo444;
+nodo445[label="{EO: 445|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1359[label="{EO: 1359|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo445 -> nodo1359;
+nodo1360[label="{EO: 1360|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo445 -> nodo1360;
+nodo1361[label="{EO: 1361|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo445 -> nodo1361;
+nodo1362[label="{EO: 1362|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo445 -> nodo1362;
+
+nodo144 -> nodo445;
+
+nodo47 -> nodo144;
+nodo145[label="{EO: 145|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo446[label="{EO: 446|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1363[label="{EO: 1363|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo446 -> nodo1363;
+nodo1364[label="{EO: 1364|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo446 -> nodo1364;
+nodo1365[label="{EO: 1365|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo446 -> nodo1365;
+nodo1366[label="{EO: 1366|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo446 -> nodo1366;
+
+nodo145 -> nodo446;
+nodo447[label="{EO: 447|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1367[label="{EO: 1367|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo447 -> nodo1367;
+nodo1368[label="{EO: 1368|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo447 -> nodo1368;
+
+nodo145 -> nodo447;
+nodo448[label="{EO: 448|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1369[label="{EO: 1369|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo448 -> nodo1369;
+nodo1370[label="{EO: 1370|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo448 -> nodo1370;
+nodo1371[label="{EO: 1371|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo448 -> nodo1371;
+nodo1372[label="{EO: 1372|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo448 -> nodo1372;
+
+nodo145 -> nodo448;
+nodo449[label="{EO: 449|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1373[label="{EO: 1373|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo449 -> nodo1373;
+nodo1374[label="{EO: 1374|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo449 -> nodo1374;
+
+nodo145 -> nodo449;
+
+nodo47 -> nodo145;
+nodo146[label="{EO: 146|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo450[label="{EO: 450|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1375[label="{EO: 1375|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo450 -> nodo1375;
+nodo1376[label="{EO: 1376|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo450 -> nodo1376;
+
+nodo146 -> nodo450;
+nodo451[label="{EO: 451|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1377[label="{EO: 1377|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo451 -> nodo1377;
+nodo1378[label="{EO: 1378|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo451 -> nodo1378;
+nodo1379[label="{EO: 1379|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo451 -> nodo1379;
+
+nodo146 -> nodo451;
+nodo452[label="{EO: 452|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1380[label="{EO: 1380|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo452 -> nodo1380;
+nodo1381[label="{EO: 1381|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo452 -> nodo1381;
+nodo1382[label="{EO: 1382|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo452 -> nodo1382;
+nodo1383[label="{EO: 1383|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo452 -> nodo1383;
+
+nodo146 -> nodo452;
+
+nodo47 -> nodo146;
+nodo147[label="{EO: 147|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo453[label="{EO: 453|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1384[label="{EO: 1384|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo453 -> nodo1384;
+nodo1385[label="{EO: 1385|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo453 -> nodo1385;
+
+nodo147 -> nodo453;
+nodo454[label="{EO: 454|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1386[label="{EO: 1386|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo454 -> nodo1386;
+nodo1387[label="{EO: 1387|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo454 -> nodo1387;
+nodo1388[label="{EO: 1388|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo454 -> nodo1388;
+nodo1389[label="{EO: 1389|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo454 -> nodo1389;
+
+nodo147 -> nodo454;
+
+nodo47 -> nodo147;
+
+nodo14 -> nodo47;
+
+nodo3 -> nodo14;
+
+nodo0 -> nodo3;
+nodo4[label="{EO: 4|cost: 1.0|A: GoToSahara}"]
+nodo15[label="{EO: 15|cost: 2.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo48[label="{EO: 48|cost: 3.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo148[label="{EO: 148|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+nodo455[label="{EO: 455|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1390[label="{EO: 1390|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo455 -> nodo1390;
+nodo1391[label="{EO: 1391|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo455 -> nodo1391;
+nodo1392[label="{EO: 1392|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo455 -> nodo1392;
+nodo1393[label="{EO: 1393|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo455 -> nodo1393;
+
+nodo148 -> nodo455;
+nodo456[label="{EO: 456|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1394[label="{EO: 1394|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo456 -> nodo1394;
+nodo1395[label="{EO: 1395|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo456 -> nodo1395;
+
+nodo148 -> nodo456;
+nodo457[label="{EO: 457|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1396[label="{EO: 1396|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo457 -> nodo1396;
+nodo1397[label="{EO: 1397|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo457 -> nodo1397;
+nodo1398[label="{EO: 1398|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo457 -> nodo1398;
+nodo1399[label="{EO: 1399|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo457 -> nodo1399;
+
+nodo148 -> nodo457;
+nodo458[label="{EO: 458|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1400[label="{EO: 1400|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo458 -> nodo1400;
+nodo1401[label="{EO: 1401|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo458 -> nodo1401;
+
+nodo148 -> nodo458;
+
+nodo48 -> nodo148;
+nodo149[label="{EO: 149|cost: 4.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+nodo459[label="{EO: 459|cost: 5.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+nodo1402[label="{EO: 1402|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Alaska\n}}"]
+
+nodo459 -> nodo1402;
+
+nodo149 -> nodo459;
+nodo460[label="{EO: 460|cost: 5.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+nodo1403[label="{EO: 1403|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo460 -> nodo1403;
+nodo1404[label="{EO: 1404|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo460 -> nodo1404;
+nodo1405[label="{EO: 1405|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo460 -> nodo1405;
+nodo1406[label="{EO: 1406|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo460 -> nodo1406;
+
+nodo149 -> nodo460;
+nodo461[label="{EO: 461|cost: 5.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+nodo1407[label="{EO: 1407|cost: 6.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+
+nodo461 -> nodo1407;
+nodo1408[label="{EO: 1408|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+
+nodo461 -> nodo1408;
+nodo1409[label="{EO: 1409|cost: 6.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+
+nodo461 -> nodo1409;
+
+nodo149 -> nodo461;
+
+nodo48 -> nodo149;
+nodo150[label="{EO: 150|cost: 4.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+nodo462[label="{EO: 462|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1410[label="{EO: 1410|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo462 -> nodo1410;
+nodo1411[label="{EO: 1411|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo462 -> nodo1411;
+nodo1412[label="{EO: 1412|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo462 -> nodo1412;
+nodo1413[label="{EO: 1413|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo462 -> nodo1413;
+
+nodo150 -> nodo462;
+nodo463[label="{EO: 463|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1414[label="{EO: 1414|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo463 -> nodo1414;
+nodo1415[label="{EO: 1415|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo463 -> nodo1415;
+nodo1416[label="{EO: 1416|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+
+nodo463 -> nodo1416;
+
+nodo150 -> nodo463;
+nodo464[label="{EO: 464|cost: 5.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+nodo1417[label="{EO: 1417|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+
+nodo464 -> nodo1417;
+nodo1418[label="{EO: 1418|cost: 6.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+
+nodo464 -> nodo1418;
+
+nodo150 -> nodo464;
+
+nodo48 -> nodo150;
+nodo151[label="{EO: 151|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+nodo465[label="{EO: 465|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1419[label="{EO: 1419|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo465 -> nodo1419;
+nodo1420[label="{EO: 1420|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo465 -> nodo1420;
+nodo1421[label="{EO: 1421|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo465 -> nodo1421;
+nodo1422[label="{EO: 1422|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo465 -> nodo1422;
+
+nodo151 -> nodo465;
+nodo466[label="{EO: 466|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1423[label="{EO: 1423|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo466 -> nodo1423;
+nodo1424[label="{EO: 1424|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo466 -> nodo1424;
+nodo1425[label="{EO: 1425|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo466 -> nodo1425;
+
+nodo151 -> nodo466;
+nodo467[label="{EO: 467|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Inglaterra\n}}"]
+nodo1426[label="{EO: 1426|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo467 -> nodo1426;
+nodo1427[label="{EO: 1427|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo467 -> nodo1427;
+nodo1428[label="{EO: 1428|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo467 -> nodo1428;
+
+nodo151 -> nodo467;
+
+nodo48 -> nodo151;
+
+nodo15 -> nodo48;
+nodo49[label="{EO: 49|cost: 3.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo152[label="{EO: 152|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+nodo468[label="{EO: 468|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1429[label="{EO: 1429|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo468 -> nodo1429;
+nodo1430[label="{EO: 1430|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo468 -> nodo1430;
+nodo1431[label="{EO: 1431|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo468 -> nodo1431;
+nodo1432[label="{EO: 1432|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo468 -> nodo1432;
+
+nodo152 -> nodo468;
+nodo469[label="{EO: 469|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1433[label="{EO: 1433|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo469 -> nodo1433;
+nodo1434[label="{EO: 1434|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo469 -> nodo1434;
+
+nodo152 -> nodo469;
+nodo470[label="{EO: 470|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1435[label="{EO: 1435|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo470 -> nodo1435;
+nodo1436[label="{EO: 1436|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo470 -> nodo1436;
+nodo1437[label="{EO: 1437|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo470 -> nodo1437;
+nodo1438[label="{EO: 1438|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo470 -> nodo1438;
+
+nodo152 -> nodo470;
+nodo471[label="{EO: 471|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1439[label="{EO: 1439|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo471 -> nodo1439;
+nodo1440[label="{EO: 1440|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo471 -> nodo1440;
+
+nodo152 -> nodo471;
+
+nodo49 -> nodo152;
+nodo153[label="{EO: 153|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+nodo472[label="{EO: 472|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1441[label="{EO: 1441|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo472 -> nodo1441;
+nodo1442[label="{EO: 1442|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo472 -> nodo1442;
+
+nodo153 -> nodo472;
+nodo473[label="{EO: 473|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1443[label="{EO: 1443|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo473 -> nodo1443;
+nodo1444[label="{EO: 1444|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo473 -> nodo1444;
+nodo1445[label="{EO: 1445|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo473 -> nodo1445;
+
+nodo153 -> nodo473;
+nodo474[label="{EO: 474|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1446[label="{EO: 1446|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo474 -> nodo1446;
+nodo1447[label="{EO: 1447|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo474 -> nodo1447;
+nodo1448[label="{EO: 1448|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo474 -> nodo1448;
+nodo1449[label="{EO: 1449|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo474 -> nodo1449;
+
+nodo153 -> nodo474;
+
+nodo49 -> nodo153;
+
+nodo15 -> nodo49;
+nodo50[label="{EO: 50|cost: 3.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo154[label="{EO: 154|cost: 4.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+nodo475[label="{EO: 475|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20Brasil\n}}"]
+nodo1450[label="{EO: 1450|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo475 -> nodo1450;
+nodo1451[label="{EO: 1451|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo475 -> nodo1451;
+
+nodo154 -> nodo475;
+nodo476[label="{EO: 476|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Brasil\n}}"]
+nodo1452[label="{EO: 1452|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo476 -> nodo1452;
+nodo1453[label="{EO: 1453|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo476 -> nodo1453;
+nodo1454[label="{EO: 1454|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo476 -> nodo1454;
+nodo1455[label="{EO: 1455|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo476 -> nodo1455;
+
+nodo154 -> nodo476;
+
+nodo50 -> nodo154;
+nodo155[label="{EO: 155|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+nodo477[label="{EO: 477|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1456[label="{EO: 1456|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo477 -> nodo1456;
+nodo1457[label="{EO: 1457|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo477 -> nodo1457;
+nodo1458[label="{EO: 1458|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo477 -> nodo1458;
+nodo1459[label="{EO: 1459|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo477 -> nodo1459;
+
+nodo155 -> nodo477;
+nodo478[label="{EO: 478|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1460[label="{EO: 1460|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo478 -> nodo1460;
+nodo1461[label="{EO: 1461|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo478 -> nodo1461;
+
+nodo155 -> nodo478;
+nodo479[label="{EO: 479|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1462[label="{EO: 1462|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo479 -> nodo1462;
+nodo1463[label="{EO: 1463|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo479 -> nodo1463;
+nodo1464[label="{EO: 1464|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo479 -> nodo1464;
+nodo1465[label="{EO: 1465|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo479 -> nodo1465;
+
+nodo155 -> nodo479;
+nodo480[label="{EO: 480|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1466[label="{EO: 1466|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo480 -> nodo1466;
+nodo1467[label="{EO: 1467|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo480 -> nodo1467;
+
+nodo155 -> nodo480;
+
+nodo50 -> nodo155;
+nodo156[label="{EO: 156|cost: 4.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+nodo481[label="{EO: 481|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Mexico\n}}"]
+nodo1468[label="{EO: 1468|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo481 -> nodo1468;
+nodo1469[label="{EO: 1469|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo481 -> nodo1469;
+
+nodo156 -> nodo481;
+nodo482[label="{EO: 482|cost: 5.0|A: GoToEEUU|{\nEnergia:\n20Mexico\n}}"]
+nodo1470[label="{EO: 1470|cost: 6.0|A: GoToAlaska|{\nEnergia:\n20EEUU\n}}"]
+
+nodo482 -> nodo1470;
+nodo1471[label="{EO: 1471|cost: 6.0|A: GoToCanada|{\nEnergia:\n20EEUU\n}}"]
+
+nodo482 -> nodo1471;
+nodo1472[label="{EO: 1472|cost: 6.0|A: GoToMexico|{\nEnergia:\n20EEUU\n}}"]
+
+nodo482 -> nodo1472;
+
+nodo156 -> nodo482;
+nodo483[label="{EO: 483|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Mexico\n}}"]
+nodo1473[label="{EO: 1473|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo483 -> nodo1473;
+nodo1474[label="{EO: 1474|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo483 -> nodo1474;
+nodo1475[label="{EO: 1475|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo483 -> nodo1475;
+nodo1476[label="{EO: 1476|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo483 -> nodo1476;
+
+nodo156 -> nodo483;
+
+nodo50 -> nodo156;
+nodo157[label="{EO: 157|cost: 4.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+nodo484[label="{EO: 484|cost: 5.0|A: GoToBuenosAires|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1477[label="{EO: 1477|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo484 -> nodo1477;
+nodo1478[label="{EO: 1478|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20BuenosAires\n}}"]
+
+nodo484 -> nodo1478;
+
+nodo157 -> nodo484;
+nodo485[label="{EO: 485|cost: 5.0|A: GoToPeru|{\nEnergia:\n20TierraDelFuego\n}}"]
+nodo1479[label="{EO: 1479|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo485 -> nodo1479;
+nodo1480[label="{EO: 1480|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo485 -> nodo1480;
+nodo1481[label="{EO: 1481|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo485 -> nodo1481;
+nodo1482[label="{EO: 1482|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo485 -> nodo1482;
+
+nodo157 -> nodo485;
+
+nodo50 -> nodo157;
+
+nodo15 -> nodo50;
+nodo51[label="{EO: 51|cost: 3.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo158[label="{EO: 158|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo486[label="{EO: 486|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+nodo1483[label="{EO: 1483|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Canada\n}}"]
+
+nodo486 -> nodo1483;
+nodo1484[label="{EO: 1484|cost: 6.0|A: GoToEEUU|{\nEnergia:\n20Canada\n}}"]
+
+nodo486 -> nodo1484;
+nodo1485[label="{EO: 1485|cost: 6.0|A: GoToGroenlandia|{\nEnergia:\n20Canada\n}}"]
+
+nodo486 -> nodo1485;
+nodo1486[label="{EO: 1486|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Canada\n}}"]
+
+nodo486 -> nodo1486;
+
+nodo158 -> nodo486;
+nodo487[label="{EO: 487|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+nodo1487[label="{EO: 1487|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Cuba\n}}"]
+
+nodo487 -> nodo1487;
+nodo1488[label="{EO: 1488|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Cuba\n}}"]
+
+nodo487 -> nodo1488;
+
+nodo158 -> nodo487;
+nodo488[label="{EO: 488|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+nodo1489[label="{EO: 1489|cost: 6.0|A: GoToBrasil|{\nEnergia:\n20Peru\n}}"]
+
+nodo488 -> nodo1489;
+nodo1490[label="{EO: 1490|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Peru\n}}"]
+
+nodo488 -> nodo1490;
+nodo1491[label="{EO: 1491|cost: 6.0|A: GoToMexico|{\nEnergia:\n20Peru\n}}"]
+
+nodo488 -> nodo1491;
+nodo1492[label="{EO: 1492|cost: 6.0|A: GoToTierraDelFuego|{\nEnergia:\n20Peru\n}}"]
+
+nodo488 -> nodo1492;
+
+nodo158 -> nodo488;
+nodo489[label="{EO: 489|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+nodo1493[label="{EO: 1493|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo489 -> nodo1493;
+nodo1494[label="{EO: 1494|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo489 -> nodo1494;
+
+nodo158 -> nodo489;
+
+nodo51 -> nodo158;
+nodo159[label="{EO: 159|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo490[label="{EO: 490|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo1495[label="{EO: 1495|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo490 -> nodo1495;
+nodo1496[label="{EO: 1496|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo490 -> nodo1496;
+nodo1497[label="{EO: 1497|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo490 -> nodo1497;
+nodo1498[label="{EO: 1498|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo490 -> nodo1498;
+nodo1499[label="{EO: 1499|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo490 -> nodo1499;
+
+nodo159 -> nodo490;
+nodo491[label="{EO: 491|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo1500[label="{EO: 1500|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo491 -> nodo1500;
+nodo1501[label="{EO: 1501|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo491 -> nodo1501;
+
+nodo159 -> nodo491;
+nodo492[label="{EO: 492|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo1502[label="{EO: 1502|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo492 -> nodo1502;
+nodo1503[label="{EO: 1503|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo492 -> nodo1503;
+nodo1504[label="{EO: 1504|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo492 -> nodo1504;
+
+nodo159 -> nodo492;
+
+nodo51 -> nodo159;
+
+nodo15 -> nodo51;
+
+nodo4 -> nodo15;
+nodo16[label="{EO: 16|cost: 2.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo52[label="{EO: 52|cost: 3.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo160[label="{EO: 160|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+nodo493[label="{EO: 493|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+nodo1505[label="{EO: 1505|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo493 -> nodo1505;
+nodo1506[label="{EO: 1506|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo493 -> nodo1506;
+nodo1507[label="{EO: 1507|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo493 -> nodo1507;
+nodo1508[label="{EO: 1508|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo493 -> nodo1508;
+nodo1509[label="{EO: 1509|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo493 -> nodo1509;
+
+nodo160 -> nodo493;
+nodo494[label="{EO: 494|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo1510[label="{EO: 1510|cost: 6.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+
+nodo494 -> nodo1510;
+nodo1511[label="{EO: 1511|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+
+nodo494 -> nodo1511;
+
+nodo160 -> nodo494;
+nodo495[label="{EO: 495|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo1512[label="{EO: 1512|cost: 6.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo495 -> nodo1512;
+nodo1513[label="{EO: 1513|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo495 -> nodo1513;
+nodo1514[label="{EO: 1514|cost: 6.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo495 -> nodo1514;
+
+nodo160 -> nodo495;
+
+nodo52 -> nodo160;
+nodo161[label="{EO: 161|cost: 4.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+nodo496[label="{EO: 496|cost: 5.0|A: GoToArabia|{\nEnergia:\n20India\n}}"]
+nodo1515[label="{EO: 1515|cost: 6.0|A: GoToBoss|{\nEnergia:\n20Arabia\n}}"]
+
+nodo496 -> nodo1515;
+nodo1516[label="{EO: 1516|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Arabia\n}}"]
+
+nodo496 -> nodo1516;
+
+nodo161 -> nodo496;
+nodo497[label="{EO: 497|cost: 5.0|A: GoToIndonesia|{\nEnergia:\n20India\n}}"]
+nodo1517[label="{EO: 1517|cost: 6.0|A: GoToAustralia|{\nEnergia:\n20Indonesia\n}}"]
+
+nodo497 -> nodo1517;
+nodo1518[label="{EO: 1518|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Indonesia\n}}"]
+
+nodo497 -> nodo1518;
+
+nodo161 -> nodo497;
+nodo498[label="{EO: 498|cost: 5.0|A: GoToJapon|{\nEnergia:\n20India\n}}"]
+nodo1519[label="{EO: 1519|cost: 6.0|A: GoToChina|{\nEnergia:\n20Japon\n}}"]
+
+nodo498 -> nodo1519;
+nodo1520[label="{EO: 1520|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Japon\n}}"]
+
+nodo498 -> nodo1520;
+nodo1521[label="{EO: 1521|cost: 6.0|A: GoToNuevaGuinea|{\nEnergia:\n20Japon\n}}"]
+
+nodo498 -> nodo1521;
+
+nodo161 -> nodo498;
+
+nodo52 -> nodo161;
+nodo162[label="{EO: 162|cost: 4.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+nodo499[label="{EO: 499|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n20Noruega\n}}"]
+nodo1522[label="{EO: 1522|cost: 6.0|A: GoToCanada|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo499 -> nodo1522;
+nodo1523[label="{EO: 1523|cost: 6.0|A: GoToInglaterra|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo499 -> nodo1523;
+nodo1524[label="{EO: 1524|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Groenlandia\n}}"]
+
+nodo499 -> nodo1524;
+
+nodo162 -> nodo499;
+nodo500[label="{EO: 500|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Noruega\n}}"]
+nodo1525[label="{EO: 1525|cost: 6.0|A: GoToEgipto|{\nEnergia:\n20Moscu\n}}"]
+
+nodo500 -> nodo1525;
+nodo1526[label="{EO: 1526|cost: 6.0|A: GoToIndia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo500 -> nodo1526;
+nodo1527[label="{EO: 1527|cost: 6.0|A: GoToNoruega|{\nEnergia:\n20Moscu\n}}"]
+
+nodo500 -> nodo1527;
+nodo1528[label="{EO: 1528|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo500 -> nodo1528;
+nodo1529[label="{EO: 1529|cost: 6.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+
+nodo500 -> nodo1529;
+
+nodo162 -> nodo500;
+
+nodo52 -> nodo162;
+nodo163[label="{EO: 163|cost: 4.0|A: GoToSiberia|{\nEnergia:\n20Moscu\n}}"]
+nodo501[label="{EO: 501|cost: 5.0|A: GoToBoss|{\nEnergia:\n20Siberia\n}}"]
+nodo1530[label="{EO: 1530|cost: 6.0|A: GoToArabia|{\nEnergia:\n-3086058Boss\n}}"]
+
+nodo501 -> nodo1530;
+nodo1531[label="{EO: 1531|cost: 6.0|A: GoToAustralia|{\nEnergia:\n-3086058Boss\n}}"]
+
+nodo501 -> nodo1531;
+nodo1532[label="{EO: 1532|cost: 6.0|A: GoToSudafrica|{\nEnergia:\n-3086058Boss\n}}"]
+
+nodo501 -> nodo1532;
+
+nodo163 -> nodo501;
+nodo502[label="{EO: 502|cost: 5.0|A: GoToChina|{\nEnergia:\n20Siberia\n}}"]
+nodo1533[label="{EO: 1533|cost: 6.0|A: GoToJapon|{\nEnergia:\n20China\n}}"]
+
+nodo502 -> nodo1533;
+nodo1534[label="{EO: 1534|cost: 6.0|A: GoToSiberia|{\nEnergia:\n20China\n}}"]
+
+nodo502 -> nodo1534;
+
+nodo163 -> nodo502;
+nodo503[label="{EO: 503|cost: 5.0|A: GoToKamchatka|{\nEnergia:\n20Siberia\n}}"]
+
+nodo163 -> nodo503;
+
+nodo52 -> nodo163;
+nodo164[label="{EO: 164|cost: 4.0|A: GoToSuecia|{\nEnergia:\n20Moscu\n}}"]
+nodo504[label="{EO: 504|cost: 5.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+
+nodo164 -> nodo504;
+nodo505[label="{EO: 505|cost: 5.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+
+nodo164 -> nodo505;
+nodo506[label="{EO: 506|cost: 5.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+
+nodo164 -> nodo506;
+
+nodo52 -> nodo164;
+
+nodo16 -> nodo52;
+nodo53[label="{EO: 53|cost: 3.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+nodo165[label="{EO: 165|cost: 4.0|A: GoToCanarias|{\nEnergia:\n20Sahara\n}}"]
+nodo507[label="{EO: 507|cost: 5.0|A: GoToCanada|{\nEnergia:\n20Canarias\n}}"]
+
+nodo165 -> nodo507;
+nodo508[label="{EO: 508|cost: 5.0|A: GoToCuba|{\nEnergia:\n20Canarias\n}}"]
+
+nodo165 -> nodo508;
+nodo509[label="{EO: 509|cost: 5.0|A: GoToPeru|{\nEnergia:\n20Canarias\n}}"]
+
+nodo165 -> nodo509;
+nodo510[label="{EO: 510|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Canarias\n}}"]
+
+nodo165 -> nodo510;
+
+nodo53 -> nodo165;
+nodo166[label="{EO: 166|cost: 4.0|A: GoToEgipto|{\nEnergia:\n20Sahara\n}}"]
+nodo511[label="{EO: 511|cost: 5.0|A: GoToMoscu|{\nEnergia:\n20Egipto\n}}"]
+
+nodo166 -> nodo511;
+nodo512[label="{EO: 512|cost: 5.0|A: GoToSahara|{\nEnergia:\n20Egipto\n}}"]
+
+nodo166 -> nodo512;
+nodo513[label="{EO: 513|cost: 5.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+
+nodo166 -> nodo513;
+
+nodo53 -> nodo166;
+
+nodo16 -> nodo53;
+nodo54[label="{EO: 54|cost: 3.0|A: GoToSuecia|{\nEnergia:\n20Egipto\n}}"]
+nodo167[label="{EO: 167|cost: 4.0|A: GoToEgipto|{\nEnergia:\n0Suecia\n}}"]
+nodo514[label="{EO: 514|cost: 5.0|A: GoToMoscu|{\nEnergia:\n19Egipto\n}}"]
+
+nodo167 -> nodo514;
+nodo515[label="{EO: 515|cost: 5.0|A: GoToSahara|{\nEnergia:\n19Egipto\n}}"]
+
+nodo167 -> nodo515;
+nodo516[label="{EO: 516|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Egipto\n}}"]
+
+nodo167 -> nodo516;
+
+nodo54 -> nodo167;
+nodo168[label="{EO: 168|cost: 4.0|A: GoToInglaterra|{\nEnergia:\n0Suecia\n}}"]
+nodo517[label="{EO: 517|cost: 5.0|A: GoToCanada|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo168 -> nodo517;
+nodo518[label="{EO: 518|cost: 5.0|A: GoToGroenlandia|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo168 -> nodo518;
+nodo519[label="{EO: 519|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Inglaterra\n}}"]
+
+nodo168 -> nodo519;
+
+nodo54 -> nodo168;
+nodo169[label="{EO: 169|cost: 4.0|A: GoToMoscu|{\nEnergia:\n0Suecia\n}}"]
+nodo520[label="{EO: 520|cost: 5.0|A: GoToEgipto|{\nEnergia:\n19Moscu\n}}"]
+
+nodo169 -> nodo520;
+nodo521[label="{EO: 521|cost: 5.0|A: GoToIndia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo169 -> nodo521;
+nodo522[label="{EO: 522|cost: 5.0|A: GoToNoruega|{\nEnergia:\n19Moscu\n}}"]
+
+nodo169 -> nodo522;
+nodo523[label="{EO: 523|cost: 5.0|A: GoToSiberia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo169 -> nodo523;
+nodo524[label="{EO: 524|cost: 5.0|A: GoToSuecia|{\nEnergia:\n19Moscu\n}}"]
+
+nodo169 -> nodo524;
+
+nodo54 -> nodo169;
+
+nodo16 -> nodo54;
+
+nodo4 -> nodo16;
+
+nodo0 -> nodo4;
 
 
 }

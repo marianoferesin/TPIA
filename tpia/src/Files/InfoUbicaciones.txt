@@ -1,4 +1,4 @@
-TierraDelFuego	0	5	0
+TierraDelFuego	0	0	0
 BuenosAires	0	5	1
 Brasil	0	5	2
 Peru	0	5	3

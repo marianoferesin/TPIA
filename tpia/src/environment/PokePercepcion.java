@@ -56,6 +56,7 @@ public class PokePercepcion extends Perception {
 
     @Override
     public String toString() {
-        return "PokePercepcion: " + "miMap= {...}, misUbicacionesVisibles= {...} , miUbicacion=" + miUbicacion.getNombre();
+        //return "PokePercepcion: " + "miMap= {...}, misUbicacionesVisibles= {...} , miUbicacion=" + miUbicacion.getNombre();
+        return "PokePercepcion: \n" + "miMap= " + miMap + " \nmisUbicacionesVisibles= " + misUbicacionesVisibles.keySet() + "\nmiUbicacion=" + miUbicacion.getNombre();
     }
 }
