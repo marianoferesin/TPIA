@@ -128,27 +128,30 @@ public class PokeEnvironmentState extends EnvironmentState {
     }
 
     private void moverEnemigo(PokeUbicacion unaUbicacion){
-
-        if (unaUbicacion.getPokeEnemigo() != null &&  unaUbicacion.getPokeEnemigo().moverse()){
-            String ubi= unaUbicacion.getNombre();
-            ArrayList<String> adyacentes = map.get(ubi);
-            for (int i = 0; i < adyacentes.size(); i++) {
-                PokeUbicacion ady = pokeUbicaciones.get(adyacentes.get(i));
-                if (ady.getPokeEnemigo() != null || ady.esPokeparada()){
-                    adyacentes.remove(i);
+        if (unaUbicacion.tieneEnemigo()){
+            PokeEnemigo enemigo = unaUbicacion.getPokeEnemigo();
+            if (enemigo.moverse()){
+                ArrayList<String> adyacentesFiltrados = new ArrayList<>();
+                for(String a: map.get(unaUbicacion.getNombre())){
+                    PokeUbicacion ady = pokeUbicaciones.get(a);
+                    if (!ady.tieneEnemigo() || !ady.esPokeparada()) {
+                        adyacentesFiltrados.add(a);
+                    }
                 }
-            }
-            if(adyacentes.size() != 0){
-                PokeEnemigo enemigo = new PokeEnemigo(unaUbicacion.getPokeEnemigo());
-                unaUbicacion.removerPokeEnemigo();
-                pokeUbicaciones.put(ubi,unaUbicacion);
-                int destino = ((new Random()).nextInt() % adyacentes.size());
-                if(destino<0) destino += adyacentes.size();
-
-                String dest = adyacentes.get(destino);
-                PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
-                nuevaUbi.setPokeEnemigo(enemigo);
-                pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+                if(adyacentesFiltrados.size() != 0){
+                    unaUbicacion.removerPokeEnemigo();
+                    //si es por referencia no es necesario
+                    //pokeUbicaciones.put(unaUbicacion.getNombre(),unaUbicacion);
+                    int destino = ((new Random()).nextInt() % adyacentesFiltrados.size());
+                    if(destino<0) {destino += adyacentesFiltrados.size();}
+                    String dest = adyacentesFiltrados.get(destino);
+                    PokeUbicacion nuevaUbi = pokeUbicaciones.get(dest);
+                    System.out.println("Saco enemigo de "+unaUbicacion.getNombre()+ " y lo pongo en "+dest);
+                    nuevaUbi.setPokeEnemigo(enemigo);
+                    //TODO , no esta guardando bien al enemigo
+                    //si es por referencia no es necesario
+                    //pokeUbicaciones.put(nuevaUbi.getNombre(), nuevaUbi);
+                }
             }
         }
     }

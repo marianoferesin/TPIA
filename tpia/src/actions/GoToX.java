@@ -24,10 +24,10 @@ public class GoToX extends SearchAction {
         PokeAgentState agState = (PokeAgentState) s;
         PokeUbicacion ubi = agState.getPokeUbicacion();
         ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
-        System.out.println(adyacentes);
         if (adyacentes.contains(destino)) {
                 agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
                 agState.huir();
+            System.out.println(ubi.getNombre()+"-->"+destino);
                 return agState;
         }
         return null;

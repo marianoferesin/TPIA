@@ -63,4 +63,8 @@ public class PokeUbicacion {
         PokeUbicacion that = (PokeUbicacion) o;
         return Objects.equals(nombre, that.nombre);
     }
+
+    public boolean tieneEnemigo(){
+        return (this.pokeEnemigo.getEnergia() != 0);
+    }
 }
