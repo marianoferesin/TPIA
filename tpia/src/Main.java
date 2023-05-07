@@ -1,11 +1,6 @@
-import GUI.PokeFrame;
-import GUI.PokePanel;
 import agent.PokeAgent;
 import environment.PokeEnvironment;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
-
-import javax.swing.*;
-
 public class Main {
     public static void main(String[] args) {
         PokeEnvironment pokeEnvironment = new PokeEnvironment();

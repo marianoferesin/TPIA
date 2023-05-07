@@ -18,7 +18,7 @@ public class FileReaders {
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                ret.add(data);
+                ret.add(data.trim());
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -66,10 +66,10 @@ public class FileReaders {
                 String data = myReader.nextLine();
                 String[] splitted = data.split("\\s+");
                 ArrayList <String> next = new ArrayList<String>();
-                next.add(splitted[0]);
-                next.add(splitted[1]);
-                next.add(splitted[2]);
-                next.add(splitted[3]);
+                next.add(splitted[0].trim());
+                next.add(splitted[1].trim());
+                next.add(splitted[2].trim());
+                next.add(splitted[3].trim());
                 ret.add(next);
             }
             myReader.close();

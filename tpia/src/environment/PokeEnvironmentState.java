@@ -52,7 +52,6 @@ public class PokeEnvironmentState extends EnvironmentState {
        for(String ubi: ubicaciones){
            this.map.put(ubi,new ArrayList<String>());
        }
-
        //Get info of places
         ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
         for(ArrayList<String> info: infoUbicaciones){
@@ -71,7 +70,6 @@ public class PokeEnvironmentState extends EnvironmentState {
 
        for(ArrayList<String> a: aristas) {
            this.map.get(a.get(0)).add(a.get(1));
-           this.map.get(a.get(1)).add(a.get(0));
        }
 
        this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,null,false);
@@ -90,7 +88,7 @@ public class PokeEnvironmentState extends EnvironmentState {
             if(this.pokeUbicaciones.get(point).esPokeparada()) str += " Pokeparada  --> ";
             else str += "Enemigo: " + this.pokeUbicaciones.get(point).getPokeEnemigo().getEnergia().toString() + " --> ";
 
-            Collection<String> successors = this.map.get(point);
+            ArrayList<String> successors = this.map.get(point);
             if (successors != null) {
                 for (String successor : successors) {
                     str = str + successor + " ";
