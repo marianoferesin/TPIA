@@ -12,8 +12,8 @@ public class PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
     private String AGENT_INIT_LOCATION = "TierraDelFuego";
     private PokeUbicacion pokeUbicacion;
-    private Integer pokeEnergia;
-    private Integer pokeEnergiaInicial;
+    private Double pokeEnergia;
+    private Double pokeEnergiaInicial;
     private Integer[][] pokeAtaques;
     //TODO
     //Debe existir una percepcion desede el ambiente que informe a la gente de la cantidad de pokemones.
@@ -83,7 +83,8 @@ public class PokeAgentState extends SearchBasedAgentState {
         initPlayer();
     }
     private void initPlayer(){
-        pokeEnergiaInicial = (int) (Math.random()*(20-10+1)+10);
+        int random = (int) (Math.random()*(20-10+1)+10);
+        pokeEnergiaInicial = random * 1.0;
         pokeEnergia = pokeEnergiaInicial;
         pokeAtaques = new Integer[][]{{0,0,0},{0,0,0}};
         pokeCantidad = 0;
@@ -121,19 +122,19 @@ public class PokeAgentState extends SearchBasedAgentState {
         return "{ " + "Energia: "+ pokeEnergia + "," + pokeUbicacion + " }";
     }
 
-    public Integer getPokeEnergia() {
+    public Double getPokeEnergia() {
         return pokeEnergia;
     }
 
-    public void setPokeEnergia(Integer pokeEnergia) {
+    public void setPokeEnergia(Double pokeEnergia) {
         this.pokeEnergia = pokeEnergia;
     }
 
-    public Integer getPokeEnergiaInicial() {
+    public Double getPokeEnergiaInicial() {
         return pokeEnergiaInicial;
     }
 
-    public void setPokeEnergiaInicial(Integer pokeEnergiaInicial) {
+    public void setPokeEnergiaInicial(Double pokeEnergiaInicial) {
         this.pokeEnergiaInicial = pokeEnergiaInicial;
     }
     public void setPokeAtaques(Integer[][] pokeAtaques) {
@@ -168,7 +169,19 @@ public class PokeAgentState extends SearchBasedAgentState {
     public void verificarPoderesEspeciales(){
         if( (1.2*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][0] =1;}
         if( (1.3*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][1] =1;}
-        if( (1.5*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][3] =1;}
+        if( (1.5*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][2] =1;}
+    }
+
+    public boolean AtaqueEspecial1Enabled(){
+        return this.pokeAtaques[0][0] == 1;
+    }
+
+    public boolean AtaqueEspecial2Enabled(){
+        return this.pokeAtaques[0][1] == 1;
+    }
+
+    public boolean AtaqueEspecial3Enabled(){
+        return this.pokeAtaques[0][2] == 1;
     }
 
 }
