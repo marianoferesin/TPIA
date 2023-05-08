@@ -2,8 +2,8 @@ package enemigos;
 
 public class Boss extends PokeEnemigo{
 
-    public Boss(Integer id, Integer energia) {
-        super(id, energia);
+    public Boss(Integer energia) {
+        super(energia);
     }
 
     public Boss(PokeEnemigo e) {

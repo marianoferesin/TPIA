@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PokeAgentState extends SearchBasedAgentState {
+public class    PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
     private String AGENT_INIT_LOCATION = "TierraDelFuego";
     private PokeUbicacion pokeUbicacion;
@@ -21,7 +21,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     public PokeAgentState(){
-        pokeUbicacion = new PokeUbicacion(AGENT_INIT_LOCATION,null,false);
+        pokeUbicacion = new PokeUbicacion(AGENT_INIT_LOCATION,null,0);
         map = new HashMap<>();
         pokeUbicaciones = new HashMap<>();
     }
@@ -33,7 +33,7 @@ public class PokeAgentState extends SearchBasedAgentState {
     @Override
     public SearchBasedAgentState clone() {
         PokeAgentState pokeAgentState = new PokeAgentState();
-        pokeAgentState.setPokeUbicacion(this.pokeUbicacion);
+        pokeAgentState.setPokeUbicacion(this.pokeUbicacion.clone());
         pokeAgentState.setPokeEnergia(this.pokeEnergia);
         pokeAgentState.setPokeEnergiaInicial(this.pokeEnergiaInicial);
         pokeAgentState.setPokeAtaques(this.pokeAtaques);
@@ -127,9 +127,8 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     public void setPokeEnergia(Double pokeEnergia) {
-        this.pokeEnergia = pokeEnergia;
+            this.pokeEnergia = pokeEnergia;
     }
-
     public Double getPokeEnergiaInicial() {
         return pokeEnergiaInicial;
     }
@@ -139,10 +138,6 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
     public void setPokeAtaques(Integer[][] pokeAtaques) {
         this.pokeAtaques = pokeAtaques;
-    }
-
-    public Integer getPokeCantidad() {
-        return pokeCantidad;
     }
 
     public void setPokeCantidad(Integer pokeCantidad) {
@@ -158,12 +153,9 @@ public class PokeAgentState extends SearchBasedAgentState {
     }
 
     public void huir(){
-        if (this.pokeUbicacion.getPokeEnemigo() != null){
-            if (this.pokeEnergia < this.pokeUbicacion.getPokeEnemigo().getEnergia()){
-                this.setPokeEnergia(this.pokeEnergiaInicial-(this.pokeUbicacion.getPokeEnemigo().getEnergia()/4));
-            }
+        if (this.pokeUbicacion.getPokeEnemigo().getEnergia() > 0){
+            this.setPokeEnergia(this.pokeEnergia-(this.pokeUbicacion.getPokeEnemigo().getEnergia()/4));
         }
-
     }
 
     public void verificarPoderesEspeciales(){

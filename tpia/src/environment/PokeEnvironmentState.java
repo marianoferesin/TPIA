@@ -14,16 +14,17 @@ public class PokeEnvironmentState extends EnvironmentState {
     private PokeUbicacion ubicacionBoss;
     private Integer cdSatelite;
     private PokeUbicacion ubicacionPokeLuchador;
+    private boolean agenteConVida;
 
     @Override
     public Object clone() {
         PokeEnvironmentState newPokeEnviromentState = new PokeEnvironmentState();
-        HashMap<String, ArrayList<String>> copyMap = new HashMap<String, ArrayList<String>>();
+        HashMap<String, ArrayList<String>> copyMap = new HashMap<>();
         for (Map.Entry<String, ArrayList<String>> entry : this.map.entrySet()) {
-            copyMap.put(entry.getKey(), new ArrayList<String>(entry.getValue()));
+            copyMap.put(entry.getKey(), new ArrayList<>(entry.getValue()));
         }
         newPokeEnviromentState.map = copyMap;
-        HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<String, PokeUbicacion>();
+        HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<>();
         for (Map.Entry<String, PokeUbicacion> entry : this.pokeUbicaciones.entrySet()) {
             copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
         }
@@ -33,10 +34,11 @@ public class PokeEnvironmentState extends EnvironmentState {
         newPokeEnviromentState.ubicacionPokeLuchador = this.ubicacionPokeLuchador;
         return  newPokeEnviromentState;
     }
- public PokeEnvironmentState(){
+    public PokeEnvironmentState(){
         this.map = new HashMap<String, ArrayList<String>>();
         this.pokeUbicaciones = new HashMap<String,PokeUbicacion>();
         this.cdSatelite = 0;
+        this.agenteConVida=true;
     }
 
     @Override
@@ -54,13 +56,13 @@ public class PokeEnvironmentState extends EnvironmentState {
        //Get info of places
         ArrayList <ArrayList<String>> infoUbicaciones = FileReaders.leerInfoUbicaciones();
         for(ArrayList<String> info: infoUbicaciones){
-            PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
+            PokeEnemigo ene = new PokeEnemigo(Integer.valueOf(info.get(2)));
 
             if (info.get(0).equals(BOSS_LOCATION)){
-                ene = new Boss(Integer.valueOf(info.get(3)),Integer.valueOf(info.get(2)));
-                this.ubicacionBoss = new PokeUbicacion(info.get(0),ene,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
+                ene = new Boss(Integer.valueOf(info.get(2)));
+                this.ubicacionBoss = new PokeUbicacion(info.get(0),ene,0);
             }
-            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,(Integer.valueOf(info.get(1)) == 1) ? Boolean.TRUE : Boolean.FALSE);
+            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Integer.parseInt(info.get(1)));
             this.pokeUbicaciones.put(ubi.getNombre(),ubi);
         }
        //An edge is represented by an ArrayList
@@ -71,12 +73,9 @@ public class PokeEnvironmentState extends EnvironmentState {
            this.map.get(a.get(0)).add(a.get(1));
        }
 
-       this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,null,false);
+       this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,new PokeEnemigo(0),0);
 
     }
-
-
-
     @Override
     public String toString() {
         //Display info about all world
@@ -186,6 +185,14 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     public Integer getCdSatelite() {
         return cdSatelite;
+    }
+
+    public boolean isAgenteConVida() {
+        return agenteConVida;
+    }
+
+    public void setAgenteConVida(boolean agenteConVida) {
+        this.agenteConVida = agenteConVida;
     }
 
     public void setCdSatelite(Integer cdSatelite) {

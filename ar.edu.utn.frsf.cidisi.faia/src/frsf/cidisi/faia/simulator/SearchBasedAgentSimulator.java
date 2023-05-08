@@ -17,12 +17,12 @@
  */
 package frsf.cidisi.faia.simulator;
 
+import agent.PokeAgent;
+import agent.PokeAgentState;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.GoalBasedAgent;
-import frsf.cidisi.faia.agent.search.GoalTest;
-import frsf.cidisi.faia.agent.search.Problem;
-import frsf.cidisi.faia.agent.search.SearchBasedAgent;
+import frsf.cidisi.faia.agent.search.*;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.state.AgentState;
 
@@ -48,7 +48,6 @@ public class SearchBasedAgentSimulator extends GoalBasedAgentSimulator {
         Problem p = sa.getProblem();
         GoalTest gt = p.getGoalState();
         AgentState aSt = p.getAgentState();
-
         return gt.isGoalState(aSt);
     }
 

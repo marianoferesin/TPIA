@@ -1,7 +1,10 @@
 package environment;
 
+import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import frsf.cidisi.faia.state.AgentState;
+import frsf.cidisi.faia.state.EnvironmentState;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +43,17 @@ public class PokeEnvironment extends Environment {
             perception.setMiMap(mapPerception);
             perception.setMisUbicacionesVisibles(pokeUbicacionesPerception);
         }
-        //mueve enemigos dado que estamos saliendo de un ciclo de percepcion
-        this.getEnvironmentState().MoverEnemigos();
         return perception;
     }
-
+    @Override
+    public void updateState(AgentState ast, Action action) {
+        this.environmentState = action.execute(ast, environmentState);
+        this.getEnvironmentState().MoverEnemigos();
+    }
+    @Override
+    public boolean agentFailed(Action actionReturned) {
+        return !((PokeEnvironmentState) this.environmentState).isAgenteConVida();
+    }
     public String toString(){
         return "";
         //return environmentState.toString();

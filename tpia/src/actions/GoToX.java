@@ -7,7 +7,6 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
-
 import java.util.ArrayList;
 
 public class GoToX extends SearchAction {
@@ -25,9 +24,9 @@ public class GoToX extends SearchAction {
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
         if (adyacentes.contains(destino)) {
-                agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
-                agentState.huir();
-                return agentState;
+            agentState.huir();
+            agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
+            return agentState;
         }
         return null;
     }
@@ -36,20 +35,20 @@ public class GoToX extends SearchAction {
     // Actualiza el estado del agente y del ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        PokeAgentState agState = (PokeAgentState) ast;
-        PokeEnvironmentState pkState = (PokeEnvironmentState) est;
-        PokeUbicacion ubi = agState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agState.getMap().get(ubi.getNombre());;
-        for (int i = 0; i < adyacentes.size(); i++) {
-            if (adyacentes.get(i).equals(destino)) {
-                agState.setPokeUbicacion(agState.getPokeUbicaciones().get(destino));
-                agState.huir();
-                pkState.setUbicacionPokeLuchador(agState.getPokeUbicaciones().get(destino));
-                return pkState;
-            }
+        PokeAgentState agentState = (PokeAgentState) ast;
+        PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
+        PokeUbicacion ubi = agentState.getPokeUbicacion();
+        ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
+        if (adyacentes.contains(destino)){
+            System.out.println(" ("+ ubi.getNombre() +" --> "+destino +") Antes de huir de  :" + agentState.getPokeEnergia());
+            agentState.huir();
+            System.out.println("("+ ubi.getNombre()+" --> "+destino+") Despues de huir :" + agentState.getPokeEnergia());
+            agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
+            pokeEnvironmentState.setUbicacionPokeLuchador(agentState.getPokeUbicaciones().get(destino));
+            pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
+            return pokeEnvironmentState;
         }
         return null;
-
     }
 
     @Override

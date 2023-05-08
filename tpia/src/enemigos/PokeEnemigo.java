@@ -1,22 +1,22 @@
 package enemigos;
 
 public class PokeEnemigo {
-
-    protected Integer id;
     protected Integer energia;
     private Integer cooldownMoverse;
 
 
-    public PokeEnemigo(Integer id, Integer energia) {
-        this.id = id;
+    public PokeEnemigo(Integer energia) {
         this.energia = energia;
         this.cooldownMoverse = (int) ((Math.random() * ((3 - 1) + 1)) + 1);
     }
 
     public PokeEnemigo(PokeEnemigo e){
-        this.id = e.id;
         this.energia = e.energia;
         this.cooldownMoverse = e.getCooldownMoverse();
+    }
+     public PokeEnemigo(Integer energia,Integer cooldownMoverse){
+        this.energia = energia;
+        this.cooldownMoverse = cooldownMoverse;
     }
 
     public Integer getCooldownMoverse() {
@@ -38,5 +38,9 @@ public class PokeEnemigo {
 
     public void setEnergia(Integer energia) {
         this.energia = energia;
+    }
+
+    public PokeEnemigo clone(){
+        return new PokeEnemigo(this.getEnergia(),this.getCooldownMoverse());
     }
 }

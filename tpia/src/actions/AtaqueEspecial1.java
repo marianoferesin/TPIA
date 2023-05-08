@@ -36,15 +36,16 @@ public class AtaqueEspecial1 extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         PokeAgentState agentState = (PokeAgentState) ast;
-        PokeEnvironmentState enviromState = (PokeEnvironmentState) est;
+        PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         if ( agentState.AtaqueEspecial1Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
             int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
-            (enviromState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
+            (pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
             agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (multiplicador * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
-            return enviromState;
+            pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
+            return pokeEnvironmentState;
         }
         return null;
     }

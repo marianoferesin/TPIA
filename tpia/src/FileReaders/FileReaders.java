@@ -69,7 +69,6 @@ public class FileReaders {
                 next.add(splitted[0].trim());
                 next.add(splitted[1].trim());
                 next.add(splitted[2].trim());
-                next.add(splitted[3].trim());
                 ret.add(next);
             }
             myReader.close();

@@ -6,7 +6,7 @@ import java.util.Objects;
 public class PokeUbicacion {
     private String nombre;
     private PokeEnemigo pokeEnemigo;
-    private Boolean esPokeparada;
+    private Integer energiaPokeparada;
     private Integer antiguedad;
 
     public String getNombre() {
@@ -17,21 +17,21 @@ public class PokeUbicacion {
         this.nombre = nombre;
     }
 
-    public PokeUbicacion(String nombre, PokeEnemigo pokeEnemigo, Boolean esPokeparada) {
+    public PokeUbicacion(String nombre, PokeEnemigo pokeEnemigo, Integer energiaPokeparada) {
         this.nombre = nombre;
         this.pokeEnemigo = pokeEnemigo;
-        this.esPokeparada = esPokeparada;
+        this.energiaPokeparada = energiaPokeparada;
         this.antiguedad = 0;
     }
     public PokeUbicacion(PokeUbicacion e) {
         this.nombre = e.nombre;
         this.pokeEnemigo = e.pokeEnemigo;
-        this.esPokeparada = e.esPokeparada;
+        this.energiaPokeparada = e.energiaPokeparada;
         this.antiguedad = e.antiguedad;
     }
 
     public Boolean esPokeparada(){
-        return this.esPokeparada;
+        return this.energiaPokeparada > 0;
     }
 
     public PokeEnemigo getPokeEnemigo(){
@@ -54,6 +54,14 @@ public class PokeUbicacion {
         return this;
     }
 
+    public Integer getEnergiaPokeparada() {
+        return energiaPokeparada;
+    }
+
+    public void setEnergiaPokeparada(Integer energiaPokeparada) {
+        this.energiaPokeparada = energiaPokeparada;
+    }
+
     public int getAnt() {return antiguedad;}
 
     @Override
@@ -71,5 +79,8 @@ public class PokeUbicacion {
     @Override
     public String toString() {
         return nombre;
+    }
+    public PokeUbicacion clone(){
+        return new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada);
     }
 }

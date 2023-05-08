@@ -1,7 +1,7 @@
 package agent;
 
 import FileReaders.FileReaders;
-import actions.GoToX;
+import actions.*;
 import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
@@ -34,6 +34,12 @@ public class PokeAgent extends SearchBasedAgent {
         for(String ubi: ubicaciones){
             actionsList.add(new GoToX(ubi));
         }
+        actionsList.add(new Atacar());
+        actionsList.add(new RecargarEnergia());
+     // actionsList.add(new AtaqueEspecial1());
+     // actionsList.add(new AtaqueEspecial2());
+     // actionsList.add(new AtaqueEspecial3());
+
 
         //Arbol podado.
         /*PokeUbicacion ubicacion = pokeAgentState.getPokeUbicacion();
@@ -71,6 +77,15 @@ public class PokeAgent extends SearchBasedAgent {
         // Return the selected action
 
         return selectedAction;
+    }
+
+    public void setPokeAgentState(PokeAgentState pokeAgentState) {
+        this.pokeAgentState = pokeAgentState;
+    }
+
+    @Override
+    public String toString(){
+        return pokeAgentState.toString();
     }
     @Override
     public void see(Perception perception) {
