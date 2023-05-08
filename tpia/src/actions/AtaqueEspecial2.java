@@ -21,10 +21,10 @@ public class AtaqueEspecial2 extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         PokeAgentState agentState = (PokeAgentState) s;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if ( agentState.AtaqueEspecial2Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
+        if ( agentState.ataqueEspecial2Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
             int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
-            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (multiplicador * energiaEnemigo));
+            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
             agentState.setCoolDown2();
             return agentState;
@@ -39,11 +39,11 @@ public class AtaqueEspecial2 extends SearchAction {
         PokeAgentState agentState = (PokeAgentState) ast;
         PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if ( agentState.AtaqueEspecial1Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
+        if ( agentState.ataqueEspecial1Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
             int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
             (pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
-            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (multiplicador * energiaEnemigo));
+            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
             agentState.setCoolDown2();

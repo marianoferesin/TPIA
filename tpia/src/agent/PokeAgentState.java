@@ -181,22 +181,25 @@ public class    PokeAgentState extends SearchBasedAgentState {
         }
     }
     private void refreshCoolDown(){
-        if(AtaqueEspecial1Enabled() && this.pokeAtaques[1][0] > 0) this.pokeAtaques[1][0]--;
+        if(ataqueEspecial1Enabled() && this.pokeAtaques[1][0] > 0) this.pokeAtaques[1][0]--;
 
-        if(AtaqueEspecial2Enabled() && this.pokeAtaques[1][1] > 0) this.pokeAtaques[1][1]--;
+        if(ataqueEspecial2Enabled() && this.pokeAtaques[1][1] > 0) this.pokeAtaques[1][1]--;
 
-        if(AtaqueEspecial3Enabled() && this.pokeAtaques[1][2] > 0) this.pokeAtaques[1][2]--;
+        if(ataqueEspecial3Enabled() && this.pokeAtaques[1][2] > 0) this.pokeAtaques[1][2]--;
     }
-    public boolean AtaqueEspecial1Enabled(){
+    public boolean ataqueEspecial1Enabled(){
         return this.pokeAtaques[0][0] == 1 && this.pokeAtaques[1][0] == 0;
     }
 
-    public boolean AtaqueEspecial2Enabled(){
+    public boolean ataqueEspecial2Enabled(){
         return this.pokeAtaques[0][1] == 1 && this.pokeAtaques[1][1] == 0;
     }
 
-    public boolean AtaqueEspecial3Enabled(){
+    public boolean ataqueEspecial3Enabled(){
         return this.pokeAtaques[0][2] == 1 && this.pokeAtaques[1][2] == 0;
+    }
+    public boolean algunAtaqueEspecial(){
+        return ataqueEspecial1Enabled() || ataqueEspecial2Enabled() || ataqueEspecial3Enabled();
     }
     public void setCoolDown1(){
         this.pokeAtaques[1][0] = 0;
