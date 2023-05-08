@@ -10,6 +10,9 @@ import frsf.cidisi.faia.state.EnvironmentState;
 
 import java.util.ArrayList;
 
+/**
+ * Actualmente no se usa, para no cogestionar el arbol.
+ */
 public class RecargarEnergia extends SearchAction {
     //Actualiza el estado del agente
     @Override
@@ -33,7 +36,7 @@ public class RecargarEnergia extends SearchAction {
         PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         if(ubi.esPokeparada()){
-            agentState.setPokeEnergia( ubi.getEnergiaPokeparada()+ agentState.getPokeEnergia());
+            agentState.setPokeEnergia(ubi.getEnergiaPokeparada()+ agentState.getPokeEnergia());
             agentState.verificarPoderesEspeciales();
             pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre()).setEnergiaPokeparada(0);
             ubi.setEnergiaPokeparada(0);

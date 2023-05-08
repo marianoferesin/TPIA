@@ -14,7 +14,7 @@ Suecia	0	5
 Egipto	0	5
 Sudafrica	0	5
 Moscu	0	5
-Kamchatka	0	10
+Kamchatka	0	5
 China	0	5
 India	0	5
 Japon	0	5
@@ -22,8 +22,8 @@ Indonesia	0	5
 NuevaGuinea	0	5
 Australia	0	5
 Groenlandia	10	0
-Arabia	12	0
-NuevaZelanda	15	0
+Arabia	10	0
+NuevaZelanda	10	0
 Siberia	10	0
 Cuba	5	0
 Boss	0	20

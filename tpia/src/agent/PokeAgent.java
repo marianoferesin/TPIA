@@ -8,9 +8,8 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-import frsf.cidisi.faia.solver.search.BreathFirstSearch;
-import frsf.cidisi.faia.solver.search.DepthFirstSearch;
-import frsf.cidisi.faia.solver.search.Search;
+import frsf.cidisi.faia.solver.search.*;
+
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -36,11 +35,10 @@ public class PokeAgent extends SearchBasedAgent {
             actionsList.add(new GoToX(ubi));
         }
         actionsList.add(new Atacar());
-        actionsList.add(new RecargarEnergia());
-     // actionsList.add(new AtaqueEspecial1());
-     // actionsList.add(new AtaqueEspecial2());
-     // actionsList.add(new AtaqueEspecial3());
-
+        //actionsList.add(new RecargarEnergia());
+        actionsList.add(new AtaqueEspecial1());
+        actionsList.add(new AtaqueEspecial2());
+        actionsList.add(new AtaqueEspecial3());
 
         //Arbol podado.
         /*PokeUbicacion ubicacion = pokeAgentState.getPokeUbicacion();
@@ -56,9 +54,10 @@ public class PokeAgent extends SearchBasedAgent {
     @Override
     public Action selectAction() {
 
-        // Breath first strategy
         BreathFirstSearch searchStrategy = new BreathFirstSearch();
         //DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //UniformCostSearch searchStrategy = new UniformCostSearch(new DummyStepCostFunction());
+        //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
 
         Search searchSolver = new Search(searchStrategy);
 

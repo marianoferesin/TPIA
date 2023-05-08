@@ -157,23 +157,54 @@ public class    PokeAgentState extends SearchBasedAgentState {
             this.setPokeEnergia(this.pokeEnergia-(this.pokeUbicacion.getPokeEnemigo().getEnergia()/4));
         }
     }
+    public void recargar(Integer energiaPokeparada){
+        pokeEnergia += energiaPokeparada;
 
-    public void verificarPoderesEspeciales(){
-        if( (1.2*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][0] =1;}
-        if( (1.3*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][1] =1;}
-        if( (1.5*this.pokeEnergiaInicial) >= this.pokeEnergia) { this.pokeAtaques[0][2] =1;}
     }
 
+    public void verificarPoderesEspeciales(){
+
+        refreshCoolDown();
+
+        //TODO los poderes se estan activando presuntamente rapido.
+        if( this.pokeEnergia >= (1.2*this.pokeEnergiaInicial)) {
+            this.pokeAtaques[0][0] = 1;
+            this.pokeAtaques[1][0] = 0;
+        }
+        if( this.pokeEnergia >= (1.3*this.pokeEnergiaInicial)) {
+            this.pokeAtaques[0][1] =1;
+            this.pokeAtaques[1][1] = 0;
+        }
+        if( this.pokeEnergia >= (1.5*this.pokeEnergiaInicial)) {
+            this.pokeAtaques[0][2] =1;
+            this.pokeAtaques[1][2] = 0;
+        }
+    }
+    private void refreshCoolDown(){
+        if(AtaqueEspecial1Enabled() && this.pokeAtaques[1][0] > 0) this.pokeAtaques[1][0]--;
+
+        if(AtaqueEspecial2Enabled() && this.pokeAtaques[1][1] > 0) this.pokeAtaques[1][1]--;
+
+        if(AtaqueEspecial3Enabled() && this.pokeAtaques[1][2] > 0) this.pokeAtaques[1][2]--;
+    }
     public boolean AtaqueEspecial1Enabled(){
-        return this.pokeAtaques[0][0] == 1;
+        return this.pokeAtaques[0][0] == 1 && this.pokeAtaques[1][0] == 0;
     }
 
     public boolean AtaqueEspecial2Enabled(){
-        return this.pokeAtaques[0][1] == 1;
+        return this.pokeAtaques[0][1] == 1 && this.pokeAtaques[1][1] == 0;
     }
 
     public boolean AtaqueEspecial3Enabled(){
-        return this.pokeAtaques[0][2] == 1;
+        return this.pokeAtaques[0][2] == 1 && this.pokeAtaques[1][2] == 0;
     }
-
+    public void setCoolDown1(){
+        this.pokeAtaques[1][0] = 0;
+    }
+    public void setCoolDown2(){
+        this.pokeAtaques[1][1] = 0;
+    }
+    public void setCoolDown3(){
+        this.pokeAtaques[1][2] = 0;
+    }
 }

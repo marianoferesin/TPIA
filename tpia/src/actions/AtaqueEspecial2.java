@@ -26,6 +26,7 @@ public class AtaqueEspecial2 extends SearchAction {
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
             agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (multiplicador * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
+            agentState.setCoolDown2();
             return agentState;
         }
         return null;
@@ -45,6 +46,7 @@ public class AtaqueEspecial2 extends SearchAction {
             agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (multiplicador * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
+            agentState.setCoolDown2();
             return pokeEnvironmentState;
         }
         return null;

@@ -22,6 +22,8 @@ public class PokeEnvironment extends Environment {
     @Override
     //Metodo llamado por el simulador para armar la percepción que será enviada al agente
     public Perception getPercept() {
+        //TODO los enemigos se mueven al principio del ciclo por ahora, despues habria que cambiarlo.
+        this.getEnvironmentState().MoverEnemigos();
         HashMap<String, ArrayList<String>> mapPerception = new HashMap<String, ArrayList<String>>();
         HashMap<String, PokeUbicacion> pokeUbicacionesPerception = new HashMap<String,PokeUbicacion>();
         PokePercepcion perception = new PokePercepcion();
@@ -48,7 +50,6 @@ public class PokeEnvironment extends Environment {
     @Override
     public void updateState(AgentState ast, Action action) {
         this.environmentState = action.execute(ast, environmentState);
-        //this.getEnvironmentState().MoverEnemigos();
     }
     @Override
     public boolean agentFailed(Action actionReturned) {

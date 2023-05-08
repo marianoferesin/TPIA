@@ -10,12 +10,13 @@ import frsf.cidisi.faia.state.EnvironmentState;
 
 public class Atacar extends SearchAction {
     //Actualiza el estado del agente
+    //TODO podriamos comprimir todas las acciones de ataque especial en esta accion, para descongestionar el arbol de busqueda.
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         PokeAgentState agentState = (PokeAgentState) s;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if (ubi.tieneEnemigo() && (agentState.getPokeUbicacion().getPokeEnemigo().getEnergia() < agentState.getPokeEnergia())) {
-            int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (ubi.tieneEnemigo() && (energiaEnemigo < agentState.getPokeEnergia())) {
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
             agentState.setPokeEnergia(agentState.getPokeEnergia() - energiaEnemigo + (0.2* energiaEnemigo));
             agentState.verificarPoderesEspeciales();
@@ -31,8 +32,8 @@ public class Atacar extends SearchAction {
         PokeAgentState agentState = (PokeAgentState) ast;
         PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if (ubi.tieneEnemigo() && ( agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia() ) ) {
-            int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (ubi.tieneEnemigo() && (agentState.getPokeEnergia() > energiaEnemigo) ){
             Double energia = agentState.getPokeEnergia();
             (pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);

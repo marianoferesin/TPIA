@@ -24,15 +24,19 @@ public class GoToX extends SearchAction {
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
         if (adyacentes.contains(destino)) {
+            //Si hay enemigo huyo
             agentState.huir();
+            //Si es pokeparada recargo
+            agentState.recargar(ubi.getEnergiaPokeparada());
+            agentState.verificarPoderesEspeciales();
+            ubi.setEnergiaPokeparada(0);
+
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
             return agentState;
         }
         return null;
     }
-
-
-    // Actualiza el estado del agente y del ambiente
+    // Actualiza el ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         PokeAgentState agentState = (PokeAgentState) ast;
@@ -40,9 +44,16 @@ public class GoToX extends SearchAction {
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
         if (adyacentes.contains(destino)){
+            //Si hay enemigo huyo
             System.out.println(" ("+ ubi.getNombre() +" --> "+destino +") Antes de huir de  :" + agentState.getPokeEnergia());
             agentState.huir();
             System.out.println("("+ ubi.getNombre()+" --> "+destino+") Despues de huir :" + agentState.getPokeEnergia());
+            //Si es pokeparada recargo
+            agentState.recargar(ubi.getEnergiaPokeparada());
+            agentState.verificarPoderesEspeciales();
+            if(ubi.getEnergiaPokeparada() > 0) System.out.println("Recargue energia.............. en " + ubi.getNombre());
+            ubi.setEnergiaPokeparada(0);
+
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
             pokeEnvironmentState.setUbicacionPokeLuchador(agentState.getPokeUbicaciones().get(destino));
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
