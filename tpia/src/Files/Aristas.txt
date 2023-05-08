@@ -65,7 +65,7 @@ Peru Mexico
 Peru TierraDelFuego
 Sahara Canarias
 Sahara Egipto
-Siberia Boss
+Siberia Moscu
 Siberia China
 Siberia Kamchatka
 Sudafrica Boss

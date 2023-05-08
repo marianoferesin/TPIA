@@ -34,11 +34,12 @@ public class PokeAgent extends SearchBasedAgent {
         for(String ubi: ubicaciones){
             actionsList.add(new GoToX(ubi));
         }
-        actionsList.add(new Atacar());
+        actionsList.add(new AtaqueGeneral());
+        //actionsList.add(new Atacar());
         //actionsList.add(new RecargarEnergia());
-        actionsList.add(new AtaqueEspecial1());
-        actionsList.add(new AtaqueEspecial2());
-        actionsList.add(new AtaqueEspecial3());
+        //actionsList.add(new AtaqueEspecial1());
+       // actionsList.add(new AtaqueEspecial2());
+       // actionsList.add(new AtaqueEspecial3());
 
         //Arbol podado.
         /*PokeUbicacion ubicacion = pokeAgentState.getPokeUbicacion();

@@ -167,15 +167,15 @@ public class    PokeAgentState extends SearchBasedAgentState {
         refreshCoolDown();
 
         //TODO los poderes se estan activando presuntamente rapido.
-        if( this.pokeEnergia >= (1.2*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (1.25*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][0] = 1;
             this.pokeAtaques[1][0] = 0;
         }
-        if( this.pokeEnergia >= (1.3*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (1.75*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][1] =1;
             this.pokeAtaques[1][1] = 0;
         }
-        if( this.pokeEnergia >= (1.5*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (2.2*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][2] =1;
             this.pokeAtaques[1][2] = 0;
         }
