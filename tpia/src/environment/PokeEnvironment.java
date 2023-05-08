@@ -48,7 +48,7 @@ public class PokeEnvironment extends Environment {
     @Override
     public void updateState(AgentState ast, Action action) {
         this.environmentState = action.execute(ast, environmentState);
-        this.getEnvironmentState().MoverEnemigos();
+        //this.getEnvironmentState().MoverEnemigos();
     }
     @Override
     public boolean agentFailed(Action actionReturned) {

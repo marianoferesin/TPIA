@@ -10,7 +10,8 @@ public class PokeGoal extends GoalTest {
     public boolean isGoalState(AgentState agentState) {
         PokeUbicacion pokeDestino = new PokeUbicacion("Boss",new PokeEnemigo(0),0);
 
-        return ((PokeAgentState) agentState).getPokeUbicacion().equals(pokeDestino) && ((PokeAgentState) agentState).getPokeUbicacion().getPokeEnemigo().getEnergia() == 0;
+        return ((PokeAgentState) agentState).getPokeUbicacion().equals(pokeDestino) &&
+                ((PokeAgentState) agentState).getPokeUbicacion().getPokeEnemigo().getEnergia() == 0;
 
     }
 }

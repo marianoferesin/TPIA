@@ -2,7 +2,7 @@ TierraDelFuego	0	0
 BuenosAires	0	5
 Brasil	0	5
 Peru	0	5
-Mexico	0	20
+Mexico	0	5
 EEUU	0	5
 Canada	0	5
 Alaska	0	5
@@ -10,7 +10,7 @@ Canarias	0	5
 Sahara	0	5
 Inglaterra	0	5
 Noruega	0	5
-Suecia	0	30
+Suecia	0	5
 Egipto	0	5
 Sudafrica	0	5
 Moscu	0	5
@@ -26,4 +26,4 @@ Arabia	12	0
 NuevaZelanda	15	0
 Siberia	10	0
 Cuba	5	0
-Boss	0	100
+Boss	0	20

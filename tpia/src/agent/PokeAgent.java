@@ -9,6 +9,7 @@ import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
+import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -57,7 +58,7 @@ public class PokeAgent extends SearchBasedAgent {
 
         // Breath first strategy
         BreathFirstSearch searchStrategy = new BreathFirstSearch();
-//        DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
 
         Search searchSolver = new Search(searchStrategy);
 
