@@ -132,7 +132,7 @@ public class PokeEnvironmentState extends EnvironmentState {
                 ArrayList<String> posibleDestinos = new ArrayList<>();
                 for(String a: map.get(unaUbicacion.getNombre())){
                     PokeUbicacion ady = pokeUbicaciones.get(a);
-                    if (!ady.tieneEnemigo() && !ady.esPokeparada()) {
+                    if (!ady.tieneEnemigo() && !ady.esPokeparada() && ady.getNombre() != "Boss") {
                         posibleDestinos.add(a);
                     }
                 }
