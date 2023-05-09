@@ -46,8 +46,8 @@ public class PokeAgent extends SearchBasedAgent {
     @Override
     public Action selectAction() {
 
-        BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //BreathFirstSearch searchStrategy = new BreathFirstSearch();
+        DepthFirstSearch searchStrategy = new DepthFirstSearch();
         //UniformCostSearch searchStrategy = new UniformCostSearch(new DummyStepCostFunction());
         //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
 

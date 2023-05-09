@@ -23,7 +23,6 @@ public class NTreeConPoda extends NTree{
         if(this.sons.size() == 0){
             if(!(((PokeAgentState) agentState).getPokeUbicacion().isBoss())){
                 if(parent != null){
-                    System.out.println("Removi algo");
                     parent.getSons().remove(this);
                     if(parent.getParent() != null){
                     ((NTreeConPoda) parent).rollBack();

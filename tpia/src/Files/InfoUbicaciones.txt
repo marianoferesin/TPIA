@@ -26,4 +26,4 @@ Arabia	10	0
 NuevaZelanda	10	0
 Siberia	10	0
 Cuba	10	0
-Boss	0	40
+Boss	0	10

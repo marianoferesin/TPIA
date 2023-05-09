@@ -12,8 +12,8 @@ public class PokeAgentPodador extends PokeAgent{
     @Override
     public Action selectAction() {
 
-        BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //BreathFirstSearch searchStrategy = new BreathFirstSearch();
+        DepthFirstSearch searchStrategy = new DepthFirstSearch();
         //ArbolPodadoSearch searchStrategy = new ArbolPodadoSearch();
         //UniformCostSearch searchStrategy = new UniformCostSearch(new DummyStepCostFunction());
         //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
