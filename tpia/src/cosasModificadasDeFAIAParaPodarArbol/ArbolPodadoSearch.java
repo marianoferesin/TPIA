@@ -18,7 +18,7 @@ public class ArbolPodadoSearch extends Strategy {
         //Add the nodes at the bottom of the list of nodes to expand
         for (NTreeConPoda nt : treesConPoda) {
             if(nt.getParent() != null){
-                nt.setCost(nt.getParent().getCost() - 1);
+                nt.setCost(nt.getParent().getCost());
             }else{
                 nt.setCost(1);
             }
@@ -28,7 +28,7 @@ public class ArbolPodadoSearch extends Strategy {
 
     public void addNodeToExpand(NTree node) {
         //Add the node at the top of the list of nodes to expand
-        node.setCost(node.getParent().getCost() - 1);
+        node.setCost(node.getParent().getCost());
         nodesToExpand.add(node);
     }
 

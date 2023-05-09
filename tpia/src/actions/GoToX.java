@@ -23,7 +23,12 @@ public class GoToX extends SearchAction {
         PokeAgentState agentState = (PokeAgentState) s;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
         ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
+
+        //TODO modificacion de prueba, si estoy en el boss no me muevo
+        if(((PokeAgentState) s).getPokeUbicacion().isBoss() && posibilidadGanar((PokeAgentState) s)) return null;
+
         if (adyacentes.contains(destino)) {
+            if(ubi.getNombre().equals(destino)) return null;
             //Si hay enemigo huyo
             agentState.huir();
             //Si es pokeparada recargo
@@ -65,10 +70,33 @@ public class GoToX extends SearchAction {
 
     @Override
     public String toString() {
-        return "GoTo"+destino;
+        return "GoTo"+ destino;
     }
 
 
     @Override
     public Double getCost() { return 1.0; }
+
+    private boolean posibilidadGanar(PokeAgentState pokeAgentState){
+        if(pokeAgentState.getPokeEnergia() >= pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) return true;
+        return posibilidadGanar1(pokeAgentState) || posibilidadGanar2(pokeAgentState) || posibilidadGanar3(pokeAgentState);
+    }
+    private boolean posibilidadGanar1(PokeAgentState pokeAgentState){
+        boolean rtn = false;
+        int energiaEnemigo = pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (1.2 * pokeAgentState.getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
+    private boolean posibilidadGanar2(PokeAgentState pokeAgentState){
+        boolean rtn = false;
+        int energiaEnemigo = pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (1.3 * pokeAgentState.getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
+    private boolean posibilidadGanar3(PokeAgentState pokeAgentState){
+        boolean rtn = false;
+        int energiaEnemigo = pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (1.5 * pokeAgentState.getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
 }

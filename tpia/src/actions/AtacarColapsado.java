@@ -17,7 +17,7 @@ public class AtacarColapsado extends SearchAction {
         int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
         if(ubi.tieneEnemigo()){
             //Ataque normal...
-            if (energiaEnemigo < agentState.getPokeEnergia()){
+            if (energiaEnemigo <= agentState.getPokeEnergia()){
                 agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
                 agentState.setPokeEnergia(agentState.getPokeEnergia() - energiaEnemigo + (0.2* energiaEnemigo));
                 agentState.verificarPoderesEspeciales();
@@ -58,7 +58,7 @@ public class AtacarColapsado extends SearchAction {
         int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
         if(ubi.tieneEnemigo()){
             //Ataque normal...
-            if (energiaEnemigo < agentState.getPokeEnergia()){
+            if (energiaEnemigo <= agentState.getPokeEnergia()){
                 Double energia = agentState.getPokeEnergia();
                 (pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
                 agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
@@ -113,7 +113,9 @@ public class AtacarColapsado extends SearchAction {
 
 
     @Override
-    public Double getCost() { return 1.0; }
+    public Double getCost() {
+        return 1.0;
+    }
 
     private boolean posibilidadGanar1(PokeAgentState pokeAgentState){
         boolean rtn = false;

@@ -4,10 +4,8 @@ import environment.PokePercepcion;
 import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.*;
 
 public class    PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
@@ -31,13 +29,17 @@ public class    PokeAgentState extends SearchBasedAgentState {
         if (!(obj instanceof PokeAgentState that)) {
             return false;
         }
+        return this.pokeUbicacion.equals(that.pokeUbicacion) && this.pokeEnergia == that.pokeEnergia;
+        /*
         return this.pokeUbicacion.equals(that.pokeUbicacion) &&
                       this.pokeEnergia == that.pokeEnergia &&
-                      this.pokeCantidad == that.pokeCantidad &&
-                      this.pokeEnergiaInicial == that.pokeEnergiaInicial &&
+                      Objects.equals(this.pokeCantidad, that.pokeCantidad) &&
+                      Objects.equals(this.pokeEnergiaInicial, that.pokeEnergiaInicial) &&
                       Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
                       this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
                       this.map.equals(that.map);
+
+         */
     }
 
     @Override

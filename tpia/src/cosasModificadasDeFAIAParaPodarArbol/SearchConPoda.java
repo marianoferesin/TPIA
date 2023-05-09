@@ -1,15 +1,17 @@
 package cosasModificadasDeFAIAParaPodarArbol;
 
 import agent.PokeAgentState;
-import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import frsf.cidisi.faia.simulator.events.EventType;
+import frsf.cidisi.faia.simulator.events.SimulatorEventNotifier;
 import frsf.cidisi.faia.solver.search.NTree;
 import frsf.cidisi.faia.solver.search.Search;
 import frsf.cidisi.faia.solver.search.Strategy;
-
+import frsf.cidisi.faia.util.LatexOutput;
+import frsf.cidisi.faia.util.TreeMLWriter;
 import java.util.Vector;
 
 public class SearchConPoda extends Search {
@@ -50,9 +52,7 @@ public class SearchConPoda extends Search {
         while (searchStrategy.getNodesToExpandSize() > 0 & !goal) {
             // This is the first node of the node's queue that will be expanded
             NTree firstNode = searchStrategy.getNode();
-
             //System.out.println("Profundidad: " + firstNode.getDeep());
-
             // If the actual node is a goal node then the search must finish.-
             if (goalTest.isGoalState(firstNode.getAgentState())) {
                 goal = true;
@@ -65,36 +65,23 @@ public class SearchConPoda extends Search {
                     PokeAgentState ast = (PokeAgentState) firstNode.getAgentState().clone();
                     // This is the action that can generate a new node.-
                     ast = (PokeAgentState) action.execute(ast);
-
                     if (ast != null && !ast.isDead()) {// If the action was correctly executed.-
                         NTree n = new NTreeConPoda(firstNode, action, ast, nodeIdx);
-                        // If the node is not repeated in his search's tree branch
-                        // then it can be added to the end of the branch.-
-                        if (!existsNode(n, n.getParent())) {
-                            //FORZAR LA POKEPARADA A 0.
+                        if (!existsNode((NTreeConPoda) n, (NTreeConPoda) n.getParent())) {
                             firstNode.addSon(n);
                             nodeIdx++;
-                            //System.out.println("Nodo nro: " + nodeIdx);
                         }
                     }
                 }
-                // The nodes are added to the queue of "nodes to expand",
-                // so they can be expanded in the next cycles.-
-                //if(firstNode.getSons().size() != 0){
-                    searchStrategy.addNodesToExpand(firstNode.getSons());
-                //}
-                if(firstNode.getSons().size() == 0 && nodeIdx > 1) {
+                if(firstNode.getSons().size() == 0) {
                     ((NTreeConPoda) firstNode).rollBack();
-                }else{
-                    searchStrategy.addNodesToExpand(firstNode.getSons());
                 }
+                searchStrategy.addNodesToExpand(firstNode.getSons());
             }
         }
-
         if (goal && !getBestPath().isEmpty()) {
             // This variable store the branch's path where the node belongs.-
             Vector<NTree> path = getBestPath();
-
             // The first node of the branch has the action that must be executed by the agent.-
             return path.elementAt(0).getAction();
         }
@@ -103,9 +90,8 @@ public class SearchConPoda extends Search {
 
     }
 
-    private boolean existsNode(NTree node, NTree parent) {
-        NTree p = (NTree) parent;//.clone();
-
+    private boolean existsNode(NTreeConPoda node, NTreeConPoda parent) {
+        NTree p = parent;//.clone();
         // This is an iteration through the node's parent (and ancestors) looking for a repeated node
         // in the same branch of the Search Tree.-
         while (p != null) {
@@ -140,5 +126,26 @@ public class SearchConPoda extends Search {
     }
     private String toXml() {
         return tree.toXml();
+    }
+    @Override
+    public void showSolution() {
+        this.showTree();
+    }
+    @Override
+    public void showTree() {
+        switch (this.visibleTree) {
+            case 2 -> LatexOutput.getInstance().printFile(this.tree, this.searchStrategy.getStrategyName());
+            case 4 -> GraphvizTreeModificado.printFile(this.tree);
+            case 5 -> TreeMLWriter.printFile(this.tree);
+        }
+
+    }
+    @Override
+    public void setVisibleTree(int visibleTree) {
+        if (visibleTree == 2) {
+            SimulatorEventNotifier.SubscribeEventHandler(EventType.SimulationFinished, LatexOutput.getInstance());
+        }
+
+        this.visibleTree = visibleTree;
     }
 }
