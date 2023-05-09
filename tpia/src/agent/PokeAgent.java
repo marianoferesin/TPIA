@@ -2,6 +2,7 @@ package agent;
 
 import FileReaders.FileReaders;
 import actions.*;
+import cosasModificadasDeFAIAParaPodarArbol.SearchConPoda;
 import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
@@ -16,10 +17,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PokeAgent extends SearchBasedAgent {
-    private Vector<SearchAction> actions;
-    private PokeAgentState pokeAgentState = new PokeAgentState();
-    private PokeGoal pokeGoal = new PokeGoal();
-    private Problem problem;
+    protected Vector<SearchAction> actions;
+    protected PokeAgentState pokeAgentState = new PokeAgentState();
+    protected PokeGoal pokeGoal = new PokeGoal();
+    protected Problem problem;
     public PokeAgent(){
         pokeAgentState.initState();
         this.setAgentState(pokeAgentState);
@@ -27,7 +28,7 @@ public class PokeAgent extends SearchBasedAgent {
         problem = new Problem(pokeGoal,pokeAgentState,actions);
         this.setProblem(problem);
     }
-    private Vector<SearchAction> initActions(){
+    protected Vector<SearchAction> initActions(){
         Vector<SearchAction> actionsList = new Vector<>();
         //Funcionamiento sin poda de arbol de busqueda.
         ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
@@ -40,16 +41,6 @@ public class PokeAgent extends SearchBasedAgent {
         //actionsList.add(new AtaqueEspecial2());
         //actionsList.add(new AtaqueEspecial3());
         actionsList.add(new AtacarColapsado());
-
-        //Arbol podado.
-        /*PokeUbicacion ubicacion = pokeAgentState.getPokeUbicacion();
-        ArrayList<String> adyacentes = pokeAgentState.getMap().get(ubicacion.getNombre());
-        for (String adyacente : adyacentes) {
-            actionsList.add(new GoToX(adyacente));
-        }*/
-        //actionsList.add(new GoToX("Peru"));
-        //actionsList.add(new GoToX("BuenosAires"));
-
         return actionsList;
     }
     @Override

@@ -5,6 +5,7 @@ import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +13,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
     private String BOSS_LOCATION = "Boss";
     private String AGENT_INIT_LOCATION = "TierraDelFuego";
     private PokeUbicacion pokeUbicacion;
-    private Double pokeEnergia;
+    private double pokeEnergia;
     private Double pokeEnergiaInicial;
     private Integer[][] pokeAtaques;
     //TODO
@@ -27,14 +28,24 @@ public class    PokeAgentState extends SearchBasedAgentState {
     }
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if (!(obj instanceof PokeAgentState that)) {
+            return false;
+        }
+        boolean rta = this.pokeUbicacion.equals(that.pokeUbicacion) &&
+                      this.pokeEnergia == that.pokeEnergia &&
+                      this.pokeCantidad == that.pokeCantidad &&
+                      this.pokeEnergiaInicial == that.pokeEnergiaInicial &&
+                      Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
+                      this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
+                      this.map.equals(that.map);
+        return rta;
     }
 
     @Override
     public SearchBasedAgentState clone() {
         PokeAgentState pokeAgentState = new PokeAgentState();
         pokeAgentState.setPokeUbicacion(this.pokeUbicacion.clone());
-        pokeAgentState.setPokeEnergia(this.pokeEnergia);
+        pokeAgentState.setPokeEnergia(pokeEnergia);
         pokeAgentState.setPokeEnergiaInicial(this.pokeEnergiaInicial);
         pokeAgentState.setPokeAtaques(this.pokeAtaques);
         pokeAgentState.setPokeCantidad(this.pokeCantidad);
@@ -119,7 +130,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
     }
     @Override
     public String toString() {
-        return "{ " + "Energia: "+ pokeEnergia + "," + pokeUbicacion + " }";
+        return "{ " + "Energia: "+ pokeEnergia + ", Ubicacion: " + pokeUbicacion + " }";
     }
 
     public Double getPokeEnergia() {
@@ -167,15 +178,15 @@ public class    PokeAgentState extends SearchBasedAgentState {
         refreshCoolDown();
 
         //TODO los poderes se estan activando presuntamente rapido.
-        if( this.pokeEnergia >= (1.2*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (1.25*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][0] = 1;
             this.pokeAtaques[1][0] = 0;
         }
-        if( this.pokeEnergia >= (1.3*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (1.75*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][1] =1;
             this.pokeAtaques[1][1] = 0;
         }
-        if( this.pokeEnergia >= (1.5*this.pokeEnergiaInicial)) {
+        if( this.pokeEnergia >= (2.2*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][2] =1;
             this.pokeAtaques[1][2] = 0;
         }
@@ -210,4 +221,8 @@ public class    PokeAgentState extends SearchBasedAgentState {
     public void setCoolDown3(){
         this.pokeAtaques[1][2] = 0;
     }
+    public boolean isDead(){
+        return pokeEnergia < 1;
+    }
+    public void decrementarEnergia(){pokeEnergia--;}
 }

@@ -27,10 +27,11 @@ public class GoToX extends SearchAction {
             //Si hay enemigo huyo
             agentState.huir();
             //Si es pokeparada recargo
-            agentState.recargar(ubi.getEnergiaPokeparada());
-            agentState.verificarPoderesEspeciales();
-            ubi.setEnergiaPokeparada(0);
-
+            if(ubi.esPokeparada()){
+                agentState.recargar(ubi.getEnergiaPokeparada());
+                agentState.verificarPoderesEspeciales();
+                ubi.setEnergiaPokeparada(0);
+            }
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
             return agentState;
         }

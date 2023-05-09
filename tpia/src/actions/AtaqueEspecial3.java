@@ -13,9 +13,6 @@ import java.util.ArrayList;
 public class AtaqueEspecial3 extends SearchAction {
 
     Double multiplicador = 1.5;
-
-
-
     //Actualiza el estado del agente
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
@@ -46,7 +43,7 @@ public class AtaqueEspecial3 extends SearchAction {
             agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
             agentState.verificarPoderesEspeciales();
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
-            agentState.setCoolDown2();
+            agentState.setCoolDown3();
             return pokeEnvironmentState;
         }
         return null;

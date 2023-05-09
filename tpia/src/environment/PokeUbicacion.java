@@ -66,10 +66,8 @@ public class PokeUbicacion {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
         PokeUbicacion that = (PokeUbicacion) o;
-        return Objects.equals(nombre, that.nombre);
+        return this.nombre.equals(that.getNombre());
     }
 
     public boolean tieneEnemigo(){
@@ -82,5 +80,8 @@ public class PokeUbicacion {
     }
     public PokeUbicacion clone(){
         return new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada);
+    }
+    public boolean isBoss(){
+        return nombre.equals("Boss");
     }
 }

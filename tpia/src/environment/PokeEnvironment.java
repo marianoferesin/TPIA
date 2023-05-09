@@ -4,8 +4,6 @@ import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.state.AgentState;
-import frsf.cidisi.faia.state.EnvironmentState;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -24,8 +22,8 @@ public class PokeEnvironment extends Environment {
     public Perception getPercept() {
         //TODO los enemigos se mueven al principio del ciclo por ahora, despues habria que cambiarlo.
         this.getEnvironmentState().MoverEnemigos();
-        HashMap<String, ArrayList<String>> mapPerception = new HashMap<String, ArrayList<String>>();
-        HashMap<String, PokeUbicacion> pokeUbicacionesPerception = new HashMap<String,PokeUbicacion>();
+        HashMap<String, ArrayList<String>> mapPerception = new HashMap<>();
+        HashMap<String, PokeUbicacion> pokeUbicacionesPerception = new HashMap<>();
         PokePercepcion perception = new PokePercepcion();
         PokeUbicacion miUbicacion = this.getEnvironmentState().getUbicacionPokeLuchador();
         String nombreUbi = miUbicacion.getNombre();
@@ -56,7 +54,6 @@ public class PokeEnvironment extends Environment {
         return !((PokeEnvironmentState) this.environmentState).isAgenteConVida();
     }
     public String toString(){
-        return "";
-        //return environmentState.toString();
+        return environmentState.toString();
     }
 }

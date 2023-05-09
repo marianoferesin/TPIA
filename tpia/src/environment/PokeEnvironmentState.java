@@ -78,14 +78,13 @@ public class PokeEnvironmentState extends EnvironmentState {
     }
     @Override
     public String toString() {
-        //Display info about all world
+        return "{...}";
+        /*
         String str = "";
-
         for (String point : map.keySet()) {
             str = str + "[ " + point + " --> ";
             if(this.pokeUbicaciones.get(point).esPokeparada()) str += " Pokeparada  --> ";
             else str += "Enemigo: " + this.pokeUbicaciones.get(point).getPokeEnemigo().getEnergia().toString() + " --> ";
-
             ArrayList<String> successors = this.map.get(point);
             if (successors != null) {
                 for (String successor : successors) {
@@ -94,8 +93,11 @@ public class PokeEnvironmentState extends EnvironmentState {
             }
             str = str + " ]\n";
         }
-
         return str;
+
+         */
+
+
     }
     
 
