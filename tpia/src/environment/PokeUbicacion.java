@@ -66,8 +66,7 @@ public class PokeUbicacion {
 
     @Override
     public boolean equals(Object o) {
-        PokeUbicacion that = (PokeUbicacion) o;
-        return this.nombre.equals(that.getNombre());
+        return this.nombre.equals(((PokeUbicacion) o).getNombre());
     }
 
     public boolean tieneEnemigo(){

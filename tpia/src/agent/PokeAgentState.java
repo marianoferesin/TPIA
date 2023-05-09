@@ -31,14 +31,13 @@ public class    PokeAgentState extends SearchBasedAgentState {
         if (!(obj instanceof PokeAgentState that)) {
             return false;
         }
-        boolean rta = this.pokeUbicacion.equals(that.pokeUbicacion) &&
+        return this.pokeUbicacion.equals(that.pokeUbicacion) &&
                       this.pokeEnergia == that.pokeEnergia &&
                       this.pokeCantidad == that.pokeCantidad &&
                       this.pokeEnergiaInicial == that.pokeEnergiaInicial &&
                       Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
                       this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
                       this.map.equals(that.map);
-        return rta;
     }
 
     @Override

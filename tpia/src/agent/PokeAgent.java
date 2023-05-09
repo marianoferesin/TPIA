@@ -2,15 +2,12 @@ package agent;
 
 import FileReaders.FileReaders;
 import actions.*;
-import cosasModificadasDeFAIAParaPodarArbol.SearchConPoda;
-import environment.PokeUbicacion;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.solver.search.*;
-
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -67,7 +64,6 @@ public class PokeAgent extends SearchBasedAgent {
             Logger.getLogger(PokeAgent.class.getName()).log(Level.SEVERE, null, ex);
         }
         // Return the selected action
-
         return selectedAction;
     }
 
