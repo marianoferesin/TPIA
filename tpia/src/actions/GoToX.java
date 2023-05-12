@@ -8,6 +8,7 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class GoToX extends SearchAction {
 
@@ -28,6 +29,7 @@ public class GoToX extends SearchAction {
         if(((PokeAgentState) s).getPokeUbicacion().isBoss() && posibilidadGanar((PokeAgentState) s)) return null;
 
         if (adyacentes.contains(destino)) {
+
             if(ubi.getNombre().equals(destino)) return null;
             //Si hay enemigo huyo
             agentState.huir();
@@ -38,6 +40,7 @@ public class GoToX extends SearchAction {
                 ubi.setEnergiaPokeparada(0);
             }
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
+            agentState.decrementarEnergia();
             return agentState;
         }
         return null;
@@ -98,5 +101,13 @@ public class GoToX extends SearchAction {
         int energiaEnemigo = pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
         if (1.5 * pokeAgentState.getPokeEnergia() > energiaEnemigo)rtn=true;
         return rtn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GoToX goToX = (GoToX) o;
+        return Objects.equals(destino, goToX.destino);
     }
 }

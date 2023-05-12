@@ -2,10 +2,8 @@ package cosasModificadasDeFAIAParaPodarArbol;
 
 import frsf.cidisi.faia.solver.search.NTree;
 import frsf.cidisi.faia.solver.search.Strategy;
-
-import java.util.Collection;
+import java.util.PriorityQueue;
 import java.util.Vector;
-
 public class ArbolPodadoSearch extends Strategy {
     public ArbolPodadoSearch() {
     }
@@ -18,7 +16,7 @@ public class ArbolPodadoSearch extends Strategy {
         //Add the nodes at the bottom of the list of nodes to expand
         for (NTreeConPoda nt : treesConPoda) {
             if(nt.getParent() != null){
-                nt.setCost(nt.getParent().getCost());
+                nt.setCost(nt.getParent().getCost() -1 );
             }else{
                 nt.setCost(1);
             }
@@ -28,13 +26,17 @@ public class ArbolPodadoSearch extends Strategy {
 
     public void addNodeToExpand(NTree node) {
         //Add the node at the top of the list of nodes to expand
-        node.setCost(node.getParent().getCost());
+        node.setCost(node.getParent().getCost()-1);
         nodesToExpand.add(node);
     }
 
     @Override
     public String getStrategyName() {
         return "Depth First con poda de arbol";
+    }
+
+    public PriorityQueue getNodesToExpand(){
+        return nodesToExpand;
     }
 
 }

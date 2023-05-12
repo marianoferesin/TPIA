@@ -226,4 +226,36 @@ public class    PokeAgentState extends SearchBasedAgentState {
         return pokeEnergia < 1;
     }
     public void decrementarEnergia(){pokeEnergia--;}
+
+    public boolean leGanoAlBoss(){
+        if(posibilidadGanarAlBoss()) return true;
+        if(ataqueEspecial1Enabled() && posibilidadGanar1AlBoss()) return true;
+        if(ataqueEspecial2Enabled() && posibilidadGanar2AlBoss()) return true;
+        if(ataqueEspecial3Enabled() && posibilidadGanar3AlBoss()) return true;
+        return false;
+    }
+    public boolean posibilidadGanarAlBoss(){
+        boolean rtn = false;
+        int energiaEnemigo = getPokeUbicaciones().get("Boss").getPokeEnemigo().getEnergia();
+        if (getPokeEnergia() >= energiaEnemigo) rtn=true;
+        return rtn;
+    }
+    public boolean posibilidadGanar1AlBoss(){
+        boolean rtn = false;
+        int energiaEnemigo = getPokeUbicaciones().get("Boss").getPokeEnemigo().getEnergia();
+        if (1.2 * getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
+    public boolean posibilidadGanar2AlBoss(){
+        boolean rtn = false;
+        int energiaEnemigo = getPokeUbicaciones().get("Boss").getPokeEnemigo().getEnergia();
+        if (1.3 * getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
+    public boolean posibilidadGanar3AlBoss(){
+        boolean rtn = false;
+        int energiaEnemigo = getPokeUbicaciones().get("Boss").getPokeEnemigo().getEnergia();
+        if (1.5 * getPokeEnergia() > energiaEnemigo)rtn=true;
+        return rtn;
+    }
 }

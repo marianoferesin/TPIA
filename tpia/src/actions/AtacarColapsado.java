@@ -8,8 +8,11 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
+import java.util.Objects;
+
 public class AtacarColapsado extends SearchAction {
     //Actualiza el estado del agente
+    String tipo = "";
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         PokeAgentState agentState = (PokeAgentState) s;
@@ -21,6 +24,7 @@ public class AtacarColapsado extends SearchAction {
                 agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
                 agentState.setPokeEnergia(agentState.getPokeEnergia() - energiaEnemigo + (0.2* energiaEnemigo));
                 agentState.verificarPoderesEspeciales();
+                tipo = "Normal";
                 return agentState;
             }
             //Ataques especial1
@@ -29,6 +33,7 @@ public class AtacarColapsado extends SearchAction {
                 agentState.setPokeEnergia( 1.2 * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
                 agentState.verificarPoderesEspeciales();
                 agentState.setCoolDown1();
+                tipo = "Especial Tipo 1";
                 return agentState;
             }
             else if(agentState.ataqueEspecial2Enabled() && posibilidadGanar2(agentState)){
@@ -36,12 +41,14 @@ public class AtacarColapsado extends SearchAction {
                 agentState.setPokeEnergia( 1.3 * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
                 agentState.verificarPoderesEspeciales();
                 agentState.setCoolDown2();
+                tipo = "Especial Tipo 2";
                 return agentState;
             } else if (agentState.ataqueEspecial3Enabled() && posibilidadGanar3(agentState)){
                 agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
                 agentState.setPokeEnergia( 1.5 * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
                 agentState.verificarPoderesEspeciales();
                 agentState.setCoolDown3();
+                tipo = "Especial Tipo 3";
                 return agentState;
             }
         }
@@ -108,7 +115,7 @@ public class AtacarColapsado extends SearchAction {
 
     @Override
     public String toString() {
-        return "AtacarColapsado";
+        return "AtacarColapsado - " + tipo;
     }
 
 
@@ -135,4 +142,10 @@ public class AtacarColapsado extends SearchAction {
         if (1.5 * pokeAgentState.getPokeEnergia() > energiaEnemigo)rtn=true;
         return rtn;
     }
+    @Override
+    public boolean equals(Object o) {
+        if(o == null) return false;
+        return this.getClass() == o.getClass();
+    }
+
 }

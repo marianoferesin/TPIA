@@ -1,0 +1,20 @@
+
+#!/bin/bash
+
+i=0
+
+mkdir /Users/elfacu/IdeaProjects/TPIA/searchGVTrees/out
+
+archivos=$(find /Users/elfacu/IdeaProjects/TPIA/searchGVTrees -maxdepth 1 -type f | wc -l)
+
+((archivos--))
+
+echo cantidad de archivos $archivos: 
+
+while [ $i -lt $archivos ]
+do
+	
+	dot -Tsvg /Users/elfacu/IdeaProjects/TPIA/searchGVTrees/$i.dot -o /Users/elfacu/IdeaProjects/TPIA/searchGVTrees/out/$i.svg
+	echo árbol $i convertido.
+	((i++))
+done 

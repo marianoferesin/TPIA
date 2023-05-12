@@ -1,6 +1,7 @@
 package agent;
 
 import cosasModificadasDeFAIAParaPodarArbol.ArbolPodadoSearch;
+import cosasModificadasDeFAIAParaPodarArbol.BusquedaInformadaPrueba;
 import cosasModificadasDeFAIAParaPodarArbol.SearchConPoda;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.solver.search.*;
@@ -13,8 +14,9 @@ public class PokeAgentPodador extends PokeAgent{
     public Action selectAction() {
 
         //BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
         //ArbolPodadoSearch searchStrategy = new ArbolPodadoSearch();
+        BusquedaInformadaPrueba searchStrategy = new BusquedaInformadaPrueba();
         //UniformCostSearch searchStrategy = new UniformCostSearch(new DummyStepCostFunction());
         //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
 
