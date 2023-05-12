@@ -1,10 +1,11 @@
-package cosasModificadasDeFAIAParaPodarArbol;
+package modificacionesFaia.Search;
 
 import agent.PokeAgentState;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.NTree;
 import frsf.cidisi.faia.solver.search.Strategy;
+
 import java.util.Vector;
 
 public class NTreeConPoda extends NTree{

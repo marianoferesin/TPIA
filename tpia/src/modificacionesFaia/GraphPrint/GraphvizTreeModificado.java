@@ -1,7 +1,7 @@
-package cosasModificadasDeFAIAParaPodarArbol;
+package modificacionesFaia.GraphPrint;
 
-import frsf.cidisi.faia.solver.search.NTree;
 import frsf.cidisi.faia.util.GraphvizTree;
+import modificacionesFaia.Search.NTreeConPoda;
 import java.io.File;
 
 public class GraphvizTreeModificado extends GraphvizTree {

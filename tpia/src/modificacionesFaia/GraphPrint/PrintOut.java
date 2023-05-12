@@ -1,4 +1,4 @@
-package cosasModificadasDeFAIAParaPodarArbol;
+package modificacionesFaia.GraphPrint;
 
 import java.io.File;
 import java.io.FileWriter;

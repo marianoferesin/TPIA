@@ -1,8 +1,7 @@
 package agent;
 
-import cosasModificadasDeFAIAParaPodarArbol.ArbolPodadoSearch;
-import cosasModificadasDeFAIAParaPodarArbol.BusquedaInformadaPrueba;
-import cosasModificadasDeFAIAParaPodarArbol.SearchConPoda;
+import modificacionesFaia.Search.BusquedaInformadaPrueba;
+import modificacionesFaia.Search.SearchConPoda;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.solver.search.*;
 

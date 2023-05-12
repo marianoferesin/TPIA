@@ -1,4 +1,4 @@
-package cosasModificadasDeFAIAParaPodarArbol;
+package modificacionesFaia.Search;
 
 import actions.AtacarColapsado;
 import actions.GoToX;

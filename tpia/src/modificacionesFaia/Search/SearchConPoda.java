@@ -1,4 +1,4 @@
-package cosasModificadasDeFAIAParaPodarArbol;
+package modificacionesFaia.Search;
 
 import agent.PokeAgentState;
 import frsf.cidisi.faia.agent.search.GoalTest;
@@ -12,9 +12,9 @@ import frsf.cidisi.faia.solver.search.Search;
 import frsf.cidisi.faia.solver.search.Strategy;
 import frsf.cidisi.faia.util.LatexOutput;
 import frsf.cidisi.faia.util.TreeMLWriter;
+import modificacionesFaia.GraphPrint.GraphvizTreeModificado;
+import modificacionesFaia.Search.NTreeConPoda;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Vector;
 
 public class SearchConPoda extends Search {
