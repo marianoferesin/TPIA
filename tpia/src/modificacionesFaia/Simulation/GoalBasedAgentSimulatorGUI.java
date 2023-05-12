@@ -9,7 +9,6 @@ import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.simulator.Simulator;
 import frsf.cidisi.faia.simulator.events.EventType;
 import frsf.cidisi.faia.simulator.events.SimulatorEventNotifier;
-
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -64,7 +63,6 @@ public abstract class GoalBasedAgentSimulatorGUI extends Simulator {
         } else {
             System.out.println("ERROR: The simulation has finished, but the agent has not reached his goal.");
         }
-        JFrame pokeFrame = new PokeFrame();
         System.out.println();
         this.environment.close();
         SimulatorEventNotifier.runEventHandlers(EventType.SimulationFinished, (Object[])null);
