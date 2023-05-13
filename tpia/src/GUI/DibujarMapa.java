@@ -6,7 +6,7 @@ import environment.PokeUbicacion;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
+import java.awt.image.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +18,10 @@ public class DibujarMapa extends JPanel {
 
     private PokeEnvironmentState ambiente;
     private BufferedImage backgroundImage;
-    private BufferedImage enemigoImage;
-    private BufferedImage bossImage;
-    private BufferedImage agenteImage;
-    private BufferedImage paradaImage;
+    private Image enemigoImage;
+    private Image bossImage;
+    private Image agenteImage;
+    private Image paradaImage;
 
 
 
@@ -29,10 +29,11 @@ public class DibujarMapa extends JPanel {
         this.ambiente = e;
 
         backgroundImage= loadImage(".\\tpia\\src\\GUI\\Images\\smWorld.jpg");
-        enemigoImage= loadImage(".\\tpia\\src\\GUI\\Images\\enemigo.png");
-        bossImage= loadImage(".\\tpia\\src\\GUI\\Images\\boss.png");
-        agenteImage= loadImage(".\\tpia\\src\\GUI\\Images\\agente.png");
-        paradaImage= loadImage(".\\tpia\\src\\GUI\\Images\\parada.png");
+        enemigoImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\enemigo.png"));
+        bossImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\Boss.png"));
+        agenteImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\agente.png"));
+        paradaImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\parada.png"));
+
     }
 
     public void paintComponent(Graphics g) {
@@ -83,15 +84,19 @@ public class DibujarMapa extends JPanel {
             g2d.setColor(Color.black);
             g2d.drawString(key, textX, textY);
 
+
             // Dibujar Enemigos
+            int alto = 70;
+            int ancho = 70;
+
             if (ubi.tieneEnemigo() && (enemigoImage != null)) {
                 if (ubi.isBoss()){
-                    g.drawImage(bossImage, x-20, y+5, 60, 60, null);
+                    g.drawImage(bossImage, x-ancho/2, y-alto/4, ancho, alto, null);
                 }else{
-                    g.drawImage(enemigoImage, x-20, y+5, 60, 60, null);
+                    g.drawImage(enemigoImage, x-ancho/2, y-alto/4, ancho, alto, null);
                 }
             }else if ( ubi.esPokeparada()){
-                g.drawImage(paradaImage, x-20, y-5, 40, 40, null);
+                g.drawImage(paradaImage, x-ancho/6, y-alto/6, ancho/3, alto/3, null);
             }
         }
 
@@ -99,7 +104,9 @@ public class DibujarMapa extends JPanel {
         PokeUbicacion agente = ambiente.getUbicacionPokeLuchador();
         int x = ambiente.getx(agente.getNombre(), this.getWidth());
         int y = ambiente.gety(agente.getNombre(), this.getHeight());
-        g.drawImage(agenteImage, x, y, 60, 60, null);
+        g.drawImage(agenteImage, x-40, y-40, 80, 80, null);
+
+
 
 
     }
@@ -128,7 +135,34 @@ public class DibujarMapa extends JPanel {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return img;
+        // Cambia el modo de color de la imagen a TRANSLUCENT
+        BufferedImage transparentImage = new BufferedImage( img.getWidth(), img.getHeight(), BufferedImage.TRANSLUCENT);
+        transparentImage.createGraphics().drawImage(img, 0, 0, null);
+        return transparentImage;
+    }
+
+    private Image hacerTransparente(BufferedImage image){
+        // Aplica un filtro que convierte el color de fondo en transparente
+        ImageFilter filter = new RGBImageFilter() {
+            int transparentColor = Color.WHITE.getRGB() | 0xFF000000; // Color de fondo a convertir en transparente
+
+            public final int filterRGB(int x, int y, int rgb) {
+                if ((rgb | 0xFF000000) == transparentColor) {
+                    // El píxel tiene el mismo color que el color de fondo
+                    return 0x00FFFFFF & rgb; // Convierte a transparente
+                } else {
+                    // El píxel tiene otro color
+                    return rgb;
+                }
+            }
+        };
+
+        // Crea un objeto ImageProducer a partir de la imagen con el filtro aplicado
+        ImageProducer producer = new FilteredImageSource(image.getSource(), filter);
+
+        // Crea una imagen a partir del ImageProducer
+        Image transparentImage = Toolkit.getDefaultToolkit().createImage(producer);
+        return transparentImage;
     }
 
 }
