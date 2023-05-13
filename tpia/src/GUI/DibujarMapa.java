@@ -1,5 +1,6 @@
 package GUI;
 
+import environment.PokeEnvironmentState;
 import environment.PokeUbicacion;
 
 import javax.swing.*;
@@ -14,11 +15,12 @@ import javax.imageio.ImageIO;
 
 public class DibujarMapa extends JPanel {
 
-    private CoordenadasUbicaciones mapa;
 
+    private PokeEnvironmentState ambiente;
     private BufferedImage backgroundImage;
 
-    public DibujarMapa() {
+    public DibujarMapa(PokeEnvironmentState e) {
+        this.ambiente = e;
         try {
             String path = ".\\tpia\\src\\GUI\\Images\\smWorld.jpg";
             backgroundImage = ImageIO.read(new File(path));
@@ -37,17 +39,14 @@ public class DibujarMapa extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
 
 
-
-        mapa= new CoordenadasUbicaciones();
-
         //dibujamos Aristas
-        for (String lineas : mapa.getAristas().keySet() ) {
-            int xInicial = mapa.getx(lineas,this.getWidth());
-            int yInicial = mapa.gety(lineas,this.getHeight());
+        for (String lineas : ambiente.getMap().keySet() ) {
+            int xInicial = ambiente.getx(lineas,this.getWidth());
+            int yInicial = ambiente.gety(lineas,this.getHeight());
             ArrayList<String> Destinos = new ArrayList<>();
-            for(String a: mapa.getAristas().get(lineas)){
-                int xFinal = mapa.getx(a,this.getWidth());
-                int yFinal = mapa.gety(a,this.getHeight());
+            for(String a: ambiente.getMap().get(lineas)){
+                int xFinal = ambiente.getx(a,this.getWidth());
+                int yFinal = ambiente.gety(a,this.getHeight());
                 g2d.setColor(Color.red);
                 g2d.setStroke(new BasicStroke(3));
                 g2d.drawLine(xInicial,yInicial,xFinal,yFinal);
@@ -58,22 +57,24 @@ public class DibujarMapa extends JPanel {
 
 
         //Dibujamos ubicaciones
-        for (String key : mapa.getMapUbicaciones().keySet() ) {
-            int x = mapa.getx(key,this.getWidth());
-            int y = mapa.gety(key,this.getHeight());
+        for (String key : ambiente.getPokeUbicaciones().keySet() ) {
+            int x = ambiente.getx(key,this.getWidth());
+            int y = ambiente.gety(key,this.getHeight());
             g2d.setColor(Color.yellow);
             g2d.setStroke(new BasicStroke(7));
             g2d.drawOval(x,y,7,7);
 
-            Font font = new Font("Arial", Font.PLAIN, 20);
+            Font font = new Font("Arial", Font.BOLD, 20);
+            g2d.setFont(font);
             FontMetrics metrics = g2d.getFontMetrics(font);
             int textX = x - metrics.stringWidth(key)/2;
             int textY = y - metrics.getHeight()/2;
             // Dibujar sombra
-            g2d.setFont(font);
             g2d.setColor(Color.black);
-            g2d.drawString(key, textX + 3, textY + 3);
+            g2d.fillRect(textX,textY-20, metrics.stringWidth(key), metrics.getHeight());
+
             // Dibujar texto
+
             g2d.setColor(Color.orange);
             g2d.drawString(key, textX, textY);
         }
@@ -81,11 +82,11 @@ public class DibujarMapa extends JPanel {
 
 
     }
-/*
+
     public void updateCoords() {
         int width = getWidth();
         int height = getHeight();
-
+/*
         xCoords[0] = width / 4;
         xCoords[1] = width / 2;
         xCoords[2] = (3 * width) / 4;
@@ -95,24 +96,8 @@ public class DibujarMapa extends JPanel {
         yCoords[1] = height / 2;
         yCoords[2] = height / 4;
         yCoords[3] = height / 2;
-
+*/
         repaint();
-    }*/
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("DibujarMapa");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        DibujarMapa mapaPanel = new DibujarMapa();
-        frame.add(mapaPanel);
-        frame.setSize(1400, 1000);
-        frame.setVisible(true);
-
-        mapaPanel.addComponentListener(new ComponentAdapter() {
-            public void componentResized(ComponentEvent e) {
-              //  mapaPanel.updateCoords();
-            }
-        });
     }
-
 
 }

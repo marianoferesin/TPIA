@@ -4,6 +4,16 @@ public class PokeEnemigo {
     protected Integer energia;
     private Integer cooldownMoverse;
 
+    public String getUbicacionAnterior() {
+        return UbicacionAnterior;
+    }
+
+    public void setUbicacionAnterior(String ubicacionAnterior) {
+        UbicacionAnterior = ubicacionAnterior;
+    }
+
+    private String UbicacionAnterior;
+
 
     public PokeEnemigo(Integer energia) {
         this.energia = energia;

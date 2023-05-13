@@ -20,7 +20,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
     private HashMap<String, ArrayList<String>> map;
     private HashMap<String, PokeUbicacion> pokeUbicaciones;
     public PokeAgentState(){
-        pokeUbicacion = new PokeUbicacion(AGENT_INIT_LOCATION,null,0);
+        pokeUbicacion = new PokeUbicacion(AGENT_INIT_LOCATION,null,0,0.0,0.0);
         map = new HashMap<>();
         pokeUbicaciones = new HashMap<>();
     }

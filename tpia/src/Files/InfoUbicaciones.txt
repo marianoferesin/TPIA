@@ -1,29 +1,29 @@
-TierraDelFuego	0	0
-BuenosAires	0	0
-Brasil	0	0
-Peru	0	0
-Mexico	0	0
-EEUU	0	0
-Canada	0	0
-Alaska	0	0
-Canarias	0	0
-Sahara	0	0
-Inglaterra	0	0
-Noruega	0	0
-Suecia	0	0
-Egipto	0	0
-Sudafrica	0	0
-Moscu	0	0
-Kamchatka	0	0
-China	0	0
-India	0	0
-Japon	0	0
-Indonesia	0	0
-NuevaGuinea	0	0
-Australia	0   0
-Groenlandia	10	0
-Arabia	10	0
-NuevaZelanda	10	0
-Siberia	10	0
-Cuba	10	0
-Boss	0	50
+Alaska	0	0	0.12	0.31
+Arabia	10	0	0.62	0.47
+Australia	0	0	0.86	0.78
+Boss	0	50	0.71	0.83
+Brasil	0	0	0.30	0.72
+BuenosAires	0	0	0.28	0.81
+Canada	0	0	0.28	0.34
+Canarias	0	0	0.37	0.52
+China	0	0	0.80	0.30
+Cuba	10	0	0.25	0.52
+EEUU	0	0	0.20	0.40
+Egipto	0	0	0.54	0.50
+Groenlandia	10	0	0.35	0.17
+India	0	0	0.72	0.46
+Indonesia	0	0	0.79	0.67
+Inglaterra	0	0	0.44	0.34
+Japon	0	0	0.88	0.39
+Kamchatka	0	0	0.90	0.17
+Mexico	0	0	0.17	0.51
+Moscu	0	0	0.62	0.22
+Noruega	0	0	0.50	0.16
+NuevaGuinea	0	0	0.88	0.67
+NuevaZelanda	10	0	0.97	0.91
+Peru	0	0	0.24	0.70
+Sahara	0	0	0.44	0.54
+Siberia	10	0	0.74	0.19
+Sudafrica	0	0	0.54	0.80
+Suecia	0	0	0.51	0.25
+TierraDelFuego	0	0	0.25	0.90

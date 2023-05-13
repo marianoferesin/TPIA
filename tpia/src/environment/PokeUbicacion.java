@@ -8,6 +8,8 @@ public class PokeUbicacion {
     private PokeEnemigo pokeEnemigo;
     private Integer energiaPokeparada;
     private Integer antiguedad;
+    private Double xRatio;
+    private Double yRatio;
 
     public String getNombre() {
         return nombre;
@@ -17,11 +19,13 @@ public class PokeUbicacion {
         this.nombre = nombre;
     }
 
-    public PokeUbicacion(String nombre, PokeEnemigo pokeEnemigo, Integer energiaPokeparada) {
+    public PokeUbicacion(String nombre, PokeEnemigo pokeEnemigo, Integer energiaPokeparada, Double ratioX, Double ratioY) {
         this.nombre = nombre;
         this.pokeEnemigo = pokeEnemigo;
         this.energiaPokeparada = energiaPokeparada;
         this.antiguedad = 0;
+        this.xRatio = ratioX;
+        this.yRatio = ratioY;
     }
     public PokeUbicacion(PokeUbicacion e) {
         this.nombre = e.nombre;
@@ -78,9 +82,17 @@ public class PokeUbicacion {
         return nombre;
     }
     public PokeUbicacion clone(){
-        return new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada);
+        return new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada,xRatio,yRatio);
     }
     public boolean isBoss(){
         return nombre.equals("Boss");
     }
+
+    // recive en ancho de la imagen y devuelve la ubicación
+    public int getx(int x) { return (int) (x * xRatio);    }
+
+    // recive en alto de la imagen y devuelve la ubicación
+    public int gety(int y) { return (int) (y * yRatio);    }
+
+
 }
