@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
 
-public class DibujarMapa extends JPanel {
+public class DibujarMapa extends JPanel implements ActionListener {
 
 
     private PokeEnvironmentState ambiente;
@@ -22,12 +22,14 @@ public class DibujarMapa extends JPanel {
     private Image bossImage;
     private Image agenteImage;
     private Image paradaImage;
-
+    private Timer timer;
 
 
     public DibujarMapa(PokeEnvironmentState e) {
         this.ambiente = e;
 
+        timer = new Timer(1, this);
+        timer.start();
         backgroundImage= loadImage(".\\tpia\\src\\GUI\\Images\\smWorld.jpg");
         enemigoImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\enemigo.png"));
         bossImage= hacerTransparente(loadImage(".\\tpia\\src\\GUI\\Images\\Boss.png"));
@@ -165,4 +167,8 @@ public class DibujarMapa extends JPanel {
         return transparentImage;
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        repaint();
+    }
 }

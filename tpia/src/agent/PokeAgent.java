@@ -63,6 +63,7 @@ public class PokeAgent extends SearchBasedAgent {
         } catch (Exception ex) {
             Logger.getLogger(PokeAgent.class.getName()).log(Level.SEVERE, null, ex);
         }
+      
         // Return the selected action
         return selectedAction;
     }
