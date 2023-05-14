@@ -29,8 +29,6 @@ public class    PokeAgentState extends SearchBasedAgentState {
         if (!(obj instanceof PokeAgentState that)) {
             return false;
         }
-        return this.pokeUbicacion.equals(that.pokeUbicacion) && this.pokeEnergia == that.pokeEnergia;
-        /*
         return this.pokeUbicacion.equals(that.pokeUbicacion) &&
                       this.pokeEnergia == that.pokeEnergia &&
                       Objects.equals(this.pokeCantidad, that.pokeCantidad) &&
@@ -39,7 +37,6 @@ public class    PokeAgentState extends SearchBasedAgentState {
                       this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
                       this.map.equals(that.map);
 
-         */
     }
 
     @Override

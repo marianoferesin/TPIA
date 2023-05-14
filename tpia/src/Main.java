@@ -14,13 +14,13 @@ import java.awt.event.ComponentEvent;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         PokeEnvironment pokeEnvironment = new PokeEnvironment();
-        PokeAgent pokeAgent = new PokeAgentPodador();
+        PokeAgent pokeAgent = new PokeAgent();
 
-        DibujarMapa dibujarMapa = lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState().clone(),null);
+        //DibujarMapa dibujarMapa = lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState().clone(),null);
 
         SearchBasedAgentSimulator searchBasedAgentSimulator = new SearchBasedAgentSimulator(pokeEnvironment,pokeAgent);
         searchBasedAgentSimulator.start();
-
+        /*
         for (int i = 0; i < StaticEnvironmentList.pokeEnvironmentsStates.size();i++){
             Thread.sleep(2500);
             dibujarMapa.setAmbiente(StaticEnvironmentList.pokeEnvironmentsStates.get(i));
@@ -52,6 +52,10 @@ public class Main {
             }
         });
         return mapaPanel;
+
+         */
     }
+
+
 
 }

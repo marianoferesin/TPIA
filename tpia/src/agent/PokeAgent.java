@@ -27,24 +27,18 @@ public class PokeAgent extends SearchBasedAgent {
     }
     protected Vector<SearchAction> initActions(){
         Vector<SearchAction> actionsList = new Vector<>();
-        //Funcionamiento sin poda de arbol de busqueda.
         ArrayList <String> ubicaciones = FileReaders.leerUbicaciones();
         for(String ubi: ubicaciones){
             actionsList.add(new GoToX(ubi));
         }
-        //actionsList.add(new Atacar());
-        //actionsList.add(new RecargarEnergia());
-        //actionsList.add(new AtaqueEspecial1());
-        //actionsList.add(new AtaqueEspecial2());
-        //actionsList.add(new AtaqueEspecial3());
         actionsList.add(new AtacarColapsado());
         return actionsList;
     }
     @Override
     public Action selectAction() {
 
-        BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        //BreathFirstSearch searchStrategy = new BreathFirstSearch();
+        DepthFirstSearch searchStrategy = new DepthFirstSearch();
         //UniformCostSearch searchStrategy = new UniformCostSearch(new DummyStepCostFunction());
         //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
 
