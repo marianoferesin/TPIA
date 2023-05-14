@@ -60,9 +60,9 @@ public class PokeEnvironmentState extends EnvironmentState {
 
             if (info.get(0).equals(BOSS_LOCATION)){
                 ene = new Boss(Integer.valueOf(info.get(2)));
-                this.ubicacionBoss = new PokeUbicacion(info.get(0),ene,0);
+                this.ubicacionBoss = new PokeUbicacion(info.get(0),ene,0,Double.parseDouble(info.get(3)),Double.parseDouble(info.get(4)));
             }
-            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Integer.parseInt(info.get(1)));
+            PokeUbicacion ubi = new PokeUbicacion(info.get(0),ene,Integer.parseInt(info.get(1)),Double.parseDouble(info.get(3)),Double.parseDouble(info.get(4)));
             this.pokeUbicaciones.put(ubi.getNombre(),ubi);
         }
        //An edge is represented by an ArrayList
@@ -73,7 +73,7 @@ public class PokeEnvironmentState extends EnvironmentState {
            this.map.get(a.get(0)).add(a.get(1));
        }
 
-       this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,new PokeEnemigo(0),0);
+       this.ubicacionPokeLuchador = new PokeUbicacion(AGENT_INIT_LOCATION,new PokeEnemigo(0),0,0.0,0.0);
 
     }
     @Override
@@ -140,6 +140,7 @@ public class PokeEnvironmentState extends EnvironmentState {
                 }
                 if(!posibleDestinos.isEmpty()){
                     PokeEnemigo pokeEnemigo = new PokeEnemigo(enemigo);
+                    pokeEnemigo.setUbicacionAnterior(unaUbicacion.getNombre());
                     unaUbicacion.removerPokeEnemigo();
                     int destino = ((new Random()).nextInt() % posibleDestinos.size());
                     if(destino<0) {destino += posibleDestinos.size();}
@@ -199,5 +200,15 @@ public class PokeEnvironmentState extends EnvironmentState {
 
     public void setCdSatelite(Integer cdSatelite) {
         this.cdSatelite = cdSatelite;
+    }
+
+    public int getx(String nombre, int x){
+        return  (this.pokeUbicaciones.get(nombre)).getx(x);
+
+    }
+
+    public int gety(String nombre, int y){
+        return  (this.pokeUbicaciones.get(nombre)).gety(y);
+
     }
 }

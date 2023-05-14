@@ -52,10 +52,6 @@ public class SearchConPoda extends Search {
 
         int flagAntiBucle=0;
 
-        //TODO Chequear aca que sea posible ganar, sino ni empezar la simu
-
-
-
         while (searchStrategy.getNodesToExpandSize() > 0 & !goal) {
             NTree firstNode = searchStrategy.getNode();
             //TODO antibucles
@@ -64,7 +60,7 @@ public class SearchConPoda extends Search {
                 flagAntiBucle = 1;
                 }
             }
-            //TODO fin algoritmo antiibucles
+
             if (goalTest.isGoalState(firstNode.getAgentState()) || flagAntiBucle == 1) {
                 flagAntiBucle = 0;
                 if(goalTest.isGoalState(firstNode.getAgentState())){
@@ -75,10 +71,8 @@ public class SearchConPoda extends Search {
                 for (SearchAction action : actionList) {
 
                     PokeAgentState ast = (PokeAgentState) firstNode.getAgentState().clone();
-                    String ubiAntes = ast.getPokeUbicacion().getNombre();
                     ast = (PokeAgentState) action.execute(ast);
                     if (ast != null) {
-                        if(((PokeAgentState)agentState).getPokeUbicacion().getNombre().equals("Siberia"))System.out.println("Antes: "+ ubiAntes +" + Ubicacion desp: " + ast);
                         NTreeConPoda n = new NTreeConPoda(firstNode, action, ast, nodeIdx);
                         if (!existsNode(n, (NTreeConPoda) n.getParent())) {
                             firstNode.addSon(n);
