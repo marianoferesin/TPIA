@@ -26,7 +26,7 @@ public class PokeEnvironmentState extends EnvironmentState {
         newPokeEnviromentState.map = copyMap;
         HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<>();
         for (Map.Entry<String, PokeUbicacion> entry : this.pokeUbicaciones.entrySet()) {
-            copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
+            copyPokeUbicaciones.put(entry.getKey(), this.pokeUbicaciones.get(entry.getKey()).clone());
         }
         newPokeEnviromentState.pokeUbicaciones = copyPokeUbicaciones;
         newPokeEnviromentState.ubicacionBoss = this.ubicacionBoss;
@@ -40,6 +40,8 @@ public class PokeEnvironmentState extends EnvironmentState {
         this.cdSatelite = 0;
         this.agenteConVida=true;
     }
+
+
 
     @Override
     public boolean equals(Object obj) {
@@ -211,4 +213,5 @@ public class PokeEnvironmentState extends EnvironmentState {
         return  (this.pokeUbicaciones.get(nombre)).gety(y);
 
     }
+
 }

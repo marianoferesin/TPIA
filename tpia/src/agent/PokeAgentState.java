@@ -57,7 +57,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
         pokeAgentState.setMap(copyMap);
         HashMap<String, PokeUbicacion> copyPokeUbicaciones = new HashMap<>();
         for (Map.Entry<String, PokeUbicacion> entry : this.pokeUbicaciones.entrySet()) {
-            copyPokeUbicaciones.put(entry.getKey(), new PokeUbicacion(entry.getValue()));
+            copyPokeUbicaciones.put(entry.getKey(), this.pokeUbicaciones.get(entry.getKey()).clone());
         }
         pokeAgentState.setPokeUbicaciones(copyPokeUbicaciones);
 

@@ -12,8 +12,8 @@ import java.awt.event.ComponentEvent;
 public class Main {
     public static void main(String[] args) {
         PokeEnvironment pokeEnvironment = new PokeEnvironment();
-        PokeAgent pokeAgent = new PokeAgent();
-        lanzarGraficos(pokeEnvironment.getEnvironmentState());
+        PokeAgent pokeAgent = new PokeAgentPodador();
+        lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState());
 
         SearchBasedAgentSimulator searchBasedAgentSimulator = new SearchBasedAgentSimulator(pokeEnvironment,pokeAgent);
         searchBasedAgentSimulator.start();
