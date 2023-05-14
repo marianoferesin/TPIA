@@ -1,9 +1,6 @@
 package modificacionesFaia.Search;
 
-import actions.AtacarColapsado;
-import actions.GoToX;
 import agent.PokeAgentState;
-import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.solver.search.NTree;
 import frsf.cidisi.faia.solver.search.Strategy;
 import java.util.Vector;

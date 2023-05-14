@@ -2,6 +2,7 @@ package GUI;
 
 import environment.PokeEnvironmentState;
 import environment.PokeUbicacion;
+import frsf.cidisi.faia.agent.search.SearchAction;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,14 +22,10 @@ public class DibujarMapa extends JPanel implements ActionListener {
     private Image bossImage;
     private Image agenteImage;
     private Image paradaImage;
-    private Timer timer;
+    private String action;
 
-
-    public DibujarMapa(PokeEnvironmentState e) {
+    public DibujarMapa(PokeEnvironmentState e, String searchAction) {
         this.ambiente = e;
-
-        timer = new Timer(1, this);
-        timer.start();
 
         String MACOS_NAME = "Mac OS X";
 
@@ -52,6 +49,8 @@ public class DibujarMapa extends JPanel implements ActionListener {
         if(System.getProperty("os.name").equals(MACOS_NAME))pathParada = "tpia/src/GUI/Images/parada.png";
         paradaImage= hacerTransparente(loadImage(pathParada));
 
+        this.action = searchAction;
+
     }
 
     public void paintComponent(Graphics g) {
@@ -61,6 +60,16 @@ public class DibujarMapa extends JPanel implements ActionListener {
         if (backgroundImage != null) {
             g2d.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), null);
         }
+
+        Font font = new Font("Arial", Font.BOLD, 20);
+        g2d.setFont(font);
+        g2d.setColor(Color.black);
+        String accion = "Accion retornada: " + this.action;
+        if(this.action == null) accion = "Accion retornada: " + "Ninguna";
+        else if(this.action.equals("Pikachu WINS")) accion = this.action;
+        else if(this.action.equals("Pikachu DEAD")) accion = this.action;
+
+        g2d.drawString(accion,50,50);
 
         //dibujamos Aristas
         for (String lineas : ambiente.getMap().keySet()) {
@@ -87,7 +96,7 @@ public class DibujarMapa extends JPanel implements ActionListener {
             g2d.setStroke(new BasicStroke(7));
             g2d.drawOval(x, y, 7, 7);
 
-            Font font = new Font("Arial", Font.BOLD, 20);
+            font = new Font("Arial", Font.BOLD, 20);
             g2d.setFont(font);
             FontMetrics metrics = g2d.getFontMetrics(font);
             int textX = x - metrics.stringWidth(key) / 2;
@@ -124,25 +133,11 @@ public class DibujarMapa extends JPanel implements ActionListener {
         int y = ambiente.gety(agente.getNombre(), this.getHeight());
         g.drawImage(agenteImage, x-40, y-40, 80, 80, null);
 
-
-
-
     }
 
     public void updateCoords() {
         int width = getWidth();
         int height = getHeight();
-/*
-        xCoords[0] = width / 4;
-        xCoords[1] = width / 2;
-        xCoords[2] = (3 * width) / 4;
-        xCoords[3] = width;
-
-        yCoords[0] = height / 4;
-        yCoords[1] = height / 2;
-        yCoords[2] = height / 4;
-        yCoords[3] = height / 2;
-*/
         repaint();
     }
 
@@ -186,5 +181,12 @@ public class DibujarMapa extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
+    }
+
+    public void setAmbiente(PokeEnvironmentState pokeEnvironmentState){
+        ambiente = pokeEnvironmentState;
+    }
+    public void setAction(String searchAction){
+        action = searchAction;
     }
 }

@@ -2,8 +2,11 @@ package environment;
 
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
+import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.state.AgentState;
+import modificacionesFaia.Search.StaticEnvironmentList;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,7 +14,7 @@ public class PokeEnvironment extends Environment {
     public PokeEnvironment(){
         this.environmentState = new PokeEnvironmentState();
         this.environmentState.initState();
-    }
+    }@Override
 
     public PokeEnvironmentState getEnvironmentState() {
         return (PokeEnvironmentState) this.environmentState;
@@ -48,6 +51,8 @@ public class PokeEnvironment extends Environment {
     @Override
     public void updateState(AgentState ast, Action action) {
         this.environmentState = action.execute(ast, environmentState);
+        StaticEnvironmentList.actions.add((SearchAction) action);
+        StaticEnvironmentList.pokeEnvironmentsStates.add((PokeEnvironmentState) ((PokeEnvironmentState) this.environmentState).clone());
     }
     @Override
     public boolean agentFailed(Action actionReturned) {
