@@ -44,24 +44,6 @@ public class NTreeConPoda extends NTree{
                         ((NTreeConPoda) sons.get(i)).rollBack(strategy,false);
                     }
                     if(sons.isEmpty())rollBack(strategy,true);
-                    /*if(allSonCostZero() && parent != null){
-                        for(int i = 0; i < sons.size();i++){
-                            if(sons.get(i).getCost() == 0 && !sons.get(i).getSons().isEmpty()){
-                                NTreeConPoda grandSon = null;
-                                for(int j = 0; j < sons.get(i).getSons().size();j++){
-                                    grandSon = (NTreeConPoda) sons.get(i).getSons().get(j);
-                                    if(grandSon.allSonCostZero()){
-                                        grandSon.parent.getSons().remove(grandSon);
-                                    }
-                                }
-                                ((NTreeConPoda) sons.get(i)).rollBack(strategy,false);
-                            }
-                        }
-                        parent.getSons().remove(this);
-                        ((NTreeConPoda) parent).rollBack(strategy,false);
-                    }
-
-                     */
                 }
         }else{System.out.println("El metodo no soporta esta estrategia de busqueda");}
     }
@@ -73,6 +55,14 @@ public class NTreeConPoda extends NTree{
             }
         }
         return sonCostZero == sons.size();
+    }
+    @Override
+    public void setCost(double cost){
+        this.cost = cost;
+    }
+    @Override
+    public double getCost(){
+        return cost;
     }
     @Override
     public boolean equals(Object obj) {

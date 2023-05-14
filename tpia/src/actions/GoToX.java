@@ -40,7 +40,6 @@ public class GoToX extends SearchAction {
                 ubi.setEnergiaPokeparada(0);
             }
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
-            agentState.decrementarEnergia();
             return agentState;
         }
         return null;
@@ -106,8 +105,10 @@ public class GoToX extends SearchAction {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
         GoToX goToX = (GoToX) o;
-        return Objects.equals(destino, goToX.destino);
+        return destino.equals(goToX.destino);
     }
 }

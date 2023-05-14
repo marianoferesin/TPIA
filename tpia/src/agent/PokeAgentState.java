@@ -175,9 +175,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
     }
 
     public void verificarPoderesEspeciales(){
-
         refreshCoolDown();
-
         //TODO los poderes se estan activando presuntamente rapido.
         if( this.pokeEnergia >= (1.25*this.pokeEnergiaInicial)) {
             this.pokeAtaques[0][0] = 1;
@@ -210,9 +208,7 @@ public class    PokeAgentState extends SearchBasedAgentState {
     public boolean ataqueEspecial3Enabled(){
         return this.pokeAtaques[0][2] == 1 && this.pokeAtaques[1][2] == 0;
     }
-    public boolean algunAtaqueEspecial(){
-        return ataqueEspecial1Enabled() || ataqueEspecial2Enabled() || ataqueEspecial3Enabled();
-    }
+
     public void setCoolDown1(){
         this.pokeAtaques[1][0] = 0;
     }
@@ -257,5 +253,8 @@ public class    PokeAgentState extends SearchBasedAgentState {
         int energiaEnemigo = getPokeUbicaciones().get("Boss").getPokeEnemigo().getEnergia();
         if (1.5 * getPokeEnergia() > energiaEnemigo)rtn=true;
         return rtn;
+    }
+    public boolean esPokeparada(String nombreUbicacion){
+        return this.pokeUbicaciones.get(nombreUbicacion).esPokeparada();
     }
 }

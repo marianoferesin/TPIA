@@ -115,7 +115,7 @@ public class AtacarColapsado extends SearchAction {
 
     @Override
     public String toString() {
-        return "AtacarColapsado - " + tipo;
+        return "AtacarColapsado";
     }
 
 

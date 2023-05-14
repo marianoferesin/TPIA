@@ -52,6 +52,10 @@ public class SearchConPoda extends Search {
 
         int flagAntiBucle=0;
 
+        //TODO Chequear aca que sea posible ganar, sino ni empezar la simu
+
+
+
         while (searchStrategy.getNodesToExpandSize() > 0 & !goal) {
             NTree firstNode = searchStrategy.getNode();
             //TODO antibucles
@@ -71,9 +75,10 @@ public class SearchConPoda extends Search {
                 for (SearchAction action : actionList) {
 
                     PokeAgentState ast = (PokeAgentState) firstNode.getAgentState().clone();
-
+                    String ubiAntes = ast.getPokeUbicacion().getNombre();
                     ast = (PokeAgentState) action.execute(ast);
-                    if (ast != null && !ast.isDead()) {
+                    if (ast != null) {
+                        if(((PokeAgentState)agentState).getPokeUbicacion().getNombre().equals("Siberia"))System.out.println("Antes: "+ ubiAntes +" + Ubicacion desp: " + ast);
                         NTreeConPoda n = new NTreeConPoda(firstNode, action, ast, nodeIdx);
                         if (!existsNode(n, (NTreeConPoda) n.getParent())) {
                             firstNode.addSon(n);
@@ -82,8 +87,7 @@ public class SearchConPoda extends Search {
                     }
                 }
                 searchStrategy.addNodesToExpand(firstNode.getSons());
-                //TODO solo llamo al rollback en los nodos HOJA.
-                if(firstNode.getSons().isEmpty())((NTreeConPoda) firstNode).rollBack(searchStrategy,true);
+                //if(firstNode.getSons().isEmpty())((NTreeConPoda) firstNode).rollBack(searchStrategy,true);
 
             }
         }
