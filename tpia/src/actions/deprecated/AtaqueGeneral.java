@@ -1,4 +1,4 @@
-package actions;
+package actions.deprecated;
 
 import agent.PokeAgentState;
 import environment.PokeEnvironmentState;

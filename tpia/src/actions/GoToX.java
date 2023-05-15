@@ -22,13 +22,11 @@ public class GoToX extends SearchAction {
         PokeAgentState agentState = (PokeAgentState) s;
         ArrayList<String> adyacentes = agentState.getMap().get(agentState.getPokeUbicacion().getNombre());
         if(agentState.isDead())return null;
-        //TODO modificacion de prueba, si estoy en el boss no me muevo
         if(((PokeAgentState) s).getPokeUbicacion().isBoss()) return null;
         if (adyacentes.contains(destino)) {
             if(agentState.getPokeUbicacion().getNombre().equals(destino)) return null;
             //Si hay enemigo huyo
             agentState.huir();
-            agentState.getPokeUbicacion().esPokeparada();
             agentState.recargar(agentState.getPokeUbicacion().getEnergiaPokeparada());
             agentState.verificarPoderesEspeciales();
             agentState.getPokeUbicacion().usarPokeParada();
@@ -55,7 +53,6 @@ public class GoToX extends SearchAction {
             agentState.verificarPoderesEspeciales();
             if(ubi.getEnergiaPokeparada() > 0) System.out.println("Recargue energia.............. en " + ubi.getNombre());
             ubi.setEnergiaPokeparada(0);
-
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
             pokeEnvironmentState.setUbicacionPokeLuchador(agentState.getPokeUbicaciones().get(destino));
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
@@ -74,18 +71,17 @@ public class GoToX extends SearchAction {
     public Double getCost() {
         double rtn = 0.0;
         switch (destino) {
-            case ("Boss") -> rtn = -10.0;
-            case ("Sudafrica"), ("Arabia"), ("Australia") -> rtn = -9.0;
-            case ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -8.0;
-            case ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon") -> rtn = -7.0;
-            case ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China") -> rtn = -6.0;
-            case ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka") -> rtn = -5.0;
-            case ("TierraDelFuego"), ("Brasil") -> rtn = -4.0;
-            case ("BuenosAires") -> rtn = -3.0;
+            case ("Boss") -> rtn = -3.0;
+            case ("Sudafrica"), ("Arabia"), ("Australia") -> rtn = -2.0;
+            case ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -2.0;
+            case ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon") -> rtn = -2.0;
+            case ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China") -> rtn = -2.0;
+            case ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka") -> rtn = -2.0;
+            case ("TierraDelFuego"), ("Brasil") -> rtn = -2.0;
+            case ("BuenosAires") -> rtn = -2.0;
         }
         return rtn;
     }
-
     private boolean posibilidadGanar(PokeAgentState pokeAgentState){
         if(pokeAgentState.getPokeEnergia() >= pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) return true;
         return posibilidadGanar1(pokeAgentState) || posibilidadGanar2(pokeAgentState) || posibilidadGanar3(pokeAgentState);

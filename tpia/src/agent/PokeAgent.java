@@ -9,6 +9,7 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.solver.search.*;
 import modificacionesFaia.Search.BusquedaInformadaPrueba;
+import modificacionesFaia.Search.PokeEstimatedCostFunction;
 import modificacionesFaia.Search.PokeStepCostFunction;
 
 import java.util.ArrayList;
@@ -42,8 +43,9 @@ public class PokeAgent extends SearchBasedAgent {
 
         //BreathFirstSearch searchStrategy = new BreathFirstSearch();
         //DepthFirstSearch searchStrategy = new DepthFirstSearch();
-        UniformCostSearch searchStrategy = new UniformCostSearch(new PokeStepCostFunction());
-        //InformedSearchStrategy searchStrategy = new GreedySearch(new DummyEstimatedCostFunction());
+        //UniformCostSearch searchStrategy = new UniformCostSearch(new PokeStepCostFunction());
+        InformedSearchStrategy searchStrategy = new GreedySearch(new PokeEstimatedCostFunction());
+
         //BusquedaInformadaPrueba searchStrategy = new BusquedaInformadaPrueba();
 
         Search searchSolver = new Search(searchStrategy);

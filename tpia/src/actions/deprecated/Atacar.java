@@ -1,4 +1,4 @@
-package actions;
+package actions.deprecated;
 
 import agent.PokeAgentState;
 import environment.PokeEnvironmentState;
@@ -8,25 +8,18 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-import java.util.ArrayList;
-
-public class AtaqueEspecial2 extends SearchAction {
-
-    Double multiplicador = 1.3;
-
-
-
+public class Atacar extends SearchAction {
     //Actualiza el estado del agente
+    //TODO podriamos comprimir todas las acciones de ataque especial en esta accion, para descongestionar el arbol de busqueda.
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         PokeAgentState agentState = (PokeAgentState) s;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if ( agentState.ataqueEspecial2Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
-            int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (ubi.tieneEnemigo() && (energiaEnemigo < agentState.getPokeEnergia())) {
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
-            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
+            agentState.setPokeEnergia(agentState.getPokeEnergia() - energiaEnemigo + (0.2* energiaEnemigo));
             agentState.verificarPoderesEspeciales();
-            agentState.setCoolDown2();
             return agentState;
         }
         return null;
@@ -39,14 +32,15 @@ public class AtaqueEspecial2 extends SearchAction {
         PokeAgentState agentState = (PokeAgentState) ast;
         PokeEnvironmentState pokeEnvironmentState = (PokeEnvironmentState) est;
         PokeUbicacion ubi = agentState.getPokeUbicacion();
-        if ( agentState.ataqueEspecial1Enabled() && ubi.tieneEnemigo() && (multiplicador * agentState.getPokeEnergia() > agentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) ) {
-            int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        int energiaEnemigo = agentState.getPokeUbicacion().getPokeEnemigo().getEnergia();
+        if (ubi.tieneEnemigo() && (agentState.getPokeEnergia() > energiaEnemigo) ){
+            Double energia = agentState.getPokeEnergia();
             (pokeEnvironmentState.getPokeUbicaciones().get(ubi.getNombre())).getPokeEnemigo().setEnergia(0);
             agentState.getPokeUbicacion().getPokeEnemigo().setEnergia(0);
-            agentState.setPokeEnergia( multiplicador * agentState.getPokeEnergia() - energiaEnemigo + (0.2 * energiaEnemigo));
+            agentState.setPokeEnergia(agentState.getPokeEnergia() - energiaEnemigo + (0.2* energiaEnemigo));
             agentState.verificarPoderesEspeciales();
             pokeEnvironmentState.setAgenteConVida(agentState.getPokeEnergia() > 0);
-            agentState.setCoolDown2();
+            System.out.println("Ataca con "+ energia +" y consigue:" + agentState.getPokeEnergia());
             return pokeEnvironmentState;
         }
         return null;
@@ -54,7 +48,7 @@ public class AtaqueEspecial2 extends SearchAction {
 
     @Override
     public String toString() {
-        return "AtaqueEspecial2";
+        return "Atacar";
     }
 
 

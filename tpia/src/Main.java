@@ -1,12 +1,9 @@
 import GUI.DibujarMapa;
 import agent.PokeAgent;
-import agent.PokeAgentPodador;
 import environment.PokeEnvironment;
 import environment.PokeEnvironmentState;
-import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 import modificacionesFaia.Search.StaticEnvironmentList;
-
 import javax.swing.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
@@ -16,12 +13,12 @@ public class Main {
         PokeEnvironment pokeEnvironment = new PokeEnvironment();
         PokeAgent pokeAgent = new PokeAgent();
 
-        //DibujarMapa dibujarMapa = lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState().clone(),null);
+        DibujarMapa dibujarMapa = lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState().clone(),null);
 
         SearchBasedAgentSimulator searchBasedAgentSimulator = new SearchBasedAgentSimulator(pokeEnvironment,pokeAgent);
         searchBasedAgentSimulator.start();
-        /*
-        for (int i = 0; i < StaticEnvironmentList.pokeEnvironmentsStates.size();i++){
+
+        for (int i = 0; i < StaticEnvironmentList.pokeEnvironmentsStates.size(); i++){
             Thread.sleep(2500);
             dibujarMapa.setAmbiente(StaticEnvironmentList.pokeEnvironmentsStates.get(i));
             dibujarMapa.setAction(StaticEnvironmentList.actions.get(i).toString());
@@ -52,8 +49,6 @@ public class Main {
             }
         });
         return mapaPanel;
-
-         */
     }
 
 
