@@ -8,7 +8,6 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import java.util.*;
 
 public class    PokeAgentState extends SearchBasedAgentState {
-    private String BOSS_LOCATION = "Boss";
     private String AGENT_INIT_LOCATION = "TierraDelFuego";
     private PokeUbicacion pokeUbicacion;
     private double pokeEnergia;
@@ -36,13 +35,12 @@ public class    PokeAgentState extends SearchBasedAgentState {
                       Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
                       this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
                       this.map.equals(that.map);
-
     }
-
     @Override
     public SearchBasedAgentState clone() {
         PokeAgentState pokeAgentState = new PokeAgentState();
-        pokeAgentState.setPokeUbicacion(this.pokeUbicacion.clone());
+        PokeUbicacion pokeUbicacionAux = this.pokeUbicacion.clone();
+        pokeAgentState.setPokeUbicacion(pokeUbicacionAux);
         pokeAgentState.setPokeEnergia(pokeEnergia);
         pokeAgentState.setPokeEnergiaInicial(this.pokeEnergiaInicial);
         pokeAgentState.setPokeAtaques(this.pokeAtaques);

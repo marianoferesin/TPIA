@@ -1,7 +1,6 @@
 package environment;
 
 import enemigos.PokeEnemigo;
-import java.util.Objects;
 
 public class PokeUbicacion {
     private String nombre;
@@ -48,14 +47,12 @@ public class PokeUbicacion {
         this.pokeEnemigo = pokeEnemigo;
     }
 
-    public PokeUbicacion incrementAnt() {
+    public void incrementAnt() {
         this.antiguedad += 1;
-        return this;
     }
 
-    public PokeUbicacion resetAnt(){
+    public void resetAnt(){
         this.antiguedad = 0;
-        return this;
     }
 
     public Integer getEnergiaPokeparada() {
@@ -82,7 +79,7 @@ public class PokeUbicacion {
         return nombre;
     }
     public PokeUbicacion clone(){
-        return new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada,xRatio,yRatio);
+        return (new PokeUbicacion(nombre,pokeEnemigo.clone(),energiaPokeparada,xRatio,yRatio));
     }
     public boolean isBoss(){
         return nombre.equals("Boss");
@@ -93,6 +90,8 @@ public class PokeUbicacion {
 
     // recive en alto de la imagen y devuelve la ubicación
     public int gety(int y) { return (int) (y * yRatio);    }
-
+    public void usarPokeParada(){
+        this.energiaPokeparada = 0;
+    }
 
 }

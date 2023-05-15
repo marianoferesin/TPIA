@@ -8,12 +8,10 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class GoToX extends SearchAction {
 
     private String destino= "";
-
     public GoToX(String destino) {
         this.destino = destino;
     }
@@ -22,23 +20,19 @@ public class GoToX extends SearchAction {
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         PokeAgentState agentState = (PokeAgentState) s;
-        PokeUbicacion ubi = agentState.getPokeUbicacion();
-        ArrayList<String> adyacentes = agentState.getMap().get(ubi.getNombre());
-
+        ArrayList<String> adyacentes = agentState.getMap().get(agentState.getPokeUbicacion().getNombre());
+        if(agentState.isDead())return null;
         //TODO modificacion de prueba, si estoy en el boss no me muevo
-        if(((PokeAgentState) s).getPokeUbicacion().isBoss() && posibilidadGanar((PokeAgentState) s)) return null;
-
+        if(((PokeAgentState) s).getPokeUbicacion().isBoss()) return null;
         if (adyacentes.contains(destino)) {
-
-            if(ubi.getNombre().equals(destino)) return null;
+            if(agentState.getPokeUbicacion().getNombre().equals(destino)) return null;
             //Si hay enemigo huyo
             agentState.huir();
-            //Si es pokeparada recargo
-            if(ubi.esPokeparada()){
-                agentState.recargar(ubi.getEnergiaPokeparada());
-                agentState.verificarPoderesEspeciales();
-                ubi.setEnergiaPokeparada(0);
-            }
+            agentState.getPokeUbicacion().esPokeparada();
+            agentState.recargar(agentState.getPokeUbicacion().getEnergiaPokeparada());
+            agentState.verificarPoderesEspeciales();
+            agentState.getPokeUbicacion().usarPokeParada();
+            agentState.getPokeUbicaciones().put(agentState.getPokeUbicacion().getNombre(),agentState.getPokeUbicacion());
             agentState.setPokeUbicacion(agentState.getPokeUbicaciones().get(destino));
             return agentState;
         }
@@ -77,7 +71,20 @@ public class GoToX extends SearchAction {
 
 
     @Override
-    public Double getCost() { return 1.0; }
+    public Double getCost() {
+        double rtn = 0.0;
+        switch (destino) {
+            case ("Boss") -> rtn = -10.0;
+            case ("Sudafrica"), ("Arabia"), ("Australia") -> rtn = -9.0;
+            case ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -8.0;
+            case ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon") -> rtn = -7.0;
+            case ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China") -> rtn = -6.0;
+            case ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka") -> rtn = -5.0;
+            case ("TierraDelFuego"), ("Brasil") -> rtn = -4.0;
+            case ("BuenosAires") -> rtn = -3.0;
+        }
+        return rtn;
+    }
 
     private boolean posibilidadGanar(PokeAgentState pokeAgentState){
         if(pokeAgentState.getPokeEnergia() >= pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) return true;

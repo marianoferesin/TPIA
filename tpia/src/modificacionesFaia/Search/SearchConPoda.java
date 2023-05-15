@@ -1,5 +1,6 @@
 package modificacionesFaia.Search;
 
+import actions.AtacarColapsado;
 import agent.PokeAgentState;
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.agent.search.Problem;
@@ -51,38 +52,31 @@ public class SearchConPoda extends Search {
         boolean goal = false;
 
         int flagAntiBucle=0;
-
+        System.out.println(actionList);
         while (searchStrategy.getNodesToExpandSize() > 0 & !goal) {
             NTree firstNode = searchStrategy.getNode();
-            //TODO antibucles
-            if(firstNode.getParent() != null && firstNode.getParent().getParent() != null){
-                if(((PokeAgentState) firstNode.getAgentState()).getPokeUbicacion().getNombre().equals(((PokeAgentState) firstNode.getParent().getParent().getAgentState()).getPokeUbicacion().getNombre()) || firstNode.getAction().equals(firstNode.getParent().getParent().getAction())){
-                flagAntiBucle = 1;
-                }
-            }
 
-            if (goalTest.isGoalState(firstNode.getAgentState()) || flagAntiBucle == 1) {
-                flagAntiBucle = 0;
-                if(goalTest.isGoalState(firstNode.getAgentState())){
-                    goal = true;
-                    goalNode = (NTreeConPoda) firstNode;
-                }
+            if (goalTest.isGoalState(firstNode.getAgentState())) {
+                goal = true;
+                goalNode = (NTreeConPoda) firstNode;
             } else {
                 for (SearchAction action : actionList) {
-
                     PokeAgentState ast = (PokeAgentState) firstNode.getAgentState().clone();
+                    String antes = firstNode.getAgentState().toString();
                     ast = (PokeAgentState) action.execute(ast);
+                    if(action.equals(new AtacarColapsado())){
+                        System.out.println("Ataque");
+                    }
                     if (ast != null) {
                         NTreeConPoda n = new NTreeConPoda(firstNode, action, ast, nodeIdx);
-                        if (!existsNode(n, (NTreeConPoda) n.getParent())) {
+                        if (!existsNode(n, n.getParent())) {
+                            System.out.println("Voy de:: "+antes + " a " + n.getAgentState().toString());
                             firstNode.addSon(n);
                             nodeIdx++;
                         }
                     }
                 }
                 searchStrategy.addNodesToExpand(firstNode.getSons());
-                //if(firstNode.getSons().isEmpty())((NTreeConPoda) firstNode).rollBack(searchStrategy,true);
-
             }
         }
         if (goal && !getBestPath().isEmpty()) {
@@ -94,14 +88,13 @@ public class SearchConPoda extends Search {
         return null;
     }
 
-    private boolean existsNode(NTreeConPoda node, NTreeConPoda parent) {
-        NTree p = parent;
-        while (p != null) {
+    private boolean existsNode(NTree node, NTree parent) {
+        for(NTree p = parent; p != null; p = p.getParent()) {
             if (node.equals(p)) {
                 return true;
             }
-            p = (NTree) p.getParent();
         }
+
         return false;
     }
 

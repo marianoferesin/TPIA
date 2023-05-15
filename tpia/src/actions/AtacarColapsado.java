@@ -54,8 +54,6 @@ public class AtacarColapsado extends SearchAction {
         }
         return null;
     }
-
-
     // Actualiza el estado del agente y del ambiente
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
@@ -117,11 +115,9 @@ public class AtacarColapsado extends SearchAction {
     public String toString() {
         return "AtacarColapsado";
     }
-
-
     @Override
     public Double getCost() {
-        return 1.0;
+        return -1.0;
     }
 
     private boolean posibilidadGanar1(PokeAgentState pokeAgentState){
