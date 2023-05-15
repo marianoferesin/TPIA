@@ -72,16 +72,11 @@ public class GoToX extends SearchAction {
         double rtn = 0.0;
         switch (destino) {
             case ("Boss") -> rtn = -3.0;
-            case ("Sudafrica"), ("Arabia"), ("Australia") -> rtn = -2.0;
-            case ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -2.0;
-            case ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon") -> rtn = -2.0;
-            case ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China") -> rtn = -2.0;
-            case ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka") -> rtn = -2.0;
-            case ("TierraDelFuego"), ("Brasil") -> rtn = -2.0;
-            case ("BuenosAires") -> rtn = -2.0;
+            case ("Sudafrica"), ("Arabia"), ("Australia"), ("BuenosAires"), ("TierraDelFuego"), ("Brasil"), ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka"), ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China"), ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon"), ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -2.0;
         }
         return rtn;
     }
+
     private boolean posibilidadGanar(PokeAgentState pokeAgentState){
         if(pokeAgentState.getPokeEnergia() >= pokeAgentState.getPokeUbicacion().getPokeEnemigo().getEnergia()) return true;
         return posibilidadGanar1(pokeAgentState) || posibilidadGanar2(pokeAgentState) || posibilidadGanar3(pokeAgentState);
