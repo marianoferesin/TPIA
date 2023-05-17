@@ -42,9 +42,9 @@ public class PokeAgent extends SearchBasedAgent {
     public Action selectAction() {
 
         //BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        //DepthFirstSearch searchStrategy = new DepthFirstSearch();
+        DepthFirstSearch searchStrategy = new DepthFirstSearch();
         //UniformCostSearch searchStrategy = new UniformCostSearch(new PokeStepCostFunction());
-        InformedSearchStrategy searchStrategy = new GreedySearch(new PokeEstimatedCostFunction());
+        //InformedSearchStrategy searchStrategy = new GreedySearch(new PokeEstimatedCostFunction());
 
         //BusquedaInformadaPrueba searchStrategy = new BusquedaInformadaPrueba();
 

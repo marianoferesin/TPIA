@@ -5,6 +5,7 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.state.AgentState;
+import modificacionesFaia.Search.StaticActionListAccess;
 import modificacionesFaia.Search.StaticEnvironmentList;
 
 import java.util.ArrayList;
@@ -52,6 +53,8 @@ public class PokeEnvironment extends Environment {
     public void updateState(AgentState ast, Action action) {
         this.environmentState = action.execute(ast, environmentState);
         StaticEnvironmentList.actions.add((SearchAction) action);
+        StaticActionListAccess.actions.remove(action);
+        StaticActionListAccess.actions.add((SearchAction) action);
         StaticEnvironmentList.pokeEnvironmentsStates.add((PokeEnvironmentState) ((PokeEnvironmentState) this.environmentState).clone());
     }
     @Override

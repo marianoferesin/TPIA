@@ -1,5 +1,7 @@
 package environment;
 
+import agent.PokeAgent;
+import agent.PokeAgentState;
 import enemigos.PokeEnemigo;
 
 public class PokeUbicacion {
@@ -67,7 +69,9 @@ public class PokeUbicacion {
 
     @Override
     public boolean equals(Object o) {
-        return this.nombre.equals(((PokeUbicacion) o).getNombre());
+        PokeUbicacion pokeUbicacion = (PokeUbicacion) o;
+        return this.nombre.equals(pokeUbicacion.getNombre()) &&
+                this.pokeEnemigo.equals(pokeUbicacion.getPokeEnemigo());
     }
 
     public boolean tieneEnemigo(){

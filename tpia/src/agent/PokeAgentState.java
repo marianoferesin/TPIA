@@ -28,13 +28,13 @@ public class    PokeAgentState extends SearchBasedAgentState {
         if (!(obj instanceof PokeAgentState that)) {
             return false;
         }
-        return this.pokeUbicacion.equals(that.pokeUbicacion) &&
-                      this.pokeEnergia == that.pokeEnergia &&
-                      Objects.equals(this.pokeCantidad, that.pokeCantidad) &&
-                      Objects.equals(this.pokeEnergiaInicial, that.pokeEnergiaInicial) &&
-                      Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
-                      this.pokeUbicaciones.equals(that.pokeUbicaciones) &&
-                      this.map.equals(that.map);
+        return this.pokeUbicacion.equals(that.pokeUbicacion);
+                      //this.pokeEnergia == that.pokeEnergia;
+                      //Objects.equals(this.pokeCantidad, that.pokeCantidad) &&
+                      //Objects.equals(this.pokeEnergiaInicial, that.pokeEnergiaInicial);
+                      //Arrays.deepEquals(this.pokeAtaques, that.pokeAtaques) &&
+                      //this.pokeUbicaciones.equals(that.pokeUbicaciones);
+                      //this.map.equals(that.map);
     }
     @Override
     public SearchBasedAgentState clone() {

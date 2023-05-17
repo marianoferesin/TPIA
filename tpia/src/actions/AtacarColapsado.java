@@ -117,7 +117,7 @@ public class AtacarColapsado extends SearchAction {
     }
     @Override
     public Double getCost() {
-        return -1.0;
+        return 3.0;
     }
 
     private boolean posibilidadGanar1(PokeAgentState pokeAgentState){

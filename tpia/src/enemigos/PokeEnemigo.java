@@ -1,5 +1,7 @@
 package enemigos;
 
+import java.util.Objects;
+
 public class PokeEnemigo {
     protected Integer energia;
     private Integer cooldownMoverse;
@@ -52,5 +54,22 @@ public class PokeEnemigo {
 
     public PokeEnemigo clone(){
         return new PokeEnemigo(this.getEnergia(),this.getCooldownMoverse());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PokeEnemigo that = (PokeEnemigo) o;
+        return Objects.equals(energia, that.energia) && Objects.equals(UbicacionAnterior, that.UbicacionAnterior);
+    }
+
+    @Override
+    public String toString() {
+        return "PokeEnemigo{" +
+                "energia=" + energia +
+                ", cooldownMoverse=" + cooldownMoverse +
+                ", UbicacionAnterior='" + UbicacionAnterior + '\'' +
+                '}';
     }
 }

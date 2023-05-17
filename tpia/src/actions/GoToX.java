@@ -71,8 +71,8 @@ public class GoToX extends SearchAction {
     public Double getCost() {
         double rtn = 0.0;
         switch (destino) {
-            case ("Boss") -> rtn = -3.0;
-            case ("Sudafrica"), ("Arabia"), ("Australia"), ("BuenosAires"), ("TierraDelFuego"), ("Brasil"), ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka"), ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China"), ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon"), ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = -2.0;
+            case ("Boss") -> rtn = 1.0;
+            case ("Sudafrica"), ("Arabia"), ("Australia"), ("BuenosAires"), ("TierraDelFuego"), ("Brasil"), ("Groenlandia"), ("Canada"), ("Cuba"), ("Peru"), ("Kamchatka"), ("Canarias"), ("Inglaterra"), ("Noruega"), ("Siberia"), ("China"), ("NuevaGuinea"), ("Sahara"), ("Suecia"), ("Moscu"), ("Japon"), ("Egipto"), ("Indonesia"), ("NuevaZelanda"), ("India") -> rtn = 2.0;
         }
         return rtn;
     }

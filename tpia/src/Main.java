@@ -3,6 +3,7 @@ import agent.PokeAgent;
 import environment.PokeEnvironment;
 import environment.PokeEnvironmentState;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+import modificacionesFaia.Search.StaticActionListAccess;
 import modificacionesFaia.Search.StaticEnvironmentList;
 import javax.swing.*;
 import java.awt.event.ComponentAdapter;
@@ -10,9 +11,12 @@ import java.awt.event.ComponentEvent;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        /**
+         * Pude hacer andar todo, para la busqueda en profundidad lo que hice fue reordenar la lista de acciones posibles.
+         */
         PokeEnvironment pokeEnvironment = new PokeEnvironment();
         PokeAgent pokeAgent = new PokeAgent();
-
+        StaticActionListAccess.actions = pokeAgent.getProblem().getActions();
         DibujarMapa dibujarMapa = lanzarGraficos((PokeEnvironmentState) pokeEnvironment.getEnvironmentState().clone(),null);
 
         SearchBasedAgentSimulator searchBasedAgentSimulator = new SearchBasedAgentSimulator(pokeEnvironment,pokeAgent);
